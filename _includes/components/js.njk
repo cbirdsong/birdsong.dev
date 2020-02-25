@@ -1,0 +1,7 @@
+<script async="async" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{% set js %}
+{% include "assets/js/inline.js" %}
+{% endset %}
+<script>
+	{{ js | jsmin | safe }}
+</script>

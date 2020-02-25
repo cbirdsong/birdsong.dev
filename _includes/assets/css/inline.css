@@ -1,187 +1,169 @@
-:root {
-	--turkey: #FFF0EB;
-	--white: white;
-	--blue: blue;
-}
-
-*, *:before, *:after {
+/* Global position / box sizing rules */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  position: relative;
 }
 
-html,
+/* Set core body defaults */
+:root {
+  text-rendering: optimizeLegibility;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  scroll-behavior: smooth;
+
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+
+  font-size: calc(100% + 0.5vmin);
+  line-height: 1.5;
+}
+
 body {
-	padding: 0;
-	margin: 0;
-	font-family: "Avenir", "Avenir Next", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 60ch;
+  padding: 2rem;
+
+  color: hsl(0, 0%, 10%);
+  background-color: hsl(0, 0%, 95%);
 }
 
-body {
-	display: grid;
-	height: 100vh;
-	grid-template-rows: auto 1fr auto;
-	background-color: var(--turkey);
+@media (prefers-color-scheme: dark) {
+  body {
+    background: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 95%);
+  }
 }
 
-main {
-	max-width: 37.5em;
-}
-
-p,
-pre,
-code {
-	line-height: 1.5;
-}
-
-a[href],
-a[href]:visited {
-	color: var(--blue);
-}
-
-a[href]:not(:hover) {
-	text-decoration: none;
-}
-
+/* Set up HTML 5 Elements in old browsers */
+article,
+aside,
+figure,
+footer,
 header,
+hgroup,
 main,
-footer {
-	padding: 1em;
+section,
+details {
+  display: block;
 }
 
-main {
-	padding-bottom: 2em;
+/* The owl */
+* + * {
+  margin-top: 1rem;
+  margin-top: var(--flow-spacing, 1rem);
+  margin-bottom: 0;
 }
 
-main :first-child,
-main > article :first-child {
-	margin-top: 0;
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+  font-weight: 600;
 }
 
-pre {
-	font-size: 14px;
-	direction: ltr;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	-moz-tab-size: 2;
-	tab-size: 2;
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-	padding: 1em;
-	margin: .5em 0;
+h1 {
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
-/* Header Logo (style as h2) */
-header > em {
-	display: block;
-	font-size: 2em;
-	margin: .67em 0;
-	font-weight: bold;
-	font-style: normal;
+h1,
+h2 {
+  --flow-spacing: 2.25rem;
+}
+h3,
+h4 {
+  --flow-spacing: 1.5rem;
 }
 
-/* Header Nav */
-header nav ul {
-	padding: 0;
-	list-style: none;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
-header nav ul :first-child {
-	margin-left: 0;
+/* Reasonable list defaults */
+ul,
+ol,
+dl {
+  padding-left: 1.25em;
+}
+li + li {
+  margin-top: 0.25em;
 }
 
-header nav li {
-	display: inline-block;
-	margin: 0 .5em;
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
 }
 
-header nav li a[href]:not(:hover) {
-	text-decoration: none;
-}
-
-header nav li a[data-current="current item"] {
-	font-weight: 700;
-	text-decoration: underline;
-}
-
-/* Posts List */
-article {
-	margin-bottom: 1em;
-	padding-bottom: 1em;
-	border-bottom: 1px solid #eee;
-	border-bottom: 1px solid var(--white);
-}
-
-main > section > article > * {
-	margin-top: 0;
-	margin-bottom: .5em;
-}
-
-/* Post Tags */
-a[rel="tag"],
-a[rel="tag"]:visited {
-	display: inline-block;
-  vertical-align: text-top;
-  text-transform: uppercase;
-	letter-spacing: .1em;
-  font-size: .625em;
-  padding: 0 .5em;
-	line-height: 2em;
-	height: 2em;
-  border: 1px solid var(--white);
-	background-color: var(--white);
-	color: var(--blue);
-  border-radius: .25em;
-  text-decoration: none;
-	margin: 0 .5em .5em 0;
-}
-
-a[rel="tag"]:hover {
-	border: 1px solid var(--blue);
-	background-color: var(--blue);
-	color: var(--white);
-}
-
-a[rel="tag"]:last-child {
-	margin-right: 0;
-}
-
-/* Contact Form */
-form {
-  display: grid;
-	padding: 2em 0;
-}
-
-form label {
-  display: none;
-}
-
+/* Inherit fonts for inputs and buttons */
 input,
+button,
 textarea,
-button {
-  width: 100%;
-  padding: 1em;
-  margin-bottom: 1em;
-	font-size: 1rem;
-	font-family: "Avenir", "Avenir Next", sans-serif;
+select {
+  font: inherit;
 }
 
-input,
-textarea {
-	border: 1px solid black;
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
 }
 
-button {
-	border: 1px solid var(--blue);
-	background-color: var(--blue);
-	color: var(--white);
-	cursor: pointer;
+section {
+  margin-top: 2rem;
 }
 
-@media screen and (min-width:768px) {
-	:root {
-		font-size: 1.1rem;
-	}
+summary {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  --margin: 1rem;
+  --modifier: calc(30rem - 100%);
+  margin: calc(var(--margin) * -1);
+}
+
+.columns > * {
+  flex-grow: 1;
+  flex-basis: calc(var(--modifier) * 999);
+  margin: var(--margin);
+}
+
+.columns > * > *:first-child {
+  margin-top: 0;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* content made available only to screen readers */
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
 }
