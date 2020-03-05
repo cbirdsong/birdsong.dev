@@ -1,9 +1,9 @@
 ---
-title: Résumé
-permalink: /resume/
+title: About
+permalink: /about/
 layout: layouts/page.njk
 eleventyNavigation:
-  key: Résumé
+  key: About
   order: 10
 ---
 
@@ -19,7 +19,7 @@ I'm always looking for new, more efficient ways to get my job done.
 
 </section>
 
-<section id="skills">
+<section>
 
 ## I write:
 
@@ -139,3 +139,5 @@ Bachelor of Arts in Mass Communication (Print Journalism Concentration), Univers
 - [Telegram: cbirdsong](https://telegram.me/cbirdsong)
 - [GitHub: cbirdsong](https://github.com/cbirdsong)
 - [LinkedIn: cbirdsong](http://linkedin.com/in/cbirdsong)
+
+</section>

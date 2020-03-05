@@ -126,6 +126,12 @@ a:hover, a:active {
 	color: var(--link-color-hover);
 }
 
+@supports (text-decoration-color: var(--link-color-hover)) {
+	a {
+		text-decoration-color: var(--link-color-hover);
+	}
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
 	text-decoration-skip-ink: auto;
