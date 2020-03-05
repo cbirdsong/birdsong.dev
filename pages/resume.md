@@ -1,108 +1,137 @@
 ---
-title: Resume
+title: Résumé
 permalink: /resume/
+layout: layouts/page.njk
 eleventyNavigation:
-  key: Resume
+  key: Résumé
   order: 10
 ---
 
-## Skills
+<section class="lead" id="intro">
 
-**Expert**:
+<p class="lead"><strong>I build websites</strong> that are accessible, performant, responsive, user-centric and beautiful.</p>
 
-- HTML
-- CSS
-- Sass
-- Less
-- JavaScript
-- WordPress
-- Liquid
-- Twig
+I have a keen eye for detail and love laboring over sites to get them _just right_.
 
-**Adept**:
+I have extensive experience collaborating with designers to strike the perfect balance between form and function.
 
-- PHP
-- SVG
-- Git
-- Schema
-- HTML email
-- Eleventy
+I'm always looking for new, more efficient ways to get my job done. 
 
-**Novice**:
+</section>
 
-- Craft
-- Python
-- bash
-- HubSpot
-- Pattern Lab
+<section id="skills">
 
-## Portfolio
+## I write:
 
-2M-Tek ([2m-tek.com](https://web.archive.org/web/20150423202347/http://2m-tek.com))
+- accessible and semantic **<abbr title="HyperText Markup Language">HTML</abbr>**
+- reusable and performant **<abbr title="Cascading Stylesheets">CSS</abbr>**, Sass and Less
+- just enough **JavaScript**, applied as progressive enhancement
 
-Worked closely with a designer to make client’s request for a bold handcrafted design a reality.
+## I've worked with:
 
-**Notable features**: Vertically rotated primary nav with "dropdown" menu. Cutting-edge use of `<canvas>`\-based script on images with headings to replicate Photoshop blend modes before their CSS implementations. Striking [custom Google Maps skin](https://web.archive.org/web/20150423202347/http://www.2m-tek.com/contact/). Novel [form/button styling](https://web.archive.org/web/20150423202347/http://www.2m-tek.com/contact/).
+- **Templating languages** like Liquid, Twig and Nunjucks
+- **Git**, via Bitbucket
+- **<abbr title="Scalable Vector Graphics">SVG</abbr>**, for hand-coding animations, transitions and optimization
+- **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)**
+- **[Pattern Lab](https://patternlab.io/)**, building pattern libraries for design systems
+- **HubSpot**, building custom landing pages and email templates, customizing form embeds
+- **Google Analytics** and **Google Tag Manager**, implemented as performantly as possible
 
-**Favorite details**: Scroll speeds vary between the image and text columns. The image with a heading and the content area text align with the active primary nav item. Accent lines on the right viewport edge align with the borders on the first few paragraph or heading tags in content area text.
+<details>
+<summary>I've also worked with:</summary>
 
-**How I’d do it better**: Switching to CSS-based animation for the menu pop-out would make it move as smoothly as scrolling. Using new CSS-based blend modes would improve page load time.
+- **Photoshop**, **Illustrator** and **Sketch**
+- **Google Lighthouse** and **WebPageTest**
+- **Schema.org** and other similar markup methods
+- **Cloudflare**, for doing edge SEO optimization via Cloudflare Workers
+- **[Buddy](https://buddy.works)**, for CI/CD and deployment
+- **Shopify**
+- **MailChimp**
+- **WordPress page builders** like WP Bakery and Divi, on legacy projects I inherited _(they are bad)_
+</details>
 
-Downtown Lafayette ([downtownlafayette.org](http://downtownlafayette.org))
 
-Worked with client and external design firm to match the site with new logo and branding. Won Addy award for mobile site. Runner-up for desktop site.
+<details>
+<summary>I'd love to learn more about:</summary>
 
-**Notable features**: Built [client-editable location database](http://www.downtownlafayette.org/eat-drink-shop-sleep/#Eat) and rendered it onto a custom-skinned Google Map with filtering by category and search-as-you-type.
+- **[Eleventy](https://www.11ty.dev)**
+- **Netlify**
+- **Web components**
+- **[Svelte](https://svelte.dev/)** and **[Sapper](https://sapper.svelte.dev/)**
+- **[Craft CMS](https://www.craftcms.com/)**
+</details>
 
-**Favorite details**: The custom map pins for each type of business.
+</section>
 
-**How I’d do it better**: Some areas of this design have not stood up to the client’s editing, most notably the amount of text in the location descriptions on [this view](http://www.downtownlafayette.org/eat-drink-shop-sleep/#Eat) and the filters on [this view](http://www.downtownlafayette.org/eat-drink-shop-sleep/#More). I’d try to make it more flexible, which would be easier with modern tools like flexbox or grid.
+<section>
 
-New Mexican Kennels ([newmexicankennels.com](http://newmexicankennels.com))
+## Sample Work
 
-**Notable features**: Modular and flexible design allowed for rich individual pages created from handcrafted components. Sticky nav menu items each had customize and hand-tuned contents in the side pop-out menu.
+- [Eye on 2020](https://2020.bbrcreative.com) <small>(won Best In Show Addy, <time>2020</time>)</small>
+- [Food Marketing Now](https://foodmarketingnow.com/) <small>(won Silver Addy, <time>2020</time>)</small>
+- [Lafayette General Ortho](https://lafayettegeneralortho.com/) <small>(won Silver Addy, <time>2020</time>)</small>
+- [RES](https://web.archive.org/web/20190627172805/https://res.us/)
 
-**Favorite details**: Custom cursor on Reservations call to action.
+<details>
 
-**How I’d do it better**: Add a newsletter signup area so the client might not insist on adding and then endlessly repurposing a modal popup.
+<summary>Older Work</summary>
 
-A few others:
+- [2m-tek](https://web.archive.org/web/20150423202347/http://2m-tek.com)
+- [Downtown Lafayette](http://web.archive.org/web/20150315021728/http://www.downtownlafayette.org/) <small>(won Gold/Silver Addy, 2015)</small>
+- [Wide Web Marketing](https://web.archive.org/web/20171021221327/https://www.widewebmarketing.com/)
+- [Burgersmith](https://web.archive.org/web/20171012145645/http://www.burgersmith.com/)
+- [New Mexican Kennels](https://web.archive.org/web/20170930172454/http://www.newmexicankennels.com/)
 
-- [RES](http://web.archive.org/web/20190627172805/https://res.us/)
-- [Gastro Clinic](https://gastroclinic.com)
-- [Wide Web Marketing](http://widewebmarketing.com)
-- [Andrus Boudreaux](http://andrus-boudreaux.com)
-- [Burgersmith](http://burgersmith.com)
-- [Naples Stoneworks](http://www.naplesstoneworks.com/)
-- [Heart Hospital of Lafayette](http://hearthospitaloflafayette.com)
+<small>(Some of these probably aren't up to my modern standard.)</small>
+
+</details>
+
+</section>
+
+
+<section>
 
 ## Experience
 
-### [BBR Creative](https://bbrcreative.com) (2018-)
+### [The Current](https://thecurrentla.com) <small>(<time>2018</time>-)
 
-Use modern web technologies to accessibly implement and extend designs. Worked with designers to make sites more responsive and user-friendly. Worked to optimize sites for performance. Maintained and improved existing WordPress sites.
+Helped (re)launch and run a WordPress-powered non-profit news organization. Customized and eventually replaced a prebuilt theme. Managed WordPress integrations and transitions between Mailchimp/Active Campaign and Memberful/Pico.
 
-### [The Current](https://thecurrentla.com) (2018-)
+### [BBR Creative](https://bbrcreative.com) <small>(<time>2018</time>-<time>2020</time>)
 
-Helped launch and run a WordPress-powered non-profit news organization.
+Use modern web technologies to accessibly implement and extend designs. Collaborated with designers to make sites beautiful, accessible and user-friendly. Worked to optimize existing sites for performance. 
 
-### Wide Web Marketing (2010-2018)
+Maintained and improved existing WordPress sites. Built custom HTML email templates in HubSpot. Built a landing page template system leveraging CSS custom properties from scratch.
 
-Used modern web technologies to accessibly implement and extend designs originating in Photoshop or Illustrator. Worked with designers to make designs more responsive and user-friendly.
+### [Wide Web Marketing](http://web.archive.org/web/20171021221327/https://www.widewebmarketing.com/) <small>(<time>2010</time>-<time>2018</time>)</small>
 
-Customized and maintained a fork of Bootstrap to facilitate faster and higher-quality site production. Became an expert in Adobe Business Catalyst and the Liquid markup language. Became familiar with WordPress and its ecosystem.
+Implemented and extended designs originating in Photoshop or Illustrator. Worked with designers to make designs more responsive and user-friendly.
 
-### Freelance (2009-2011)
+Customized and maintained a fork of Bootstrap to facilitate faster and higher-quality site production using Adobe Business Catalyst and the Liquid markup language. Became familiar with WordPress and its ecosystem.
 
-Designed and built websites using modern web technologies on top of lightweight CMSes like [Perch](https://grabaperch.com).
+### Freelance <small>(<time>2009</time>-<time>2011</time>)</small>
 
-### Bizzuka (2007-2008)
+Designed and built websites using modern web technologies as flat HTML or on top of lightweight CMSes like [Perch](https://grabaperch.com).
 
-Built table-based websites on a custom CMS.
+### Bizzuka <small>(<time>2007</time>-<time>2008</time>)</small>
+
+Built table-based websites on a proprietary CMS.
+
+</section>
+
+
+
+
+<section>
 
 ## Education
 
-Bachelor of Arts in Mass Communication (Print Journalism Concentration), University of Louisiana at Lafayette. 2007.
+Bachelor of Arts in Mass Communication (Print Journalism Concentration), University of Louisiana at Lafayette. <time>2007</time>.
+
+</section>
+
+
+<section>
 
 ## Contact
 

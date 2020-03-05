@@ -1,0 +1,23 @@
+<link rel="preload" href="/static/fonts/Dosis.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+@font-face {
+	font-family: Dosis;
+	src: url(/static/fonts/Dosis-optimized.woff2) format("woff2");
+	font-style: normal;
+	font-weight: 200 800;
+	font-display: swap;
+}
+</style>
+
+<script>
+if( "fonts" in document ) {
+    var regular = new FontFace("Dosis", "url(/static/fonts/Dosis.woff2) format('woff2')");
+
+    Promise.all([ regular.load() ]).then(function(fonts) {
+        fonts.forEach(function(font) {
+            document.fonts.add(font);
+        });
+    });
+}
+</script>

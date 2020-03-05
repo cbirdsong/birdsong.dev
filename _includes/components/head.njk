@@ -1,11 +1,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ title or renderData.title or metadata.title }}</title>
+	<title>{{ title or renderData.title or metadata.title }} &bull; {{ metadata.title }}</title>
+
 	{% set css %}
-	{% include "assets/css/inline.css" %}
+	{% include "assets/css/base.css" %}
 	{% endset %}
 	<style>
 		{{css | cssmin | safe}}
 	</style>
+	
+	{% include "components/fonts.njk" %}
 </head>

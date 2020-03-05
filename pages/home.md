@@ -4,4 +4,4 @@ title: Home
 permalink: /
 ---
 
-This is a work in progress.
+Hi. I'm **Cory Birdsong**. I do front-end web development.

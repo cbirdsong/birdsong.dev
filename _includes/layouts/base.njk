@@ -4,19 +4,17 @@
 	{% include "components/head.njk" %}
 
 	<body>
-
 		<header>
-			<em>
-				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
-			</em>
-			{% include "components/nav.njk" %}
+			{% include "components/header.njk" %}
 		</header>
 
 		<main>
 			{{ layoutContent | safe }}
 		</main>
 
-		{% include "components/footer.njk" %}
+		<footer>
+			{% include "components/footer.njk" %}
+		</footer>
 		
 		{% include "components/js.njk" %}
 
