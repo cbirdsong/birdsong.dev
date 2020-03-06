@@ -1,3 +1,83 @@
+/* Define colors */
+:root {
+	/* Day */
+	--brown: hsl(29, 67%, 15%);
+
+	--tan: hsl(35, 43%, 90%);
+
+	--orange: hsl(14, 71%, 47%);
+
+	--green: hsl(76, 42%, 38%);
+
+	--blue: hsl(195, 48%, 37%);
+
+	--yellow: hsl(34, 92%, 63%);
+
+	/* Night */
+	--black: hsl(0, 0%, 0%);
+
+	--white: hsl(0, 0%, 100%);
+
+	--gray-light: hsl(0, 0%, 90%);
+
+	--gray-xlight: hsl(0, 0%, 95%);
+
+	--blue-light: hsl(175, 90%, 90%);
+
+	--purple-light: hsl(300, 90%, 90%);
+}
+
+/* Set colors */
+:root {
+	--background-color: var(--tan);
+
+	--text-color: var(--brown);
+
+	--accent-color: var(--orange);
+
+	--heading-color: var(--orange);
+
+	--link-color: var(--green);
+	--link-color-hover: var(--blue);
+
+	--focus-color: var(--yellow);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: var(--black);
+
+		--text-color: var(--gray-xlight);
+
+		--accent-color: var(--gray-light);
+
+		--heading-color: var(--gray-light);
+
+		--link-color: var(--white);
+		--link-color-hover: var(--blue-light);
+
+		--focus-color: var(--purple-light);
+	}
+}
+
+@media print {
+	:root {
+		--background-color: transparent;
+
+		--text-color: var(--black);
+
+		--accent-color: var(--black);
+
+		--heading-color: var(--black);
+
+		--link-color: var(--gray-dark);
+
+		--link-color-hover: var(--gray-dark);
+
+		--focus-color: var(--gray-light);
+	}
+}
+
 /* Global position / box sizing rules */
 *,
 *::before,
@@ -15,40 +95,22 @@
 
 	scroll-behavior: smooth;
 
-	font-family: "Dosis", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue","Helvetica", "Arial", sans-serif;
+	font-family: "Dosis", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		"Helvetica", "Arial", sans-serif;
 
 	font-size: calc(100% + 1vmin);
 	font-weight: 350;
 	line-height: 1.5;
 }
-
-
-/* Set colors */
-:root {
-	--background-color: hsl(35, 43%, 90%);
-		
-	--text-color: hsl(29, 67%, 15%);
-	
-	--heading-color: hsl(14, 71%, 47%);
-
-	--link-color: hsl(76, 42%, 38%);
-	--link-color-hover: hsl(195, 48%, 37%);
-
-	--focus-color: hsl(34, 92%, 63%);
-}
-
-@media (prefers-color-scheme: dark) {
+@media print {
 	:root {
-		--background-color: hsl(0, 0%, 0%);
-		
-		--text-color: hsl(0, 0%, 95%);
+		font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
+			"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+			"Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
-		--heading-color: hsl(0, 0%, 90%);
-
-		--link-color: hsl(0, 0%, 100%);
-		--link-color-hover: hsl(175, 90%, 90%);
-
-		--focus-color: hsl(300, 90%, 90%);
+		font-size: 100%;
+		font-weight: 400;
 	}
 }
 
@@ -59,28 +121,27 @@
 }
 
 ::selection {
-  color: var(--background-color);
-  background-color: var(--link-color);
-} 
-
+	color: var(--background-color);
+	background-color: var(--link-color);
+}
 
 body {
-	margin: 0 auto;
-	max-width: 65ch;
-
-	padding: 1rem;
-	padding: calc(1vh + 0.5rem) calc(1vw + 1rem);
+	margin: 0;
 
 	color: hsl(0, 0%, 10%);
 	color: var(--text-color);
-	
+
 	background-color: hsl(0, 0%, 95%);
 	background-color: var(--background-color);
 }
 body > * {
 	padding: 1rem;
-	padding: calc(0.5vh + 0.5rem) calc(1vw + 1rem);
 	margin: 0;
+}
+@media screen {
+	body > * {
+		padding: calc(0.5vh + 0.5rem) calc(1vw + 1rem);
+	}
 }
 
 /* Set up HTML 5 Elements in old browsers */
@@ -96,6 +157,17 @@ details {
 	display: block;
 }
 
+main {
+	padding: 1rem;
+}
+@media screen {
+	main {
+		max-width: 65ch;
+		margin: 0 auto;
+		padding: calc(1vh + 0.5rem) calc(1vw + 1rem);
+	}
+}
+
 /* The owl */
 * + * {
 	margin-top: 1rem;
@@ -103,12 +175,23 @@ details {
 	margin-bottom: 0;
 }
 
-strong, strong a {
+strong,
+strong a {
 	font-weight: 450;
 }
 small {
 	font-weight: 375;
 	font-size: 75%;
+}
+
+abbr {
+	text-decoration: underline dashed;
+
+	text-decoration-line: underline;
+	text-decoration-style: dashed;
+	text-decoration-color: var(--accent-color);
+	text-decoration-thickness: 0.05em;
+	text-underline-offset: 0.1em;
 }
 
 a {
@@ -118,11 +201,13 @@ a {
 	text-decoration-thickness: 0.05em;
 	text-underline-offset: 0.1em;
 
-	transition-property: color, background-color, border-color, text-decoration-color, box-shadow, transform, filter, opacity;
+	transition-property: color, background-color, border-color,
+		text-decoration-color, box-shadow, transform, filter, opacity;
 	transition-duration: 300ms;
 	transition-timing-function: ease-in-out;
 }
-a:hover, a:active {
+a:hover,
+a:active {
 	color: var(--link-color-hover);
 }
 
@@ -132,9 +217,24 @@ a:hover, a:active {
 	}
 }
 
+@media print {
+	a {
+		text-decoration: none;
+	}
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
 	text-decoration-skip-ink: auto;
+}
+
+@media print {
+	a[href]::after {
+		content: "(" attr(href) ")";
+		margin-left: 0.3em;
+		font-weight: 400;
+		text-decoration: none;
+	}
 }
 
 /* Headings */
@@ -148,16 +248,19 @@ h6 {
 	font-weight: 550;
 }
 
-h1, h1 a {
+h1,
+h1 a {
 	font-weight: 800;
 	letter-spacing: 0.01em;
 	font-size: 1.4rem;
 }
-h2, h1 a {
+h2,
+h1 a {
 	font-size: 1.25rem;
 	font-weight: 700;
 }
-h3, h3 a {
+h3,
+h3 a {
 	font-size: 1.15rem;
 	font-weight: 650;
 }
@@ -197,6 +300,23 @@ select {
 	font: inherit;
 }
 
+/* Buttons and button links */
+
+.button {
+	display: inline-block;
+	padding: 0.6em 0.9em;
+	line-height: 1;
+
+	background-color: white;
+
+	border-radius: 4rem;
+}
+.button--trailing-arrow::after {
+	content: ">";
+	margin-left: 0.3em;
+	text-decoration: none;
+}
+
 /* Blur images when they have no alt attribute */
 img:not([alt]) {
 	filter: blur(10px);
@@ -208,7 +328,10 @@ section {
 section + section {
 	margin-top: 4rem;
 }
-
+@media screen {
+	section + section {
+	}
+}
 
 details {
 	padding: 0 0.75rem;
@@ -218,6 +341,11 @@ summary {
 	margin: 0 -0.5rem;
 	font-weight: 500;
 }
+@media print {
+	details:not([open]) {
+		display: none;
+	}
+}
 
 .lead {
 	font-size: 1.15em;
@@ -225,6 +353,17 @@ summary {
 }
 .lead strong {
 	font-weight: 550;
+}
+
+.center {
+	text-align: center;
+}
+
+footer {
+	margin-top: 3rem;
+	text-align: center;
+	font-size: 0.8em;
+	font-weight: 700;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
@@ -248,4 +387,78 @@ summary {
 	padding: 0;
 	border: 0;
 	white-space: nowrap;
+}
+
+/* Fancy header */
+
+.site-header {
+	position: relative;
+
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	justify-content: space-evenly;
+}
+.site-header > * {
+	margin: 0.25rem 0.5rem;
+}
+@media screen {
+	.site-header {
+		padding-top: 1rem;
+		padding-left: 1rem;
+		padding-right: 4vw;
+		padding-bottom: 8vw;
+	}
+	.site-header::after {
+		content: "";
+
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 3vw;
+		bottom: 6vw;
+
+		background-color: hsla(0, 0%, 100%, 0.5);
+
+		border-radius: 0% 0% 10vw 0% / 0% 0% 10vw 0%;
+		box-shadow: 0 0 0 2vw var(--orange), 0 0 0 4vw var(--yellow),
+			0 0 0 6vw var(--green);
+	}
+}
+
+.site-header nav {
+}
+.site-header ul,
+.site-header li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.site-header nav ul {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.site-header nav li {
+	margin: 0.33em;
+}
+
+.site-header a {
+	font-weight: 800;
+}
+
+.site-logo {
+	line-height: 0;
+}
+.site-logo svg {
+	width: calc(30ch + 10vw);
+}
+@media print {
+	.site-logo svg {
+		width: calc(300px);
+	}
 }

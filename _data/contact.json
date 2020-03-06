@@ -1,0 +1,22 @@
+[
+	{
+		"title": "Email",
+		"value": "resume@cory.birdsong.cc",
+		"url": "mailto:resume@cory.birdsong.cc"
+	},
+	{
+		"title": "GitHub",
+		"value": "cbirdsong",
+		"url": "https://github.com/cbirdsong"
+	},
+	{
+		"title": "LinkedIn",
+		"value": "cbirdsong",
+		"url": "https://linkedin.com/in/cbirdsong"
+	},
+	{
+		"title": "Telegram",
+		"value": "cbirdsong",
+		"url": "https://telegram.me/cbirdsong"
+	}
+]

@@ -1,5 +1,8 @@
 <div class="site-logo">
-	<a href="{{ '/' | url }}">{{ metadata.title }}</a>
+	{# <a href="{{ '/' | url }}" aria-label="{{ metadata.title }}"> #}
+	{% include "static/img/name.svg" %}
+	{# </a> #}
 </div>
 
-{% include "components/nav.njk" %}
+{# {% include "components/nav-site.njk" %} #}
+{% include "components/nav-contact.njk" %}

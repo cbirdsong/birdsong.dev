@@ -4,17 +4,17 @@
 	{% include "components/head.njk" %}
 
 	<body>
-		<header>
+		<a href="#main" class="visually-hidden">Skip to main content</a>
+
+		<header class="site-header">
 			{% include "components/header.njk" %}
 		</header>
 
-		<main>
+		<main id="main">
 			{{ layoutContent | safe }}
 		</main>
 
-		<footer>
-			{% include "components/footer.njk" %}
-		</footer>
+		{% include "components/footer.njk" %}
 		
 		{% include "components/js.njk" %}
 
