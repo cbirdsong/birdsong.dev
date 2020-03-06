@@ -26,7 +26,7 @@ I'm always looking for new ways to produce higher quality work more efficiently.
 
 ## I've worked with:
 
-- **Templating languages** (Liquid, Twig and Nunjucks)
+- **Templating languages** (Liquid, Twig, Nunjucks, Smarty)
 - **Git**
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
 - **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)**
@@ -44,7 +44,7 @@ I'm always looking for new ways to produce higher quality work more efficiently.
 - **[Buddy](https://buddy.works)**, for CI/CD and deployment
 - **Shopify**
 - **MailChimp**
-- **WordPress page builders** like WP Bakery and Divi, on legacy projects I inherited _(they are bad)_
+- **WordPress page builders** like WP Bakery and Divi, on legacy projects I inherited
   </details>
 
 <details>
