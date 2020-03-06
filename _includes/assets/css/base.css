@@ -105,7 +105,7 @@
 		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		"Helvetica", "Arial", sans-serif;
 
-	font-size: calc(100% + 1vmin);
+	font-size: calc(110% + 1vw);
 	font-weight: 350;
 	line-height: 1.5;
 }
