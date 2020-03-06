@@ -98,6 +98,6 @@ Bachelor of Arts in Mass Communication (Print Journalism Concentration), Univers
 
 <section class="center" aria-label="More info">
 
-<strong><em><a href="/about/">View about me</em></a></strong>
+<strong><em><a href="/about/">More about me</em></a></strong>
 
 </section>
