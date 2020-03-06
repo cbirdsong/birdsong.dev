@@ -33,6 +33,8 @@
 :root {
 	--background-color: var(--tan);
 
+	--background-tint-transparent: hsla(0, 0%, 100%, 0.5);
+
 	--text-color: var(--brown);
 
 	--accent-color: var(--orange);
@@ -48,6 +50,8 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background-color: var(--brown);
+
+		--background-tint-transparent: hsla(0, 0%, 100%, 0.05);
 
 		--text-color: var(--tan);
 
@@ -423,7 +427,7 @@ footer {
 		right: 3vw;
 		bottom: 6vw;
 
-		background-color: hsla(0, 0%, 100%, 0.1);
+		background-color: var(--background-tint-transparent);
 
 		border-radius: 0% 0% 10vw 0% / 0% 0% 10vw 0%;
 		box-shadow: 0 0 0 2vw var(--orange), 0 0 0 4vw var(--yellow),
