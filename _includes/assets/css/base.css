@@ -393,6 +393,7 @@ footer {
 
 .site-header {
 	position: relative;
+	text-align: center;
 
 	display: flex;
 	flex-flow: row wrap;
@@ -406,7 +407,7 @@ footer {
 @media screen {
 	.site-header {
 		padding-top: 1rem;
-		padding-left: 1rem;
+		padding-left: 0;
 		padding-right: 4vw;
 		padding-bottom: 8vw;
 	}
@@ -444,7 +445,8 @@ footer {
 	justify-content: space-evenly;
 }
 .site-header nav li {
-	margin: 0.33em;
+	margin: 0.2em 0.25em;
+	margin: calc(0.1em + 0.5vw) calc(0.2em + 1vw);
 }
 
 .site-header a {
@@ -456,6 +458,7 @@ footer {
 }
 .site-logo svg {
 	width: calc(30ch + 10vw);
+	max-width: 90%;
 }
 @media print {
 	.site-logo svg {
