@@ -1,41 +1,29 @@
 ---
 title: Résumé
+description: "Cory Birdsong is a front-end web developer that can do a bunch of cool stuff listed on this page. (this is how meta descriptions work, right?)"
 permalink: /resume/
 layout: layouts/page.njk
 ---
 
-<section>
+<section aria-label="Skills">
 
 ## Skills
 
 **Expert**:
 
-- HTML, including templating languages
-- CSS, including Sass / Less
-- WordPress, including [Timber](https://www.upstatement.com/timber/)
-- JavaScript / jQuery (presentational)
+HTML + templating languages, CSS + Sass/Less, JavaScript + jQuery, WordPress + <abbr title="Advanced Custom Fields">[ACF](advancedcustomfields.com/)</abbr> & [Timber](https://www.upstatement.com/timber/)
 
 **Adept**:
 
-- Web accessbility
-- SVG
-- Git
-- [Pattern Lab](https://patternlab.io/)
-- Custom HTML email development
-- Schema.org
-- Google Analytics / Google Tag Manager
+Web accessbility, SVG, Git, [Pattern Lab](https://patternlab.io/), custom HTML email development, Schema.org, Google Analytics / Google Tag Manager, [Eleventy](https://www.11ty.dev)
 
 **Proficient**:
 
-- HubSpot
-- PHP
-- Shopify
-- [Netlify](https://netlify.com)
-- [Eleventy](https://www.11ty.dev)
+PHP, Shopify, HubSpot, [Netlify](https://netlify.com)
 
 </section>
 
-<section>
+<section aria-label="Work">
 
 ## Work
 
@@ -52,7 +40,7 @@ layout: layouts/page.njk
 
 <summary>Older Work</summary>
 
-<p><small>Some of these probably aren't up to my modern standard. They also often use Typekit fonts, which do not work on archive.org.</small></p>
+<p>Some of these probably aren't up to my modern standard. They also often use Typekit fonts, which do not work on archive.org.</p>
 
 <ul>
 {%- for item in work.old %}
@@ -67,7 +55,7 @@ layout: layouts/page.njk
 
 </section>
 
-<section>
+<section aria-label="Experience">
 
 ## Experience
 
@@ -89,15 +77,15 @@ Customized and maintained a fork of Bootstrap to facilitate faster and higher-qu
 
 </section>
 
-<section>
+<section aria-label="Education">
 
 ## Education
 
 Bachelor of Arts in Mass Communication (Print Journalism Concentration), University of Louisiana at Lafayette. <time>2007</time>.
 
 </section>
-<!-- 
-<section>
+
+<section aria-label="Contact">
 
 ## Contact
 
@@ -106,4 +94,4 @@ Bachelor of Arts in Mass Communication (Print Journalism Concentration), Univers
 - [GitHub: cbirdsong](https://github.com/cbirdsong)
 - [LinkedIn: cbirdsong](http://linkedin.com/in/cbirdsong)
 
-</section> -->
+</section>

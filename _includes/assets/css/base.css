@@ -481,6 +481,9 @@ footer {
 
 	--link-color: var(--text-color);
 }
+.site-logo a {
+	display: inline-block;
+}
 
 .site-logo svg {
 	width: calc(30ch + 10vw);

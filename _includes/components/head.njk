@@ -5,6 +5,10 @@
 				&bull;
 				{{ metadata.title }}</title>
 
+		{% if description %}
+				<meta name="description" content="{{description}}">
+		{% endif %}
+
 		{% set css %}
 		{% include "assets/css/base.css" %}
 		{% endset %}
