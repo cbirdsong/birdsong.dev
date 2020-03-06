@@ -1,12 +1,12 @@
 ---
 layout: layouts/home.njk
-title: Home
+title: Hi.
 permalink: /
 ---
 
 <section class="lead" id="intro" aria-label="About Me">
 
-<h1>Hi.</h1>
+<h1>{{title}}</h1>
 
 <p class="lead">I build websites that are <strong>accessible</strong>, <strong>performant</strong>, <strong>responsive</strong>, <strong>user-centric</strong> and <strong>beautiful</strong>.</p>
 
@@ -28,7 +28,7 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 
 ## I've worked with:
 
-- **CSS preprocessors** (Sass and Less)
+- **<abbr title="Cascading Stylesheets">CSS</abbr> preprocessors** (Sass and Less)
 - **Templating languages** (Liquid, Twig, Nunjucks, Smarty)
 - **Git**
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
@@ -43,35 +43,37 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 - **Photoshop**, **Illustrator** and **Sketch**
 - **Google Lighthouse** and **WebPageTest**
 - **Schema.org** and other similar markup methods
-- **Cloudflare**, for doing edge SEO optimization via Cloudflare Workers
-- **[Buddy](https://buddy.works)**, for CI/CD and deployment
+- **Cloudflare**, for doing edge <abbr title="search engine optimization">SEO</abbr> optimization via Cloudflare Workers
+- **[Buddy](https://buddy.works)**, for <abbr title="continuous integration and delivery">CI/CD</abbr> and deployment
 - **Shopify**
 - **MailChimp**
-- **WordPress page builders** like WP Bakery and Divi, on legacy projects I inherited
+- **[Netlify](https://netlify.com)**
+- **[Eleventy](https://www.11ty.dev)**
+- **[Parcel](https://parceljs.org/)**
   </details>
 
 <details>
+
 <summary>I'd love to learn more about:</summary>
 
-- **[Eleventy](https://www.11ty.dev)**
-- **[Netlify](https://netlify.com)**
 - **Web components**
 - **[Svelte](https://svelte.dev/)** and **[Sapper](https://sapper.svelte.dev/)**
 - **[Craft CMS](https://www.craftcms.com/)**
-  </details>
+
+</details>
 
 </section>
 
 <section id="work" aria-label="Sample Work">
 
-## Sample Work
+## I've made:
 
 <ul>
 {%- for item in work.featured -%}
-	<li>
-<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}<span class="visually-hidden">(opens in new window)</span></a><span class="icon icon-new-window" aria-hidden="true">&#8599;</span>
+<li>
+<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a><span class="icon icon-new-window" title="(opens in new window)" aria-hidden="true">&#8599;</span>
 {%- if item.award -%} <small>(won {{ item.award.name }}, <time>{{ item.award.year }}</time>)</small>{%- endif -%}
-	</li>
+</li>
 {%- endfor -%}
 </ul>
 
@@ -83,10 +85,10 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 
 <ul>
 {%- for item in work.old %}
-	<li>
-<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}<span class="visually-hidden">(opens in new window)</span></a><span class="icon icon-new-window" aria-hidden="true">&#8599;</span>
+<li>
+<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a><span class="icon icon-new-window" title="(opens in new window)" aria-hidden="true">&#8599;</span>
 {%- if item.award -%} <small>(won {{ item.award.name }}, <time>{{ item.award.year }}</time>)</small>{%- endif -%}
-	</li>
+</li>
 {%- endfor %}
 </ul>
 

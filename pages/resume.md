@@ -11,15 +11,15 @@ layout: layouts/page.njk
 
 **Expert**:
 
-HTML + templating languages, CSS + Sass/Less, JavaScript + jQuery, WordPress + <abbr title="Advanced Custom Fields">[ACF](advancedcustomfields.com/)</abbr> & [Timber](https://www.upstatement.com/timber/)
+<abbr title="HyperText Markup Language">HTML</abbr> + templating languages, <abbr title="Cascading Stylesheets">CSS</abbr> + Sass/Less, JavaScript + jQuery, WordPress + <abbr title="Advanced Custom Fields">[ACF](advancedcustomfields.com/)</abbr> & [Timber](https://www.upstatement.com/timber/)
 
 **Adept**:
 
-Web accessbility, SVG, Git, [Pattern Lab](https://patternlab.io/), custom HTML email development, Schema.org, Google Analytics / Google Tag Manager, [Eleventy](https://www.11ty.dev)
+Web accessbility, <abbr title="Scalable Vector Graphics">SVG</abbr>, Git, [Pattern Lab](https://patternlab.io/), custom HTML email development, Schema.org, Google Analytics / Google Tag Manager, [Eleventy](https://www.11ty.dev)
 
 **Proficient**:
 
-PHP, Shopify, HubSpot, [Netlify](https://netlify.com)
+PHP, Shopify, HubSpot, [Netlify](https://netlify.com), [Parcel](https://parceljs.org/)
 
 </section>
 
@@ -29,10 +29,10 @@ PHP, Shopify, HubSpot, [Netlify](https://netlify.com)
 
 <ul>
 {%- for item in work.featured %}
-	<li>
-<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}<span class="visually-hidden">(opens in new window)</span></a><span class="icon icon-new-window" aria-hidden="true">&#8599;</span>
+<li>
+<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a><span class="icon icon-new-window" title="(opens in new window)" aria-hidden="true">&#8599;</span>
 {%- if item.award -%} <small>(won {{ item.award.name }}, <time>{{ item.award.year }}</time>)</small>{%- endif -%}
-	</li>
+</li>
 {%- endfor %}
 </ul>
 
@@ -44,10 +44,10 @@ PHP, Shopify, HubSpot, [Netlify](https://netlify.com)
 
 <ul>
 {%- for item in work.old %}
-	<li>
-<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}<span class="visually-hidden">(opens in new window)</span></a><span class="icon icon-new-window" aria-hidden="true">&#8599;</span>
+<li>
+<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a><span class="icon icon-new-window" title="(opens in new window)" aria-hidden="true">&#8599;</span>
 {%- if item.award -%} <small>(won {{ item.award.name }}, <time>{{ item.award.year }}</time>)</small>{%- endif -%}
-	</li>
+</li>
 {%- endfor %}
 </ul>
 
@@ -93,5 +93,11 @@ Bachelor of Arts in Mass Communication (Print Journalism Concentration), Univers
 - [Telegram: cbirdsong](https://telegram.me/cbirdsong)
 - [GitHub: cbirdsong](https://github.com/cbirdsong)
 - [LinkedIn: cbirdsong](http://linkedin.com/in/cbirdsong)
+
+</section>
+
+<section class="center" aria-label="More info">
+
+<strong><em><a href="/about/">View about me</em></a></strong>
 
 </section>

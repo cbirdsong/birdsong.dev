@@ -9,6 +9,10 @@
 				<meta name="description" content="{{description}}">
 		{% endif %}
 
+		{% if robots %}
+				<meta name="robots" content="{{robots}}">
+		{% endif %}
+
 		{% set css %}
 		{% include "assets/css/base.css" %}
 		{% endset %}
