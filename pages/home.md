@@ -6,15 +6,15 @@ permalink: /
 
 <section class="lead" id="intro" aria-label="About Me">
 
-<h1 class="visually-hidden">{{ metadata.title }}</h1>
+<h1>Hi.</h1>
 
 <p class="lead">I build websites that are <strong>accessible</strong>, <strong>performant</strong>, <strong>responsive</strong>, <strong>user-centric</strong> and <strong>beautiful</strong>.</p>
 
-I have a keen eye for detail and love laboring over sites to get them _just right_.
-
 I have extensive experience collaborating with designers to strike the perfect balance between form and function.
 
-I'm love learning about new capabilities in browsers and figuring out how to employ them as progressive enhancement.
+I love learning about new capabilities in browsers and figuring out how to employ them as progressive enhancement.
+
+I have a keen eye for detail and love laboring over sites to get them _just right_.
 
 </section>
 
