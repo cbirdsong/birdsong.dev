@@ -334,10 +334,6 @@ section {
 section + section {
 	margin-top: 4rem;
 }
-@media screen {
-	section + section {
-	}
-}
 
 details {
 	padding: 0 0.75rem;
