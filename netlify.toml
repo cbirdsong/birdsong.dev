@@ -9,7 +9,7 @@
 
 [[redirects]]
   from = "/about/"
-  to = "/:splat"
+  to = "/"
 	status = 302
 
 # The default HTTP status code is 301, but you can define a different one e.g.
