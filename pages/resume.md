@@ -82,14 +82,6 @@ Implemented and extended designs originating in Photoshop or Illustrator. Worked
 
 Customized and maintained a fork of Bootstrap to facilitate faster and higher-quality site production using Adobe Business Catalyst and the Liquid markup language. Became familiar with WordPress and its ecosystem.
 
-### Freelance <small>(<time>2009</time>-<time>2011</time>)</small>
-
-Designed and built websites using modern web technologies as flat HTML or on top of lightweight CMSes like [Perch](https://grabaperch.com).
-
-### Bizzuka <small>(<time>2007</time>-<time>2008</time>)</small>
-
-Built table-based websites on a proprietary CMS.
-
 </section>
 
 <section>
