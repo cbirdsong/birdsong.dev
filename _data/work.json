@@ -1,0 +1,66 @@
+{
+	"featured": [
+		{
+			"name": "Eye on 2020",
+			"url": "https://2020.bbrcreative.com",
+			"award": {
+				"name": "Best In Show Addy",
+				"year": "2020"
+			}
+		},
+		{
+			"name": "The Current",
+			"url": "https://thecurrentla.com"
+		},
+		{
+			"name": "Food Marketing Now",
+			"url": "https://foodmarketingnow.com",
+			"award": {
+				"name": "Silver Addy",
+				"year": "2020"
+			}
+		},
+		{
+			"name": "Lafayette General Ortho",
+			"url": "https://lafayettegeneralortho.com",
+			"award": {
+				"name": "Silver Addy",
+				"year": "2020"
+			}
+		},
+		{
+			"name": "Bye to Banks",
+			"url": "https://byetobanks.com"
+		}
+	],
+	"old": [
+		{
+			"name": "RES",
+			"url": "https://web.archive.org/web/20190627172805/https://res.us/"
+		},
+		{
+			"name": "The Current",
+			"url": "https://thecurrentla.com"
+		},
+		{
+			"name": "Downtown Lafayette",
+			"url": "http://web.archive.org/web/20150315021728/http://www.downtownlafayette.org/",
+			"award": {
+				"name": "Gold & Silver Addy",
+				"year": "2015"
+			}
+		},
+		{
+			"name": "Wide Web Marketing",
+			"url": "https://web.archive.org/web/20171021221327/https://www.widewebmarketing.com/"
+		},
+		{
+			"name": "Burgersmith",
+			"url": "https://web.archive.org/web/20171012145645/http://www.burgersmith.com/"
+		},
+		{
+			"name": "New Mexican Kennels",
+			"url": "https://web.archive.org/web/20170930172454/http://www.newmexicankennels.com/"
+		}
+	]
+}

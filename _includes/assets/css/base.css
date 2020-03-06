@@ -105,9 +105,11 @@
 		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		"Helvetica", "Arial", sans-serif;
 
-	font-size: calc(110% + 1vw);
-	font-weight: 350;
+	font-size: 110%;
+	font-size: calc(100% + 1vw);
 	line-height: 1.5;
+
+	font-weight: 350;
 }
 @media print {
 	:root {
@@ -181,25 +183,6 @@ main {
 	margin-bottom: 0;
 }
 
-strong,
-strong a {
-	font-weight: 450;
-}
-small {
-	font-weight: 375;
-	font-size: 75%;
-}
-
-abbr {
-	text-decoration: underline dashed;
-
-	text-decoration-line: underline;
-	text-decoration-style: dashed;
-	text-decoration-color: var(--accent-color);
-	text-decoration-thickness: 0.05em;
-	text-underline-offset: 0.1em;
-}
-
 a {
 	color: var(--link-color);
 	font-weight: 375;
@@ -234,6 +217,22 @@ a:not([class]) {
 	text-decoration-skip-ink: auto;
 }
 
+a + .icon {
+	margin: 0 0.2em 0 0;
+	color: var(--link-color-hover);
+}
+
+.icon {
+	display: inline-block;
+	font-size: 1em;
+	line-height: 1;
+
+	transform-origin: center center;
+}
+.icon-new-window {
+	transform: translateX(0em) translateY(0.1667em);
+}
+
 @media print {
 	a[href]::after {
 		content: "(" attr(href) ")";
@@ -241,6 +240,28 @@ a:not([class]) {
 		font-weight: 400;
 		text-decoration: none;
 	}
+}
+
+strong,
+strong a {
+	font-weight: 450;
+}
+em {
+	font-style: italic;
+}
+small {
+	font-weight: 375;
+	font-size: 75%;
+}
+
+abbr {
+	text-decoration: underline dashed;
+
+	text-decoration-line: underline;
+	text-decoration-style: dashed;
+	text-decoration-color: var(--accent-color);
+	text-decoration-thickness: 0.05em;
+	text-underline-offset: 0.1em;
 }
 
 /* Headings */
@@ -457,7 +478,10 @@ footer {
 
 .site-logo {
 	line-height: 0;
+
+	--link-color: var(--text-color);
 }
+
 .site-logo svg {
 	width: calc(30ch + 10vw);
 	max-width: 90%;

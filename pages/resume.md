@@ -39,11 +39,14 @@ layout: layouts/page.njk
 
 ## Work
 
-- [Eye on 2020](https://2020.bbrcreative.com) <small>(won Best In Show Addy, <time>2020</time>)</small>
-- [The Current](https://thecurrentla.com/)
-- [Food Marketing Now](https://foodmarketingnow.com/) <small>(won Silver Addy, <time>2020</time>)</small>
-- [Lafayette General Ortho](https://lafayettegeneralortho.com/) <small>(won Silver Addy, <time>2020</time>)</small>
-- [Bye to Banks](https://byetobanks.com/)
+<ul>
+{%- for item in work.featured %}
+	<li>
+<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}<span class="visually-hidden">(opens in new window)</span></a><span class="icon icon-new-window" aria-hidden="true">&#8599;</span>
+{%- if item.award -%} <small>(won {{ item.award.name }}, <time>{{ item.award.year }}</time>)</small>{%- endif -%}
+	</li>
+{%- endfor %}
+</ul>
 
 <details>
 
@@ -51,12 +54,14 @@ layout: layouts/page.njk
 
 <p><small>Some of these probably aren't up to my modern standard. They also often use Typekit fonts, which do not work on archive.org.</small></p>
 
-- [RES](https://web.archive.org/web/20190627172805/https://res.us/)
-- [2m-tek](https://web.archive.org/web/20150423202347/http://2m-tek.com)
-- [Downtown Lafayette](http://web.archive.org/web/20150315021728/http://www.downtownlafayette.org/) <small>(won Gold/Silver Addy, 2015)</small>
-- [Wide Web Marketing](https://web.archive.org/web/20171021221327/https://www.widewebmarketing.com/)
-- [Burgersmith](https://web.archive.org/web/20171012145645/http://www.burgersmith.com/)
-- [New Mexican Kennels](https://web.archive.org/web/20170930172454/http://www.newmexicankennels.com/)
+<ul>
+{%- for item in work.old %}
+	<li>
+<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}<span class="visually-hidden">(opens in new window)</span></a><span class="icon icon-new-window" aria-hidden="true">&#8599;</span>
+{%- if item.award -%} <small>(won {{ item.award.name }}, <time>{{ item.award.year }}</time>)</small>{%- endif -%}
+	</li>
+{%- endfor %}
+</ul>
 
 </details>
 
