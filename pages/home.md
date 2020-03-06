@@ -4,7 +4,9 @@ title: Home
 permalink: /
 ---
 
-<section class="lead" id="intro">
+<section class="lead" id="intro" aria-label="About Me">
+
+<h1 class="visually-hidden">{{ metadata.title }}</h1>
 
 <p class="lead">I build websites that are <strong>accessible</strong>, <strong>performant</strong>, <strong>responsive</strong>, <strong>user-centric</strong> and <strong>beautiful</strong>.</p>
 
@@ -12,20 +14,21 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 
 I have extensive experience collaborating with designers to strike the perfect balance between form and function.
 
-I'm always looking for new ways to produce higher quality work more efficiently.
+I'm love learning about new capabilities in browsers and figuring out how to employ them as progressive enhancement.
 
 </section>
 
-<section>
+<section aria-label="Skills">
 
 ## I write:
 
 - accessible and semantic **<abbr title="HyperText Markup Language">HTML</abbr>**
-- reusable and performant **<abbr title="Cascading Stylesheets">CSS</abbr>**, Sass and Less
-- just enough **JavaScript**, applied as progressive enhancement
+- reusable and performant **<abbr title="Cascading Stylesheets">CSS</abbr>**
+- just enough **JavaScript**
 
 ## I've worked with:
 
+- **CSS preprocessors** (Sass and Less)
 - **Templating languages** (Liquid, Twig, Nunjucks, Smarty)
 - **Git**
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
@@ -59,7 +62,7 @@ I'm always looking for new ways to produce higher quality work more efficiently.
 
 </section>
 
-<section id="work">
+<section id="work" aria-label="Sample Work">
 
 ## Sample Work
 
@@ -86,7 +89,7 @@ I'm always looking for new ways to produce higher quality work more efficiently.
 
 </section>
 
-<section class="center">
+<section class="center" aria-label="More info">
 
 <strong><em><a href="/resume/">View full résumé</em></a></strong>
 
