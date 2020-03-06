@@ -88,6 +88,6 @@ I'm always looking for new ways to produce higher quality work more efficiently.
 
 <section class="center">
 
-<strong><em><a href="/resume/">View my formal resume</em></a></strong>
+<strong><em><a href="/resume/">View full résumé</em></a></strong>
 
 </section>
