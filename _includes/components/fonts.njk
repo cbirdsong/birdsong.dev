@@ -6,11 +6,3 @@
 <style>
 		{{fonts_css | cssmin | safe}}
 </style>
-
-{% set fonts_js %}
-{% include "assets/js/fonts.js" %}
-{% endset %}
-<script>
-		{{ fonts_js | safe }}
-</script>
-{# <script src="/assets/js/fonts.js"></script> #}

@@ -112,15 +112,14 @@
 }
 @media screen {
 	:root {
+		font-family: "Dosis", BlinkMacSystemFont, -apple-system, "Segoe UI",
+			"Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+			"Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
 		font-size: 110%;
 		font-size: calc(100% + 1vw);
 
 		font-weight: 350;
-	}
-	:root.fonts-loaded {
-		font-family: "Dosis", BlinkMacSystemFont, -apple-system, "Segoe UI",
-			"Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-			"Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	}
 }
 
