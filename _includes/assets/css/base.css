@@ -7,7 +7,7 @@
 	/* Day */
 	--brown: hsl(29, 67%, 15%);
 
-	--tan: hsl(35, 43%, 90%);
+	--tan: hsl(35, 43%, 88%);
 
 	--orange: hsl(14, 71%, 47%);
 
@@ -18,15 +18,11 @@
 	--yellow: hsl(34, 92%, 63%);
 
 	/* Night */
-	--tan-light: hsl(35, 43%, 95%);
+	--orange-light: hsl(14, 71%, 59%);
 
-	--orange-light: hsl(14, 71%, 80%);
+	--green-light: hsl(76, 42%, 49%);
 
-	--green-light: hsl(76, 42%, 78%);
-
-	--blue-light: hsl(195, 48%, 77%);
-
-	--yellow-light: hsl(34, 92%, 82%);
+	--blue-light: hsl(195, 48%, 48%);
 }
 
 /* Set colors */
@@ -51,18 +47,19 @@
 	:root {
 		--background-color: var(--brown);
 
-		--background-tint-transparent: hsla(0, 0%, 0%, 0.05);
+		--background-tint-transparent: hsla(0, 0%, 0%, 0.1);
 
 		--text-color: var(--tan);
 
-		--accent-color: var(--orange-light);
+		--accent-color: var(--yellow);
 
-		--heading-color: var(--orange-light);
+		--heading-color: var(--yellow);
 
 		--link-color: var(--green-light);
+
 		--link-color-hover: var(--blue-light);
 
-		--focus-color: var(--yellow-light);
+		--focus-color: var(--orange-light);
 	}
 }
 
@@ -199,20 +196,34 @@ main * + * {
 }
 
 a {
-	color: var(--link-color);
+	color: hsl(76, 42%, 38%);
 	font-weight: 375;
 
 	text-decoration-thickness: 0.05em;
 	text-underline-offset: 0.1em;
+	text-decoration-skip-ink: auto;
 
 	transition-property: color, background-color, border-color,
 		text-decoration-color, box-shadow, transform, filter, opacity;
 	transition-duration: 300ms;
 	transition-timing-function: ease-in-out;
 }
+a:visited {
+	filter: grayscale(10%);
+}
 a:hover,
 a:active {
-	color: var(--link-color-hover);
+	color: hsl(195, 48%, 37%);
+}
+
+@supports (color: var(--link-color)) {
+	a {
+		color: var(--link-color);
+	}
+	a:hover,
+	a:active {
+		color: var(--link-color-hover);
+	}
 }
 
 @supports (text-decoration-color: var(--link-color-hover)) {
@@ -227,10 +238,16 @@ a:active {
 	}
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-	text-decoration-skip-ink: auto;
+@media print {
+	a[href]::after {
+		content: "(" attr(href) ")";
+		margin-left: 0.3em;
+		font-weight: 400;
+		text-decoration: none;
+	}
 }
+
+/* Links with icons */
 
 a + .icon {
 	margin: 0 0.2em 0 0;
@@ -247,13 +264,9 @@ a + .icon {
 .icon-new-window {
 	transform: translateX(0em) translateY(0.1667em);
 }
-
 @media print {
-	a[href]::after {
-		content: "(" attr(href) ")";
-		margin-left: 0.3em;
-		font-weight: 400;
-		text-decoration: none;
+	.icon-new-window {
+		display: none;
 	}
 }
 
@@ -372,14 +385,24 @@ details {
 	padding: 0 0.75rem;
 	font-size: 0.9em;
 }
-summary {
-	margin: 0 -0.5rem;
-	font-weight: 500;
-}
 @media print {
 	details:not([open]) {
 		display: none;
 	}
+}
+
+summary {
+	margin: 0 -0.5rem;
+	font-weight: 500;
+}
+
+summary:hover,
+summary:active {
+	outline: 0.25em solid var(--background-tint-transparent);
+	background-color: var(--background-tint-transparent);
+
+	cursor: pointer;
+	cursor: help;
 }
 
 .lead {
