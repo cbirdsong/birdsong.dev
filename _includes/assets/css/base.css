@@ -148,6 +148,11 @@ body {
 	background-color: hsl(0, 0%, 95%);
 	background-color: var(--background-color);
 }
+@supports(padding-bottom: env(safe-area-inset-bottom);) {
+	body {
+			padding-bottom: env(safe-area-inset-bottom);
+	}
+}
 body > * {
 	padding: 1rem;
 	margin: 0;
@@ -155,6 +160,8 @@ body > * {
 @media screen {
 	body > * {
 		padding: calc(0.5vh + 0.5rem) calc(1vw + 1rem);
+		padding-left: calc(1vw + 1rem + env(safe-area-inset-left));
+		padding-right: calc(1vw + 1rem + env(safe-area-inset-right));
 	}
 }
 
@@ -439,6 +446,9 @@ footer {
 		padding-left: 0;
 		padding-right: 4vw;
 		padding-bottom: 8vw;
+
+		padding-left: env(safe-area-inset-left);
+		padding-right: calc(4vw + env(safe-area-inset-right));
 	}
 	.site-header::after {
 		content: "";
