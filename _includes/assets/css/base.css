@@ -51,7 +51,7 @@
 	:root {
 		--background-color: var(--brown);
 
-		--background-tint-transparent: hsla(0, 0%, 100%, 0.05);
+		--background-tint-transparent: hsla(0, 0%, 0%, 0.05);
 
 		--text-color: var(--tan);
 
