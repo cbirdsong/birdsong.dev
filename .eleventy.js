@@ -67,6 +67,8 @@ module.exports = function(eleventyConfig) {
 	// Don't process folders with static assets e.g. images
 	eleventyConfig.addPassthroughCopy("_redirects");
 	eleventyConfig.addPassthroughCopy("favicon.ico");
+	eleventyConfig.addPassthroughCopy("favicon.png");
+	eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
 	eleventyConfig.addPassthroughCopy("static/img");
 	eleventyConfig.addPassthroughCopy("static/fonts");
 	eleventyConfig.addPassthroughCopy("admin");
