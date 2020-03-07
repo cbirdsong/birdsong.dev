@@ -92,7 +92,7 @@
 	position: relative;
 }
 
-/* Set core body defaults */
+/* Set root defaults */
 :root {
 	text-rendering: optimizeLegibility;
 
@@ -193,9 +193,8 @@ main {
 }
 
 /* The owl */
-* + * {
+main * + * {
 	margin-top: 1rem;
-	margin-top: var(--flow-spacing, 1rem);
 	margin-bottom: 0;
 }
 
@@ -310,13 +309,10 @@ h3 a {
 
 h1,
 h2 {
-	--flow-spacing: 2.25rem;
-
 	color: var(--heading-color);
 }
 h3,
 h4 {
-	--flow-spacing: 1.5rem;
 }
 
 /* Reasonable list defaults */
