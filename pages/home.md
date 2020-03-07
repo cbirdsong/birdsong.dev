@@ -1,12 +1,11 @@
 ---
 layout: layouts/home.njk
-title: Hi.
 permalink: /
 ---
 
 <section class="lead" id="intro" aria-label="About Me">
 
-<h1>{{title}}</h1>
+<h1>Hi.</h1>
 
 <p class="lead">I build websites that are <strong>accessible</strong>, <strong>performant</strong>, <strong>responsive</strong>, <strong>user-centric</strong> and <strong>beautiful</strong>.</p>
 
