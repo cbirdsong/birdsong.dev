@@ -13,14 +13,14 @@
 				<meta name="robots" content="{{robots}}">
 		{% endif %}
 
+		{% block fonts %}
+				{% include "components/fonts.njk" %}
+		{% endblock %}
+
 		{% set css %}
 		{% include "assets/css/base.css" %}
 		{% endset %}
 		<style>
 				{{css | cssmin | safe}}
 		</style>
-
-		{% block fonts %}
-				{% include "components/fonts.njk" %}
-		{% endblock %}
 </head>

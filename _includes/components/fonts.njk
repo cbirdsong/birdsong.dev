@@ -1,23 +1,16 @@
 <link rel="preload" href="/static/fonts/Dosis.woff2" as="font" type="font/woff2">
 
+{% set fonts_css %}
+{% include "assets/css/fonts.css" %}
+{% endset %}
 <style>
-@font-face {
-	font-family: Dosis;
-	src: url(/static/fonts/Dosis.woff2) format("woff2");
-	font-style: normal;
-	font-weight: 200 800;
-	font-display: swap;
-}
+		{{fonts_css | cssmin | safe}}
 </style>
 
-{# <script>
-if( "fonts" in document ) {
-    var regular = new FontFace("Dosis", "url(/static/fonts/Dosis.woff2) format('woff2')");
-
-    Promise.all([ regular.load() ]).then(function(fonts) {
-        fonts.forEach(function(font) {
-            document.fonts.add(font);
-        });
-    });
-}
-</script> #}
+{% set fonts_js %}
+{% include "assets/js/fonts.js" %}
+{% endset %}
+<script>
+		{{ fonts_js | safe }}
+</script>
+{# <script src="/assets/js/fonts.js"></script> #}
