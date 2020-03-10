@@ -1,6 +1,10 @@
 ---
+description: "Cory Birdsong is a front-end web developer that has given you one ticket (🎟) to see if Google renders emoji inside meta descriptions."
 layout: layouts/home.njk
 permalink: /
+eleventyNavigation:
+  key: About
+  order: 1
 ---
 
 <section class="lead" id="intro" aria-label="About Me">
@@ -22,7 +26,7 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 ## I write:
 
 - accessible and semantic **<abbr title="HyperText Markup Language">HTML</abbr>**
-- reusable and performant **<abbr title="Cascading Stylesheets">CSS</abbr>**
+- reusable and resilient **<abbr title="Cascading Stylesheets">CSS</abbr>**
 - just enough **JavaScript**
 
 ## I've worked with:
@@ -92,11 +96,5 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 </ul>
 
 </details>
-
-</section>
-
-<section class="center" aria-label="More info">
-
-<strong><em><a href="/resume/">View full résumé</em></a></strong>
 
 </section>

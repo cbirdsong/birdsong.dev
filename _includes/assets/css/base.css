@@ -210,7 +210,7 @@ main {
 article {
 }
 article + article {
-	margin-top: 3rem;
+	/* --flow-spacing: 3rem; */
 }
 aside {
 	font-size: 0.9em;
@@ -364,6 +364,15 @@ li ol,
 li dl {
 	margin-top: 0.25em;
 	margin-bottom: 0.25em;
+}
+
+@counter-style circles {
+	system: cyclic;
+	symbols: "\002609";
+	suffix: "\00205F ";
+}
+ul {
+	list-style-type: circles;
 }
 li + li {
 	margin-top: 0.25em;
@@ -564,6 +573,24 @@ footer {
 	.site-logo svg {
 		width: calc(300px);
 	}
+}
+
+.nav-contact,
+.nav-contact ul {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+}
+.nav-contact > * {
+	margin: 0em;
+}
+.nav-contact ul {
+	list-style-position: inside;
+	list-style-type: none;
+}
+.nav-contact li {
+	margin: 0.25em 0.5em;
 }
 
 /* Animations */

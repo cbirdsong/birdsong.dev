@@ -3,6 +3,9 @@ title: Résumé
 description: "Cory Birdsong is a front-end web developer that can do a bunch of cool stuff listed on this page. (this is how meta descriptions work, right?)"
 permalink: /resume/
 layout: layouts/page.njk
+eleventyNavigation:
+  key: Résumé
+  order: 10
 ---
 
 <section aria-label="Skills">
@@ -89,15 +92,13 @@ Bachelor of Arts in Mass Communication (Print Journalism Concentration), Univers
 
 ## Contact
 
-- [Email: resume@cory.birdsong.cc](mailto:resume@cory.birdsong.cc)
-- [Telegram: cbirdsong](https://telegram.me/cbirdsong)
-- [GitHub: cbirdsong](https://github.com/cbirdsong)
-- [LinkedIn: cbirdsong](http://linkedin.com/in/cbirdsong)
+- Phone: (985) 570-3709
+- Email: resume@cory.birdsong.cc
 
 </section>
 
 <section class="center" aria-label="More info">
 
-<strong><em><a href="/about/">More about me</em></a></strong>
+<strong><em><a href="/about/">More about me</a></em></strong>
 
 </section>

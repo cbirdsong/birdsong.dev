@@ -1,9 +1,10 @@
-<nav>
+<nav class="nav-contact" aria-label="Contact">
+		<p>Contact:</p>
 		{% set navPages = contact %}
 		<ul>
-				{%- for entry in navPages %}
-						<li>
-								<a href="{{ entry.url | url }}">{{ entry.title }}</a>
+				{%- for item in navPages %}
+						<li {% if item.icon %} data-icon="{{ item.icon }}" {% endif %}>
+								<a href="{{ item.href | url }}">{{ item.title }}</a>
 						</li>
 				{%- endfor %}
 		</ul>
