@@ -132,13 +132,13 @@
 }
 
 :focus {
+	outline-width: 0.15em;
+	outline-style: dashed;
 	outline-color: var(--focus-color);
 }
 @supports (box-shadow: 0 0 0 0.15em var(--focus-color)) {
 	:focus {
-		outline-color: transparent;
 		outline-width: 0;
-		outline-style: none;
 		box-shadow: 0 0 0 0.15em var(--focus-color);
 	}
 }
@@ -224,7 +224,7 @@ a {
 	text-underline-offset: 0.1em;
 	text-decoration-skip-ink: auto;
 
-	transition-property: color, background-color, border-color,
+	transition-property: color, background-color, border-color, outline-color,
 		text-decoration-color, box-shadow, transform, filter, opacity;
 	transition-duration: 300ms;
 	transition-timing-function: ease-in-out;
@@ -418,12 +418,17 @@ details {
 
 summary {
 	margin: 0 -0.5rem;
+	padding: 0 0.25rem;
 	font-weight: 500;
+
+	transition-property: color, background-color, border-color, outline-color,
+		text-decoration-color, box-shadow, transform, filter, opacity;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in-out;
 }
 
 summary:hover,
 summary:active {
-	outline: 0.25em solid var(--background-tint-transparent);
 	background-color: var(--background-tint-transparent);
 
 	cursor: pointer;
