@@ -34,12 +34,12 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 - **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)**
 - **[Pattern Lab](https://patternlab.io/)**, building pattern libraries for design systems
 - **HubSpot**, building custom landing pages and email templates, customizing form embeds
-- **Google Analytics** and **Google Tag Manager**, implemented as performantly as possible
 
 <details>
 <summary>I've also worked with:</summary>
 
 - **Photoshop**, **Illustrator** and **Sketch**
+- **Google Analytics** and **Google Tag Manager**, implemented as performantly as possible
 - **Google Lighthouse** and **WebPageTest**
 - **Schema.org** and other similar markup methods
 - **Cloudflare**, for doing edge <abbr title="search engine optimization">SEO</abbr> optimization via Cloudflare Workers
@@ -49,7 +49,7 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 - **[Netlify](https://netlify.com)**
 - **[Eleventy](https://www.11ty.dev)**
 - **[Parcel](https://parceljs.org/)**
-  </details>
+</details>
 
 <details>
 
