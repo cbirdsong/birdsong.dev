@@ -33,7 +33,7 @@
 
 	--text-color: var(--brown);
 
-	--accent-color: var(--orange);
+	--accent-color: var(--blue);
 
 	--heading-color: var(--orange);
 
@@ -69,7 +69,7 @@
 
 		--text-color: var(--black);
 
-		--accent-color: var(--black);
+		--accent-color: var(--gray-dark);
 
 		--heading-color: var(--black);
 
