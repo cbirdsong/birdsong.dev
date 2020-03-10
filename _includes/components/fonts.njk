@@ -1,8 +1,11 @@
 <link rel="preload" href="/static/fonts/Dosis.woff2" as="font" type="font/woff2" crossorigin="crossorigin">
 
-{% set fonts_css %}
-{% include "assets/css/fonts.css" %}
-{% endset %}
 <style>
-		{{fonts_css | cssmin | safe}}
+		@font-face {
+				font-family: "Dosis";
+				src: url("/static/fonts/Dosis.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 200 800;
+				font-display: swap;
+		}
 </style>
