@@ -67,7 +67,7 @@ Helped (re)launch and run a WordPress-powered non-profit news organization. Cust
 
 Use modern web technologies to accessibly implement and extend designs. Collaborated with designers to make sites beautiful, accessible and user-friendly. Built a landing page template system leveraging CSS custom properties from scratch.
 
-Maintained and improved existing WordPress sites. Worked to optimize existing sites for performance. Built custom HTML email templates in HubSpot.
+Worked with clients to maintains and improve their existing WordPress sites. Audited and optimized existing sites for performance. Built custom HTML email templates in HubSpot.
 
 ### [Wide Web Marketing](http://web.archive.org/web/20171021221327/https://www.widewebmarketing.com/) <small>(<time>2010</time>-<time>2018</time>)</small>
 
