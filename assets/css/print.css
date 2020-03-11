@@ -1,0 +1,42 @@
+:root {
+	--background-color: transparent;
+
+	--text-color: var(--black);
+
+	--accent-color: var(--gray-dark);
+
+	--heading-color: var(--black);
+
+	--link-color: var(--gray-dark);
+
+	--link-color-hover: var(--gray-dark);
+
+	--focus-color: var(--gray-light);
+
+	font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		"Helvetica", "Arial", sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+a[href]::after {
+	content: "(" attr(href) ")";
+	margin-left: 0.3em;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+details:not([open]) {
+	/* this isn't optimal but I can't figure out a way to force them open via CSS */
+	display: none;
+}
+
+.site-logo svg {
+	width: 300px;
+}
+
+.site-logo a:after {
+	content: none;
+}

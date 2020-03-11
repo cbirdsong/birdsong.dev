@@ -2,7 +2,7 @@
 title: Résumé
 description: "Cory Birdsong is a front-end web developer that can do a bunch of cool stuff listed on this page. (this is how meta descriptions work, right?)"
 permalink: /resume/
-layout: layouts/page.njk
+layout: page.njk
 eleventyNavigation:
   key: Résumé
   order: 10
@@ -22,7 +22,7 @@ Web accessbility, <abbr title="Scalable Vector Graphics">SVG</abbr>, Git, [Patte
 
 **Proficient**:
 
-PHP, Shopify, HubSpot, [Netlify](https://netlify.com), [Parcel](https://parceljs.org/)
+PHP, Shopify, HubSpot, [Netlify](https://netlify.com), npm, [Parcel](https://parceljs.org/)
 
 </section>
 

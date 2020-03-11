@@ -1,0 +1,356 @@
+/* Global position / box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	position: relative;
+}
+
+/* Set root defaults */
+:root {
+	text-rendering: optimizeLegibility;
+
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+
+	scroll-behavior: smooth;
+
+	font-family: "Dosis", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		"Helvetica", "Arial", sans-serif;
+	font-synthesis: style;
+
+	font-size: 120%;
+	line-height: 1.5;
+
+	font-weight: 350;
+}
+@supports (font-size: calc(100% + 1vw)) {
+	@media screen {
+		:root {
+			font-size: calc(100% + 1vw);
+		}
+	}
+}
+
+:focus {
+	outline: 0.1em solid currentColor;
+
+	outline-width: 0.1em;
+	outline-offset: 0.05em;
+	outline-style: dashed;
+	outline-color: var(--focus-color);
+}
+
+::selection {
+	color: var(--background-color);
+	background-color: var(--link-color);
+}
+
+body {
+	margin: 0;
+
+	color: hsl(0, 0%, 10%);
+	color: var(--text-color);
+
+	background-color: hsl(0, 0%, 95%);
+	background-color: var(--background-color);
+}
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+	body {
+		padding-bottom: env(safe-area-inset-bottom);
+	}
+}
+body > * {
+	padding: 1rem;
+	margin: 0;
+}
+@media screen {
+	body > * {
+		padding: calc(0.5vh + 0.5rem) calc(1vw + 1rem);
+		padding-left: calc(1vw + 1rem + env(safe-area-inset-left));
+		padding-right: calc(1vw + 1rem + env(safe-area-inset-right));
+	}
+}
+
+/* Set up HTML 5 Elements in old browsers */
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+main,
+section,
+details {
+	display: block;
+}
+
+/* The owl */
+* + * {
+	margin-top: 1rem;
+	margin-top: var(--flow-spacing, 1rem);
+	margin-bottom: 0;
+}
+
+main {
+	padding: 1rem;
+}
+@media screen {
+	main {
+		max-width: 65ch;
+		margin: 0 auto;
+		padding: calc(1vh + 0.5rem) calc(1vw + 1rem);
+	}
+}
+
+article {
+}
+article + article {
+}
+aside {
+	font-size: 0.9em;
+}
+
+a {
+	color: hsl(76, 42%, 38%);
+	font-weight: 375;
+
+	text-decoration-thickness: 0.05em;
+	text-underline-offset: 0.1em;
+	text-decoration-skip-ink: auto;
+
+	transition-property: color, background-color, border-color,
+		text-decoration-color, box-shadow, transform, filter, opacity;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in-out;
+}
+
+@supports (color: var(--link-color)) {
+	a {
+		color: var(--link-color);
+	}
+	a:visited {
+		filter: grayscale(80%);
+	}
+	a:hover,
+	a:active {
+		color: var(--link-color-hover);
+	}
+}
+
+@supports (text-decoration-color: var(--link-color-hover)) {
+	a {
+		text-decoration-color: var(--link-color-hover);
+	}
+}
+
+/* External links */
+
+a[target="_blank"]::after {
+	content: "\002197";
+	/* north east arrow (U+2197)  */
+
+	display: inline-block;
+	color: var(--link-color-hover);
+	padding-left: 0.1em;
+	transform: translateX(0em) translateY(0.1667em);
+}
+
+/* Links with icons */
+
+a + .icon {
+	margin: 0 0.2em 0 0;
+	color: var(--link-color-hover);
+}
+
+.icon {
+	display: inline-block;
+	font-size: 1em;
+	line-height: 1;
+
+	transform-origin: center center;
+}
+.icon-new-window {
+}
+@media print {
+	.icon-new-window {
+		display: none;
+	}
+}
+
+strong,
+strong a {
+	font-weight: 450;
+	font-feature-settings: "salt" on;
+}
+small {
+	font-weight: 375;
+	font-size: 75%;
+}
+@supports not (font-synthesis: style) {
+	@media screen {
+		/* Chromium doesn't support this, so it can't fake italics in a variable font without it */
+		em {
+			display: inline-block;
+			transform: skew(-10deg, 0deg);
+		}
+	}
+}
+
+abbr {
+	text-decoration: underline dashed;
+
+	text-decoration-line: underline;
+	text-decoration-style: dashed;
+	text-decoration-color: var(--accent-color);
+	text-decoration-thickness: 0.05em;
+	text-underline-offset: 0.1em;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.25;
+	font-weight: 550;
+
+	font-feature-settings: "salt" on;
+}
+
+h1,
+h1 a {
+	font-size: 1.4rem;
+	font-weight: 800;
+	letter-spacing: 0.01em;
+}
+h2,
+h1 a {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+h3,
+h3 a {
+	font-size: 1.15rem;
+	font-weight: 650;
+}
+
+h1,
+h2 {
+	color: var(--heading-color);
+}
+h3,
+h4 {
+}
+
+/* Reasonable list defaults */
+ul,
+ol,
+dl {
+	padding-left: 1.25em;
+}
+li ul,
+li ol,
+li dl {
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+li + li {
+	margin-top: 0.25em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Buttons and button links */
+
+.button {
+	display: inline-block;
+	padding: 0.6em 0.9em;
+	line-height: 1;
+
+	background-color: white;
+
+	border-radius: 4rem;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+	filter: blur(10px);
+}
+
+section {
+	margin: 0;
+}
+section + section {
+	margin-top: 4rem;
+}
+
+details {
+	padding: 0 0.75rem;
+	font-size: 0.9em;
+}
+
+summary {
+	margin: 0 -0.5rem;
+	padding: 0 0.25rem;
+	font-weight: 500;
+	border-radius: 0.5em;
+
+	transition-property: color, background-color, border-color, outline-color,
+		text-decoration-color, box-shadow, transform, filter, opacity;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in-out;
+}
+
+summary:hover,
+summary:active {
+	background-color: var(--background-color--translucent);
+
+	cursor: pointer;
+	cursor: help;
+}
+
+.lead {
+	font-size: 1.15em;
+	font-weight: 400;
+}
+.lead strong {
+	font-weight: 550;
+}
+
+.center {
+	text-align: center;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* content made available only to screen readers */
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	padding: 0;
+	border: 0;
+	white-space: nowrap;
+}

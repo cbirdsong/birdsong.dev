@@ -1,0 +1,12 @@
+--- 
+layout: base.njk 
+section: blog 
+permalink: /blog/index.html 
+---
+
+<h1 class="minimal">{{ title }}</h1>
+
+{{ layoutContent | safe }}
+
+{% set postslist = collections.posts %}
+{% include "_includes/postslist.njk" %}

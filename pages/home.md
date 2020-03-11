@@ -1,6 +1,6 @@
 ---
-description: "Cory Birdsong is a front-end web developer that has given you one ticket (🎟) to see if Google renders emoji inside meta descriptions."
-layout: layouts/home.njk
+description: "Cory Birdsong is a front-end web developer that has given you one ticket (🎟) to see if anything chokes on emoji inside meta descriptions."
+layout: home.njk
 permalink: /
 eleventyNavigation:
   key: About
@@ -42,6 +42,7 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 <details>
 <summary>I've also worked with:</summary>
 
+- **jQuery** and **npm** <small>(separately)</small>
 - **Photoshop**, **Illustrator** and **Sketch**
 - **Google Analytics** and **Google Tag Manager**, implemented as performantly as possible
 - **Google Lighthouse** and **WebPageTest**
@@ -53,7 +54,7 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 - **[Netlify](https://netlify.com)**
 - **[Eleventy](https://www.11ty.dev)**
 - **[Parcel](https://parceljs.org/)**
-</details>
+  </details>
 
 <details>
 
@@ -74,7 +75,7 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 <ul>
 {%- for item in work.featured -%}
 <li>
-<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a><span class="icon icon-new-window" title="(opens in new window)" aria-hidden="true">&#8599;</span>
+<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a>
 {%- if item.award -%} <small>(won {{ item.award.name }}, <time>{{ item.award.year }}</time>)</small>{%- endif -%}
 </li>
 {%- endfor -%}
@@ -89,7 +90,7 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 <ul>
 {%- for item in work.old %}
 <li>
-<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a><span class="icon icon-new-window" title="(opens in new window)" aria-hidden="true">&#8599;</span>
+<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a>
 {%- if item.award -%} <small>(won {{ item.award.name }}, <time>{{ item.award.year }}</time>)</small>{%- endif -%}
 </li>
 {%- endfor %}

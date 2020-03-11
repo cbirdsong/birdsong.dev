@@ -3,8 +3,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 		<title>
 				{%- if title or renderData.title -%}
-						{{ title or renderData.title }}
-						&bull; 
+						{{ title or renderData.title }}&nbsp;&bull;&nbsp;
 				{%- endif -%}
 				{{ metadata.title }}
 		</title>
@@ -18,15 +17,18 @@
 		{% endif %}
 
 		{% block fonts %}
-				{% include "components/fonts.njk" %}
+				{% include "_includes/fonts.njk" %}
 		{% endblock %}
 
 		{% set css %}
 		{% include "assets/css/base.css" %}
+		{% include "assets/css/year-1972.css" %}
 		{% endset %}
 		<style>
 				{{css | cssmin | safe}}
 		</style>
 
-		{% include "components/favicon.njk" %}
+		<link rel="stylesheet" href="/assets/css/print.css" media="print"/>
+
+		{% include "_includes/favicon.njk" %}
 </head>

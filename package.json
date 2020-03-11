@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npx eleventy",
     "watch": "npx eleventy --watch",
-    "serve": "npx eleventy --serve",
+    "serve": "netlify dev",
     "debug": "DEBUG=* npx eleventy"
   },
   "repository": {

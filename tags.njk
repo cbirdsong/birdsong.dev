@@ -9,7 +9,7 @@ pagination:
     - post
     - posts
 permalink: /tags/{{ tag }}/
-layout: layouts/base.njk
+layout: base.njk
 renderData:
   title: "Tagged “{{ tag }}”"
 ---
@@ -17,7 +17,7 @@ renderData:
 <h1>Tagged “{{ tag }}”</h1>
 
 {% set postslist = collections[ tag ] %}
-{% include "components/postslist.njk" %}
+{% include "_includes/postslist.njk" %}
 
 <nav>
   <a href="{{ '/blog/' | url }}">← Blog index</a>

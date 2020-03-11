@@ -3,32 +3,30 @@
 		"title": "Phone",
 		"value": "(985) 570-3709",
 		"href": "tel:+19855703709",
-		"icon" : "01F4DE",
 		"featured": true
 	},
 	{
 		"title": "Email",
 		"value": "resume@cory.birdsong.cc",
 		"href": "mailto:resume@cory.birdsong.cc",
-		"icon" : "&#9993;",
 		"featured": true
 	},
 	{
 		"title": "Telegram",
 		"value": "cbirdsong",
 		"href": "https://telegram.me/cbirdsong",
-		"icon" : ""
+		"icon": ""
 	},
 	{
 		"title": "GitHub",
 		"value": "cbirdsong",
 		"href": "https://github.com/cbirdsong",
-		"icon" : ""
+		"icon": ""
 	},
 	{
 		"title": "LinkedIn",
 		"value": "cbirdsong",
 		"href": "https://linkedin.com/in/cbirdsong",
-		"icon" : ""
+		"icon": ""
 	}
 ]

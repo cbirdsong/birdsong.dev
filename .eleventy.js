@@ -5,10 +5,10 @@ const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
+	eleventyConfig.setQuietMode(true);
+
 	// Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
-	eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
 	// Date formatting (human readable)
 	eleventyConfig.addFilter("readableDate", dateObj => {
@@ -66,13 +66,11 @@ module.exports = function(eleventyConfig) {
 
 	// Don't process folders with static assets e.g. images
 	eleventyConfig.addPassthroughCopy("_redirects");
+	eleventyConfig.addPassthroughCopy("static/");
+	eleventyConfig.addPassthroughCopy("assets/");
 	eleventyConfig.addPassthroughCopy("favicon.ico");
 	eleventyConfig.addPassthroughCopy("favicon.png");
 	eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
-	eleventyConfig.addPassthroughCopy("static/img");
-	eleventyConfig.addPassthroughCopy("static/fonts");
-	eleventyConfig.addPassthroughCopy("admin");
-	eleventyConfig.addPassthroughCopy("_includes/assets/");
 
 	/* Markdown Plugins */
 	let markdownIt = require("markdown-it");
@@ -107,6 +105,7 @@ module.exports = function(eleventyConfig) {
 		dir: {
 			input: ".",
 			includes: "_includes",
+			layouts: "_layouts",
 			data: "_data",
 			output: "_site"
 		}

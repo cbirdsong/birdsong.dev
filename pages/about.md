@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: /about/
-layout: layouts/page.njk
+layout: page.njk
 # eleventyNavigation:
 #   key: About
 #   order: 10
