@@ -189,9 +189,12 @@ ul {
 .site-header a {
 	font-weight: 700;
 	font-feature-settings: "salt" on;
+	text-decoration-color: transparent;
+	text-decoration-thickness: 0.12em;
 }
 .site-header a.active {
 	font-weight: 800;
+	text-decoration-color: var(--accent-color);
 }
 .site-header a.active::before {
 }
