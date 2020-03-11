@@ -18,12 +18,38 @@
 		"Helvetica", "Arial", sans-serif;
 }
 
+* {
+	background-color: transparent;
+}
+
+body {
+	color: black;
+	background-color: transparent;
+}
+
 a {
-	text-decoration: none;
+	text-decoration: underline;
 }
 a[href]::after {
-	content: "(" attr(href) ")";
-	margin-left: 0.3em;
+	content: "[" attr(href) "]";
+
+	display: inline-block;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+
+	font-size: 80%;
+	font-weight: 400;
+	text-decoration: none;
+	transform: none;
+}
+
+abbr {
+	text-decoration: none;
+}
+abbr[title]::after {
+	content: "(" attr(title) ")";
+	margin-left: 0.15em;
+	font-size: 80%;
 	font-weight: 400;
 	text-decoration: none;
 }
