@@ -94,3 +94,9 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 </details>
 
 </section>
+
+<section id="more-info" aria-label="More information">
+
+**[View my full resume](/resume/)**.
+
+</section>
