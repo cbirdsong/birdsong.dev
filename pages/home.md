@@ -9,9 +9,10 @@ eleventyNavigation:
 
 <section class="lead" id="intro" aria-label="About Me">
 
-<h1>Hi.</h1>
+# Hi.
 
-<p class="lead">I build websites that are <strong>accessible</strong>, <strong>performant</strong>, <strong>responsive</strong>, <strong>user-centric</strong> and <strong>beautiful</strong>.</p>
+<p class="lead">I build websites that are <strong>accessible</strong>, <strong>performant</strong>, <strong>responsive</strong>, <strong>user-centric</strong> and <strong>beautiful</strong>, using semantic <strong><abbr title="HyperText Markup Language">HTML</abbr></strong>, reusable and resilient <strong><abbr title="Cascading Stylesheets">CSS</abbr></strong>, and <em>just enough</em> <strong>JavaScript</strong>.
+</p>
 
 I have extensive experience collaborating with designers to strike the perfect balance between form and function.
 
@@ -23,17 +24,12 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 
 <section aria-label="Skills">
 
-## I write:
-
-- accessible and semantic **<abbr title="HyperText Markup Language">HTML</abbr>**
-- reusable and resilient **<abbr title="Cascading Stylesheets">CSS</abbr>**
-- just enough **JavaScript**
-
 ## I've worked with:
 
+- **Templating languages** (Liquid, Twig, Nunjucks, Smarty) and `**Markdown**`
 - **<abbr title="Cascading Stylesheets">CSS</abbr> preprocessors** (Sass and Less)
-- **Templating languages** (Liquid, Twig, Nunjucks, Smarty)
-- **Git**
+- **jQuery** and **npm** <small>(separately)</small>
+- **Git**, GitHub and BitBucket
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
 - **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)**
 - **[Pattern Lab](https://patternlab.io/)**, building pattern libraries for design systems
@@ -42,11 +38,10 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 <details>
 <summary>I've also worked with:</summary>
 
-- **jQuery** and **npm** <small>(separately)</small>
 - **Photoshop**, **Illustrator** and **Sketch**
-- **Google Analytics** and **Google Tag Manager**, implemented as performantly as possible
+- **Google Analytics** and **Google Tag Manager** <small>(implemented as performantly as possible)</small>
 - **Google Lighthouse** and **WebPageTest**
-- **Schema.org** and other similar markup methods
+- **Schema.org** and other similar metadata
 - **Cloudflare**, for doing edge <abbr title="search engine optimization">SEO</abbr> optimization via Cloudflare Workers
 - **[Buddy](https://buddy.works)**, for <abbr title="continuous integration and delivery">CI/CD</abbr> and deployment
 - **Shopify**
