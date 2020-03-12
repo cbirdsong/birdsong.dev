@@ -26,14 +26,15 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 
 ## I've worked with:
 
-- **Templating languages** (Liquid, Twig, Nunjucks, Smarty) and `**Markdown**`
+- **Templating languages** (Liquid, Twig, Nunjucks, Smarty)
 - **<abbr title="Cascading Stylesheets">CSS</abbr> preprocessors** (Sass and Less)
-- **jQuery** and **npm** <small>(separately)</small>
-- **Git**, GitHub and BitBucket
+- **jQuery**
+- **npm**
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
 - **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)**
 - **[Pattern Lab](https://patternlab.io/)**, building pattern libraries for design systems
 - **HubSpot**, building custom landing pages and email templates, customizing form embeds
+- **Git**, GitHub and BitBucket
 
 <details>
 <summary>I've also worked with:</summary>
