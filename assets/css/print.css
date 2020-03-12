@@ -27,6 +27,10 @@
 	background-color: transparent;
 }
 
+:focus::before {
+	content: none;
+}
+
 body {
 	color: black;
 	background-color: transparent;
@@ -47,12 +51,14 @@ a[href]::after {
 	text-decoration: none;
 	transform: none;
 }
+a[href^="#"]::after,
 a[href*="archive.org"]::after,
 a[href*="mailto:"]::after,
 a[href*="tel:"]::after,
 a[href*="cbirdsong"]::after {
 	content: none;
 }
+
 a[data-print-label]::after {
 	content: ": " attr(data-print-label);
 
@@ -66,7 +72,7 @@ a + small {
 }
 
 abbr {
-	text-decoration: none;
+	text-decoration: dotted;
 }
 abbr[title]::after {
 	content: "(" attr(title) ")";
@@ -76,20 +82,26 @@ abbr[title]::after {
 	text-decoration: none;
 }
 
+h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
 	page-break-after: avoid;
 	break-after: avoid;
 }
 
 p {
-	orphans: 2;
-	widows: 2;
+	orphans: 3;
+	widows: 3;
 }
 
-details:not([open]) {
-	/* this isn't optimal but I can't figure out a way to force them open via CSS */
-	display: none;
+ul,
+ol,
+dl {
+	page-break-inside: avoid;
+	break-inside: avoid-page;
 }
 
 section {
@@ -99,6 +111,16 @@ section {
 
 section + section {
 	margin-top: 2.5rem;
+}
+
+table {
+	page-break-inside: avoid;
+	break-inside: avoid-page;
+}
+
+details:not([open]) {
+	/* this isn't optimal but I can't figure out a way to force them open via CSS */
+	display: none;
 }
 
 .site-logo svg {
