@@ -153,8 +153,11 @@ a[target="_blank"]::after {
 
 	display: inline-block;
 	color: var(--link-color-hover);
-	padding-right: 0.1em;
+	margin-right: -0.1em;
 	transform: translateY(0.1667em);
+}
+a[target="_blank"] + small {
+	margin-left: 0.5em;
 }
 
 /* Text states */
