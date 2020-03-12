@@ -3,8 +3,10 @@
 		{% set navPages = contact %}
 		<ul>
 				{%- for item in navPages %}
-						<li {% if item.icon %} data-icon="{{ item.icon }}" {% endif %}>
-								<a href="{{ item.href | url }}">{{ item.title }}</a>
+						<li>
+								<a href="{{ item.href | url }}" data-print-label="{{ item.value }}" aria-label="{{ item.title }}: {{ item.value }}">
+										{{ item.title }}
+								</a>
 						</li>
 				{%- endfor %}
 		</ul>

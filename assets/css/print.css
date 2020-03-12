@@ -1,3 +1,7 @@
+@page {
+	margin: 30px;
+}
+
 :root {
 	--background-color: transparent;
 
@@ -16,6 +20,7 @@
 	font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
 		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		"Helvetica", "Arial", sans-serif;
+	font-size: 100%;
 }
 
 * {
@@ -42,6 +47,23 @@ a[href]::after {
 	text-decoration: none;
 	transform: none;
 }
+a[href*="archive.org"]::after,
+a[href*="mailto:"]::after,
+a[href*="tel:"]::after,
+a[href*="cbirdsong"]::after {
+	content: none;
+}
+a[data-print-label]::after {
+	content: ": " attr(data-print-label);
+
+	font-size: 100%;
+	font-weight: inherit;
+}
+
+a + small {
+	display: block;
+	margin: 0.25em 0 0.5em;
+}
 
 abbr {
 	text-decoration: none;
@@ -54,15 +76,47 @@ abbr[title]::after {
 	text-decoration: none;
 }
 
+h2,
+h3 {
+	page-break-after: avoid;
+	break-after: avoid;
+}
+
+p {
+	orphans: 2;
+	widows: 2;
+}
+
 details:not([open]) {
 	/* this isn't optimal but I can't figure out a way to force them open via CSS */
 	display: none;
+}
+
+section {
+	page-break-inside: avoid;
+	break-inside: avoid-page;
+}
+
+section + section {
+	margin-top: 2.5rem;
 }
 
 .site-logo svg {
 	width: 300px;
 }
 
-.site-logo a:after {
+.site-logo a::after {
 	content: none;
+}
+.site-logo::after {
+	content: "https://birdsong.dev";
+
+	display: block;
+
+	margin-top: 1em;
+	font-weight: 600;
+}
+
+.site-header nav {
+	display: none;
 }

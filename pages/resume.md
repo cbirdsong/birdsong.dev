@@ -14,7 +14,7 @@ eleventyNavigation:
 
 **Expert**:
 
-<abbr title="HyperText Markup Language">HTML</abbr> + templating languages, <abbr title="Cascading Stylesheets">CSS</abbr> + Sass/Less, JavaScript + jQuery, WordPress + <abbr title="Advanced Custom Fields">[ACF](advancedcustomfields.com/)</abbr> & [Timber](https://www.upstatement.com/timber/)
+<abbr title="HyperText Markup Language">HTML</abbr> + templating languages, <abbr title="Cascading Stylesheets">CSS</abbr> + Sass/Less, JavaScript + jQuery, WordPress + <abbr title="Advanced Custom Fields">[ACF](https://advancedcustomfields.com/)</abbr> & [Timber](https://www.upstatement.com/timber/)
 
 **Adept**:
 
@@ -33,7 +33,7 @@ PHP, Shopify, HubSpot, [Netlify](https://netlify.com), npm, [Parcel](https://par
 <ul>
 {%- for item in work.featured %}
 <li>
-<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a><span class="icon icon-new-window" title="(opens in new window)" aria-hidden="true">&#8599;</span>
+<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a>
 {%- if item.award -%} <small>(won {{ item.award.name }}, <time>{{ item.award.year }}</time>)</small>{%- endif -%}
 </li>
 {%- endfor %}
@@ -48,7 +48,7 @@ PHP, Shopify, HubSpot, [Netlify](https://netlify.com), npm, [Parcel](https://par
 <ul>
 {%- for item in work.old %}
 <li>
-<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a><span class="icon icon-new-window" title="(opens in new window)" aria-hidden="true">&#8599;</span>
+<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a>
 {%- if item.award -%} <small>(won {{ item.award.name }}, <time>{{ item.award.year }}</time>)</small>{%- endif -%}
 </li>
 {%- endfor %}
@@ -94,11 +94,6 @@ Bachelor of Arts in Mass Communication (Print Journalism Concentration), Univers
 
 - Phone: (985) 570-3709
 - Email: resume@cory.birdsong.cc
-
-</section>
-
-<section class="center" aria-label="More info">
-
-<strong><em><a href="/about/">More about me</a></em></strong>
+- Github: github.com/cbirdsong
 
 </section>

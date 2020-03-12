@@ -153,8 +153,8 @@ a[target="_blank"]::after {
 
 	display: inline-block;
 	color: var(--link-color-hover);
-	padding-left: 0.1em;
-	transform: translateX(0em) translateY(0.1667em);
+	padding-right: 0.1em;
+	transform: translateY(0.1667em);
 }
 
 /* Links with icons */
@@ -190,10 +190,10 @@ small {
 }
 @supports not (font-synthesis: style) {
 	@media screen {
-		/* Chromium doesn't support this, so it can't fake italics in a variable font without it */
 		em {
 			display: inline-block;
 			transform: skew(-10deg, 0deg);
+			--explanation-for-skew: "chromium doesn't support font-synthesis";
 		}
 	}
 }

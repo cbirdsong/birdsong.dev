@@ -26,7 +26,7 @@
 
 	--green-light: hsl(76, 42%, 49%);
 
-	--blue-light: hsl(195, 48%, 48%);
+	--blue-light: hsla(195, 62%, 49%, 1);
 }
 
 /* Set colors */
@@ -196,8 +196,6 @@ ul {
 	font-weight: 800;
 	text-decoration-color: var(--accent-color);
 }
-.site-header a.active::before {
-}
 
 .site-logo {
 	line-height: 0;
@@ -218,6 +216,12 @@ ul {
 	}
 }
 
+/* Content */
+
+section[aria-label="More information"] {
+	display: none;
+}
+
 /* Footer */
 
 .site-footer {
@@ -230,12 +234,20 @@ ul {
 	font-weight: 667;
 }
 
-.nav-contact,
-.nav-contact ul {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	justify-content: center;
+@media print {
+	.site-footer {
+		display: none;
+	}
+}
+
+@media screen {
+	.nav-contact,
+	.nav-contact ul {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+	}
 }
 .nav-contact > * {
 	margin: 0em;
@@ -283,5 +295,25 @@ ul {
 	100% {
 		box-shadow: 0 0 0 2vw var(--orange), 0 0 0 4vw var(--yellow),
 			0 0 0 6vw var(--green);
+	}
+}
+
+@supports (background-size: 100% 0.05em) {
+	.gradient-stripes {
+		background-image: repeating-linear-gradient(
+			90deg,
+			var(--orange) 0,
+			var(--orange) 0.5rem,
+			var(--yellow) 0,
+			var(--yellow) 1rem,
+			var(--green) 0,
+			var(--green) 1.5rem
+		);
+		background-size: 100% 0.1em;
+		background-repeat: repeat-x;
+		background-position: 0 97%;
+
+		text-decoration: none;
+		text-decoration-line: none;
 	}
 }
