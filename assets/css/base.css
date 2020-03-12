@@ -157,43 +157,26 @@ a[target="_blank"]::after {
 	transform: translateY(0.1667em);
 }
 
-/* Links with icons */
-
-a + .icon {
-	margin: 0 0.2em 0 0;
-	color: var(--link-color-hover);
-}
-
-.icon {
-	display: inline-block;
-	font-size: 1em;
-	line-height: 1;
-
-	transform-origin: center center;
-}
-.icon-new-window {
-}
-@media print {
-	.icon-new-window {
-		display: none;
-	}
-}
+/* Text states */
 
 strong,
 strong a {
 	font-weight: 450;
 	font-feature-settings: "salt" on;
 }
+
 small {
 	font-weight: 375;
 	font-size: 75%;
 }
+
 @supports not (font-synthesis: style) {
 	@media screen {
 		em {
 			display: inline-block;
+			margin: 0;
 			transform: skew(-10deg, 0deg);
-			--explanation-for-skew: "chromium doesn't support font-synthesis";
+			--explanation-for-transform-skew: "chromium doesn't support font-synthesis to make fake italics";
 		}
 	}
 }
@@ -209,6 +192,7 @@ abbr {
 }
 
 /* Headings */
+
 h1,
 h2,
 h3,
@@ -228,7 +212,7 @@ h1 a {
 	letter-spacing: 0.01em;
 }
 h2,
-h1 a {
+h2 a {
 	font-size: 1.25rem;
 	font-weight: 700;
 }
