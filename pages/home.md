@@ -7,18 +7,39 @@ eleventyNavigation:
   order: 1
 ---
 
-<section class="lead" id="intro" aria-label="About Me">
+<section class="intro" id="intro" aria-label="About Me">
+
+<div class="lead">
+
+<div class="lead__content">
 
 # Hi.
 
-<p class="lead">I build websites that are <strong>accessible</strong>, <strong>performant</strong>, <strong>responsive</strong>, <strong>user-centric</strong> and <strong>beautiful</strong>, using semantic <strong><abbr title="HyperText Markup Language">HTML</abbr></strong>, reusable and resilient <strong><abbr title="Cascading Stylesheets">CSS</abbr></strong>, and <em>just enough</em> <strong>JavaScript</strong>.
+<p>I build websites that are <strong>accessible</strong>, <strong>performant</strong>, <strong>responsive</strong>, <strong>user-centric</strong> and <strong>beautiful</strong>, using semantic <strong><abbr title="HyperText Markup Language">HTML</abbr></strong>, reusable and resilient <strong><abbr title="Cascading Stylesheets">CSS</abbr></strong>, and <em>just enough</em> <strong>JavaScript</strong>.
 </p>
+
+</div>
+
+<figure class="lead__image">
+
+<picture>
+	<source src="static/img/portrait.webp" type="image/webp">
+	<img src="static/img/portrait.jpg" alt="Cory Birdsong" loading="eager">
+</picture>
+
+</figure>
+
+</div>
+
+<div class="intro__content">
 
 I have extensive experience collaborating with designers to strike the perfect balance between form and function.
 
 I love learning about new capabilities in browsers and figuring out how to employ them as progressive enhancement.
 
 I have a keen eye for detail and love laboring over sites to get them _just right_.
+
+</div>
 
 </section>
 

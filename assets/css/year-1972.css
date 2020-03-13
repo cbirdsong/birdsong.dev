@@ -218,8 +218,13 @@ ul {
 
 /* Content */
 
+img {
+	border: 0.5rem solid var(--background-color--translucent);
+	border-radius: 2vw;
+}
+
 section[aria-label="More information"] {
-	display: none;
+	text-align: center;
 }
 
 /* Footer */

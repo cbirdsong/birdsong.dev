@@ -104,6 +104,11 @@ dl {
 	break-inside: avoid-page;
 }
 
+main {
+	padding: 30px;
+	padding: 2cm;
+}
+
 section {
 	page-break-inside: avoid;
 	break-inside: avoid-page;

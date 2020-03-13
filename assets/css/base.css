@@ -1,9 +1,17 @@
-/* Global position / box sizing rules */
+/* Global reset */
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 	position: relative;
+	margin: 0;
+}
+
+/* The owl */
+* + * {
+	margin-top: 1rem;
+	margin-top: var(--flow-spacing, 1rem);
+	margin-bottom: 0;
 }
 
 /* Set root defaults */
@@ -86,32 +94,6 @@ details {
 	display: block;
 }
 
-/* The owl */
-* + * {
-	margin-top: 1rem;
-	margin-top: var(--flow-spacing, 1rem);
-	margin-bottom: 0;
-}
-
-main {
-	padding: 1rem;
-}
-@media screen {
-	main {
-		max-width: 65ch;
-		margin: 0 auto;
-		padding: calc(1vh + 0.5rem) calc(1vw + 1rem);
-	}
-}
-
-article {
-}
-article + article {
-}
-aside {
-	font-size: 0.9em;
-}
-
 a {
 	color: hsl(76, 42%, 38%);
 	font-weight: 375;
@@ -131,7 +113,6 @@ a {
 		color: var(--link-color);
 	}
 	a:visited {
-		filter: grayscale(80%);
 	}
 	a:hover,
 	a:active {
@@ -202,6 +183,8 @@ h3,
 h4,
 h5,
 h6 {
+	--flow-spacing: 1.5rem;
+
 	line-height: 1.25;
 	font-weight: 550;
 
@@ -270,16 +253,19 @@ select {
 	border-radius: 4rem;
 }
 
+/* Images */
+
+img {
+	display: block;
+	max-width: 100%;
+}
+figure img {
+	margin: 0;
+}
+
 /* Blur images when they have no alt attribute */
 img:not([alt]) {
 	filter: blur(10px);
-}
-
-section {
-	margin: 0;
-}
-section + section {
-	margin-top: 4rem;
 }
 
 details {
@@ -305,6 +291,95 @@ summary:active {
 
 	cursor: pointer;
 	cursor: help;
+}
+
+/* Structural elements */
+
+main {
+	padding: 1rem;
+	padding: calc(1vh + 1rem) calc(1vw + 1rem);
+}
+
+article {
+	max-width: 30rem;
+	margin: 0 auto;
+}
+article > * + * {
+	margin-top: 3rem;
+}
+
+@supports (display: grid) {
+	article {
+		max-width: 100%;
+
+		display: grid;
+		grid-gap: 3rem 0;
+		grid-template-columns:
+			[full-start] minmax(0, 1fr)
+			[content-start] minmax(0, 30rem)
+			[content-end] minmax(0, 1fr)
+			[full-end];
+	}
+	article > * {
+		margin-top: 0;
+		grid-column: content-start / content-end;
+	}
+}
+
+section {
+}
+aside {
+	font-size: 0.9em;
+}
+
+.intro {
+	grid-column: full-start / full-end;
+}
+.intro__content {
+	margin: 0 auto;
+	max-width: 30rem;
+}
+
+.lead {
+	margin: 0 auto;
+	max-width: 30rem;
+}
+.lead__image {
+	margin: 0 0 1rem;
+	padding: 0 1.5rem 0 0;
+	text-align: center;
+}
+.lead__content {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.lead__image img {
+	width: auto;
+	height: 20ex;
+	margin: 0 auto;
+}
+@supports (display: flex) {
+	.lead {
+		display: flex;
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+		max-width: 100%;
+
+		margin: 0 auto;
+		margin-bottom: 1rem;
+	}
+	.lead__content {
+		flex: 1;
+		max-width: 30rem;
+		min-width: 50%;
+	}
+	.lead__image {
+		margin: 0;
+		padding: 0 1.5rem 0 0;
+	}
 }
 
 .lead {
