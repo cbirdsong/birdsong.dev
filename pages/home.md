@@ -15,7 +15,7 @@ eleventyNavigation:
 
 # Hi.
 
-<p>I build websites that are <strong>accessible</strong>, <strong>performant</strong>, <strong>responsive</strong>, <strong>user-centric</strong> and <strong>beautiful</strong> using semantic <strong><abbr title="HyperText Markup Language">HTML</abbr></strong>, reusable and resilient <strong><abbr title="Cascading Stylesheets">CSS</abbr></strong>, and <em>just enough</em> <strong>JavaScript</strong>.
+<p>I build websites that are <strong>fast</strong>, <strong>functional</strong> and <strong>beautiful</strong> using accessible and semantic <strong><abbr title="HyperText Markup Language">HTML</abbr></strong>, reusable and resilient <strong><abbr title="Cascading Stylesheets">CSS</abbr></strong>, and <em>just enough</em> <strong>JavaScript</strong>.
 </p>
 
 </div>
