@@ -51,18 +51,18 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 - **<abbr title="Cascading Stylesheets">CSS</abbr> preprocessors** (Sass and Less)
 - **jQuery**
 - **npm**
+- **Git**, GitHub and BitBucket
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
 - **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)**
 - **[Pattern Lab](https://patternlab.io/)**, building pattern libraries for design systems
 - **HubSpot**, building custom landing pages and email templates, customizing form embeds
-- **Git**, GitHub and BitBucket
 
 <details>
 <summary>I've also worked with:</summary>
 
 - **Photoshop**, **Illustrator** and **Sketch**
 - **Google Analytics** and **Google Tag Manager** <small>(implemented as performantly as possible)</small>
-- **Google Lighthouse** and **WebPageTest**
+- **Google Lighthouse** and **WebPageTest** for performance auditing
 - **Schema.org** and other similar metadata
 - **Cloudflare**, for doing edge <abbr title="search engine optimization">SEO</abbr> optimization via Cloudflare Workers
 - **[Buddy](https://buddy.works)**, for <abbr title="continuous integration and delivery">CI/CD</abbr> and deployment
