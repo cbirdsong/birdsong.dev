@@ -300,29 +300,31 @@ main {
 	padding: calc(1vh + 1rem) calc(1vw + 1rem);
 }
 
-article {
-	max-width: 30rem;
-	margin: 0 auto;
-}
-article > * + * {
-	margin-top: 3rem;
-}
-
-@supports (display: grid) {
+@media screen {
 	article {
-		max-width: 100%;
-
-		display: grid;
-		grid-gap: 3rem 0;
-		grid-template-columns:
-			[full-start] minmax(0, 1fr)
-			[content-start] minmax(0, 30rem)
-			[content-end] minmax(0, 1fr)
-			[full-end];
+		max-width: 30rem;
+		margin: 0 auto;
 	}
-	article > * {
-		margin-top: 0;
-		grid-column: content-start / content-end;
+	article > * + * {
+		margin-top: 3rem;
+	}
+
+	@supports (display: grid) {
+		article {
+			max-width: 100%;
+
+			display: grid;
+			grid-gap: 3rem 0;
+			grid-template-columns:
+				[full-start] minmax(0, 1fr)
+				[content-start] minmax(0, 30rem)
+				[content-end] minmax(0, 1fr)
+				[full-end];
+		}
+		article > * {
+			margin-top: 0;
+			grid-column: content-start / content-end;
+		}
 	}
 }
 
