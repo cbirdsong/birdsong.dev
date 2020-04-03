@@ -70,7 +70,8 @@ I have a keen eye for detail and love laboring over sites to get them _just righ
 - **MailChimp**
 - **[Netlify](https://netlify.com)**
 - **[Eleventy](https://www.11ty.dev)**
-- **[Parcel](https://parceljs.org/)**
+- **[Parcel](https://parceljs.org)**
+- **[Litmus](https://litmus.com)**
   </details>
 
 <details>
