@@ -2,6 +2,16 @@
 :root {
 	--black: hsl(0, 0%, 0%);
 
+	--gray-darker: hsl(0, 0%, 20%);
+
+	--gray-dark: hsl(0, 0%, 30%);
+
+	--gray-light: hsl(0, 0%, 80%);
+
+	--gray-lighter: hsl(0, 0%, 90%);
+
+	--gray-lightest: hsl(0, 0%, 97.5%);
+
 	--white: hsl(0, 0%, 100%);
 
 	/* Day */
@@ -210,10 +220,9 @@ ul {
 	width: calc(18rem + 10vw);
 	max-width: 90%;
 }
-@media print {
-	.site-logo svg {
-		width: calc(300px);
-	}
+
+.site-header-contact-info {
+	display: none;
 }
 
 /* Content */

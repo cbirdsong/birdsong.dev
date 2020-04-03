@@ -1,6 +1,11 @@
 @page {
-	margin: 20px;
-	margin: 1cm;
+	margin: 1.25cm 1cm;
+}
+@media print and (color) {
+	* {
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
 }
 
 :root {
@@ -12,9 +17,9 @@
 
 	--heading-color: var(--black);
 
-	--link-color: var(--gray-dark);
+	--link-color: var(--black);
 
-	--link-color-hover: var(--gray-dark);
+	--link-color-hover: var(--gray-darker);
 
 	--focus-color: var(--gray-light);
 
@@ -26,6 +31,10 @@
 
 * {
 	background-color: transparent;
+}
+::selection {
+	color: currentColor;
+	background-color: var(--focus-color);
 }
 
 :focus::before {
@@ -40,19 +49,27 @@ body {
 }
 
 a {
-	text-decoration: underline;
+	text-decoration: none;
+	/* text-decoration-style: dashed;
+	text-decoration-thickness: 1px;
+	text-decoration-color: var(--focus-color); */
 }
 a[href]::after {
-	content: "[" attr(href) "]";
+	content: attr(href);
 
 	display: inline-block;
-	margin-left: 0.1em;
-	margin-right: 0.1em;
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+	padding: 0.1em 0.4em;
 
-	font-size: 80%;
+	font-size: 70%;
 	font-weight: 400;
 	text-decoration: none;
 	transform: none;
+	vertical-align: text-bottom;
+
+	border-radius: 0.75em;
+	background-color: var(--gray-lightest);
 }
 a[href^="#"]::after,
 a[href*="archive.org"]::after,
@@ -95,31 +112,49 @@ h6 {
 	break-after: avoid;
 }
 
+h1 {
+	margin-bottom: 0.75cm;
+}
+h2 {
+	margin-bottom: 0.45cm;
+}
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0.33cm;
+}
+
 p {
 	orphans: 3;
 	widows: 3;
+	margin-bottom: 0.25cm;
 }
 
 ul,
 ol,
 dl {
+	margin-bottom: 0.25cm;
 	page-break-inside: avoid;
 	break-inside: avoid-page;
 }
+li + li {
+	margin-top: 0.1cm;
+}
 
 main {
-	margin: 20px;
-	margin: 1cm;
+	margin: 0.75cm 0;
 	padding: 0;
 }
 
 section {
 	page-break-inside: avoid;
 	break-inside: avoid-page;
+	padding: 0;
 }
 
 section + section {
-	margin-top: 2.5rem;
+	margin-top: 0.75cm;
 }
 
 table {
@@ -132,22 +167,59 @@ details:not([open]) {
 	display: none;
 }
 
-.site-logo svg {
-	width: 300px;
-}
+.site-header {
+	font-weight: 600;
+	font-size: 1.1em;
 
-.site-logo a::after {
+	flex-direction: column;
+}
+.site-header a::after {
 	content: none;
 }
-.site-logo::after {
+
+.site-logo svg {
+	width: 350px;
+	margin-bottom: 0.5em;
+}
+/* .site-logo::after {
 	content: "https://birdsong.dev";
 
 	display: block;
+	line-height: 1;
 
-	margin-top: 1em;
-	font-weight: 600;
-}
+	margin-top: 0.5em;
+} */
 
 .site-header nav {
+	display: none;
+}
+.site-header-contact-info {
+	display: block;
+}
+.site-header-contact-info li {
+	margin-top: 0.2em;
+}
+.site-header-contact-info li::before {
+	margin-right: 0.1em;
+	filter: grayscale(100%);
+	font-size: 0.8em;
+}
+
+.site-header-contact-info li.url {
+}
+.site-header-contact-info li.url::before {
+	content: "\01F310";
+}
+.site-header-contact-info li.phone::before {
+	content: "\01F4F1";
+}
+.site-header-contact-info li.email::before {
+	content: "\01F4E7";
+}
+.site-header-contact-info li:empty::after {
+	content: attr(data-content);
+}
+
+.site-footer {
 	display: none;
 }
