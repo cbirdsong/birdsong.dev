@@ -12,17 +12,17 @@ eleventyNavigation:
 
 ## Skills
 
-**Expert**:
+### **Expert**:
 
-<abbr title="HyperText Markup Language">HTML</abbr> + templating languages, <abbr title="Cascading Stylesheets">CSS</abbr> + Sass/Less, JavaScript + jQuery, WordPress + <abbr title="Advanced Custom Fields">[ACF](https://advancedcustomfields.com/)</abbr> & [Timber](https://www.upstatement.com/timber/)
+<abbr title="HyperText Markup Language">HTML</abbr> + templating languages, <abbr title="Cascading Stylesheets">CSS</abbr> + Sass/Less, JavaScript + jQuery, WordPress + [<abbr title="Advanced Custom Fields">ACF</abbr>](https://advancedcustomfields.com) & [Timber](https://www.upstatement.com/timber/)
 
-**Adept**:
+### **Adept**:
 
-Web accessbility, <abbr title="Scalable Vector Graphics">SVG</abbr>, Git, [Pattern Lab](https://patternlab.io/), custom HTML email development, Schema.org, Google Analytics / Google Tag Manager, [Eleventy](https://www.11ty.dev)
+Web accessibility, <abbr title="Scalable Vector Graphics">SVG</abbr>, Git, [Pattern Lab](https://patternlab.io), custom <abbr title="HyperText Markup Language">HTML</abbr> email development, [Schema.org](https://schema.org), Google Analytics / Google Tag Manager, [Eleventy](https://www.11ty.dev)
 
-**Proficient**:
+### **Proficient**:
 
-PHP, Shopify, HubSpot, [Netlify](https://netlify.com), npm, [Parcel](https://parceljs.org/)
+PHP, Shopify, HubSpot, [Netlify](https://netlify.com), npm, [Parcel](https://parceljs.org)
 
 </section>
 
