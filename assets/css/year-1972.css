@@ -1,83 +1,64 @@
-/* Define colors */
 :root {
+	/* Define colors */
 	--black: hsl(0, 0%, 0%);
-
 	--gray-darker: hsl(0, 0%, 20%);
-
 	--gray-dark: hsl(0, 0%, 30%);
-
 	--gray-light: hsl(0, 0%, 80%);
-
 	--gray-lighter: hsl(0, 0%, 90%);
-
 	--gray-lightest: hsl(0, 0%, 97.5%);
-
 	--white: hsl(0, 0%, 100%);
 
 	/* Day */
 	--brown: hsl(29, 67%, 15%);
-
 	--tan: hsl(35, 43%, 88%);
-
 	--orange: hsl(14, 71%, 47%);
-
 	--green: hsl(76, 42%, 38%);
-
 	--blue: hsl(195, 48%, 37%);
-
 	--yellow: hsl(34, 92%, 63%);
-
-	--yellow--transparent: hsla(34, 92%, 63%, 0.01);
 
 	/* Night */
 	--orange-light: hsl(14, 71%, 59%);
-
-	--orange-light--transparent: hsla(14, 71%, 59%, 0.01);
-
 	--green-light: hsl(76, 42%, 49%);
-
 	--blue-light: hsla(195, 62%, 49%, 1);
-}
+	
+	/* --- */
 
-/* Set colors */
-:root {
+	/* Set colors */
 	--background-color: var(--tan);
-
 	--background-color--translucent: hsla(0, 0%, 100%, 0.5);
-
 	--text-color: var(--brown);
-
 	--accent-color: var(--blue);
-
 	--heading-color: var(--orange);
-
 	--link-color: var(--green);
 	--link-color-hover: var(--blue);
-
 	--focus-color: var(--yellow);
-	--focus-color--transparent: var(--yellow--transparent);
+	
+	/* Set type */
+	--font-weight-base: 350;
+	--font-weight-light: 250;
+	--font-weight-heavy: 450;
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
 	:root {
 		--background-color: var(--brown);
-
 		--background-color--translucent: hsla(0, 0%, 0%, 0.1);
-
 		--text-color: var(--tan);
-
 		--accent-color: var(--yellow);
-
 		--heading-color: var(--yellow);
-
 		--link-color: var(--green-light);
-
 		--link-color-hover: var(--blue-light);
-
 		--focus-color: var(--orange-light);
-
-		--focus-color--transparnet: var(--orange-light--transparent);
 	}
+}
+
+body {
+	font-family: "Dosis", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		"Helvetica", "Arial", sans-serif;
+	font-synthesis: style;
+	
+	font-weight: var(--font-weight-base);
 }
 
 /* Fancy focus styles */
@@ -114,6 +95,10 @@ nav {
 }
 
 /* Basic styles */
+
+a {
+	font-weight: calc(var(--font-weight-base) + 25);
+}
 
 @counter-style circles {
 	system: cyclic;
@@ -164,11 +149,6 @@ ul {
 			0 0 0 6vw var(--green);
 
 		background-color: var(--background-color--translucent);
-
-		/* animation-name: headerStripes; */
-		animation-duration: 750ms;
-		animation-timing-function: ease-in-out;
-		animation-fill-mode: both;
 	}
 }
 
@@ -248,21 +228,15 @@ section[aria-label="More information"] {
 	font-weight: 667;
 }
 
-@media print {
-	.site-footer {
-		display: none;
-	}
+
+.nav-contact,
+.nav-contact ul {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
 }
 
-@media screen {
-	.nav-contact,
-	.nav-contact ul {
-		display: flex;
-		flex-flow: row wrap;
-		align-items: center;
-		justify-content: center;
-	}
-}
 .nav-contact > * {
 	margin: 0em;
 }
@@ -284,6 +258,7 @@ section[aria-label="More information"] {
 		opacity: 1;
 	}
 }
+/*
 @keyframes blurIn {
 	0% {
 		filter: blur(0.25rem);
@@ -331,3 +306,4 @@ section[aria-label="More information"] {
 		text-decoration-line: none;
 	}
 }
+*/

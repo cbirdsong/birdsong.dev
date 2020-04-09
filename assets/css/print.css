@@ -10,23 +10,14 @@
 
 :root {
 	--background-color: transparent;
-
 	--text-color: var(--black);
-
 	--accent-color: var(--gray-dark);
-
 	--heading-color: var(--black);
-
 	--link-color: var(--black);
-
 	--link-color-hover: var(--gray-darker);
-
 	--focus-color: var(--gray-light);
-
-	font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
-		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-		"Helvetica", "Arial", sans-serif;
-	font-size: 100%;
+	
+	--font-weight-base: 400;
 }
 
 * {
@@ -47,23 +38,21 @@ body {
 	padding: 0;
 	margin: 0;
 }
+body > * {
+ padding: 1rem;
+}
 
 a {
 	text-decoration: none;
-	/* text-decoration-style: dashed;
-	text-decoration-thickness: 1px;
-	text-decoration-color: var(--focus-color); */
 }
 a[href]::after {
 	content: attr(href);
 
 	display: inline-block;
-	margin-left: 0.2em;
-	margin-right: 0.2em;
+	margin: 0 0.2em;
 	padding: 0.1em 0.4em;
 
 	font-size: 70%;
-	font-weight: 400;
 	text-decoration: none;
 	transform: none;
 	vertical-align: text-bottom;
@@ -147,6 +136,14 @@ main {
 	padding: 0;
 }
 
+nav {
+	display: none;
+}
+
+article {
+	max-width: 100%;
+}
+
 section {
 	page-break-inside: avoid;
 	break-inside: avoid-page;
@@ -179,20 +176,9 @@ details:not([open]) {
 
 .site-logo svg {
 	width: 350px;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.67rem;
 }
-/* .site-logo::after {
-	content: "https://birdsong.dev";
 
-	display: block;
-	line-height: 1;
-
-	margin-top: 0.5em;
-} */
-
-.site-header nav {
-	display: none;
-}
 .site-header-contact-info {
 	display: block;
 }
@@ -205,8 +191,6 @@ details:not([open]) {
 	font-size: 0.8em;
 }
 
-.site-header-contact-info li.url {
-}
 .site-header-contact-info li.url::before {
 	content: "\01F310";
 }
