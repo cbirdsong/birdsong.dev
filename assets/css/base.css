@@ -23,15 +23,8 @@
 
 	scroll-behavior: smooth;
 
-	font-family: "Dosis", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
-		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-		"Helvetica", "Arial", sans-serif;
-	font-synthesis: style;
-
 	font-size: 120%;
 	line-height: 1.5;
-
-	font-weight: 350;
 }
 @supports (font-size: calc(100% + 1vw)) {
 	@media screen {
@@ -44,10 +37,9 @@
 :focus {
 	outline: 0.1em solid currentColor;
 
-	outline-width: 0.1em;
 	outline-offset: 0.05em;
 	outline-style: dashed;
-	outline-color: var(--focus-color);
+	outline-color: var(--focus-color, currentColor);
 }
 
 ::selection {
@@ -57,6 +49,7 @@
 
 body {
 	margin: 0;
+	padding-bottom: env(safe-area-inset-bottom);
 
 	color: hsl(0, 0%, 10%);
 	color: var(--text-color);
@@ -64,21 +57,13 @@ body {
 	background-color: hsl(0, 0%, 95%);
 	background-color: var(--background-color);
 }
-@supports (padding-bottom: env(safe-area-inset-bottom)) {
-	body {
-		padding-bottom: env(safe-area-inset-bottom);
-	}
-}
+
 body > * {
-	padding: 1rem;
 	margin: 0;
-}
-@media screen {
-	body > * {
-		padding: calc(0.5vh + 0.5rem) calc(1vw + 1rem);
-		padding-left: calc(1vw + 1rem + env(safe-area-inset-left));
-		padding-right: calc(1vw + 1rem + env(safe-area-inset-right));
-	}
+	padding: calc(0.5vh + 0.5rem) calc(1vw + 1rem);
+
+	padding-left: calc(1vw + 1rem + env(safe-area-inset-left));
+	padding-right: calc(1vw + 1rem + env(safe-area-inset-right));
 }
 
 /* Set up HTML 5 Elements in old browsers */
@@ -96,16 +81,10 @@ details {
 
 a {
 	color: hsl(76, 42%, 38%);
-	font-weight: 375;
 
 	text-decoration-thickness: 0.05em;
 	text-underline-offset: 0.1em;
 	text-decoration-skip-ink: auto;
-
-	transition-property: color, background-color, border-color,
-		text-decoration-color, box-shadow, transform, filter, opacity;
-	transition-duration: 300ms;
-	transition-timing-function: ease-in-out;
 }
 
 @supports (color: var(--link-color)) {
@@ -143,14 +122,14 @@ a[target="_blank"] + small {
 
 /* Text states */
 
-strong,
-strong a {
-	font-weight: 450;
+strong {
+	--font-weight-base: var(--font-weight-heavy);
+	font-weight: var(--font-weight-heavy);
 	font-feature-settings: "salt" on;
 }
 
 small {
-	font-weight: 375;
+	font-weight: calc(var(--font-weight-base) + 25);
 	font-size: 75%;
 }
 
@@ -160,7 +139,7 @@ small {
 			display: inline-block;
 			margin: 0;
 			transform: skew(-10deg, 0deg);
-			--explanation-for-transform-skew: "chromium doesn't support font-synthesis to make fake italics";
+			--explanation-for-transform-skew: "Chromium doesn't support 'font-synthesis' to make fake italics when variable fonts do not include italics.";
 		}
 	}
 }
@@ -228,12 +207,13 @@ dl {
 li ul,
 li ol,
 li dl {
-	margin-top: 0.25em;
-	margin-bottom: 0.25em;
+	margin: 0.25em 0;
+	margin: var(--list-spacing, 0.25em) 0;
 }
 
 li + li {
 	margin-top: 0.25em;
+	margin-top: var(--list-spacing, 0.25em);
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -279,13 +259,8 @@ details {
 summary {
 	margin: 0 -0.5rem;
 	padding: 0 0.25rem;
-	font-weight: 500;
+	font-weight: calc(var(--font-weight-heavy) + 50);
 	border-radius: 0.5em;
-
-	transition-property: color, background-color, border-color, outline-color,
-		text-decoration-color, box-shadow, transform, filter, opacity;
-	transition-duration: 300ms;
-	transition-timing-function: ease-in-out;
 }
 
 summary:hover,
@@ -303,31 +278,29 @@ main {
 	padding: calc(1vh + 1rem) calc(1vw + 1rem);
 }
 
-@media screen {
+article {
+	max-width: 30rem;
+	margin: 0 auto;
+}
+article > * + * {
+	margin-top: 3rem;
+}
+
+@supports (display: grid) {
 	article {
-		max-width: 30rem;
-		margin: 0 auto;
-	}
-	article > * + * {
-		margin-top: 3rem;
-	}
+		max-width: 100%;
 
-	@supports (display: grid) {
-		article {
-			max-width: 100%;
-
-			display: grid;
-			grid-gap: 3rem 0;
-			grid-template-columns:
-				[full-start] minmax(0, 1fr)
-				[content-start] minmax(0, 30rem)
-				[content-end] minmax(0, 1fr)
-				[full-end];
-		}
-		article > * {
-			margin-top: 0;
-			grid-column: content-start / content-end;
-		}
+		display: grid;
+		grid-gap: 3rem 0;
+		grid-template-columns:
+			[full-start] minmax(0, 1fr)
+			[content-start] minmax(0, 30rem)
+			[content-end] minmax(0, 1fr)
+			[full-end];
+	}
+	article > * {
+		margin-top: 0;
+		grid-column: content-start / content-end;
 	}
 }
 
@@ -337,66 +310,26 @@ aside {
 	font-size: 0.9em;
 }
 
-.intro {
-	grid-column: full-start / full-end;
-}
-.intro__content {
-	margin: 0 auto;
-	max-width: 30rem;
-}
-
-.lead {
-	margin: 0 auto;
-	max-width: 30rem;
-}
-.lead__image {
-	margin: 0 0 1rem;
-	padding: 0 1.5rem 0 0;
-	text-align: center;
-}
-.lead__content {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-}
-.lead__image img {
-	width: auto;
-	height: 20ex;
-	margin: 0 auto;
-}
-@supports (display: flex) {
-	.lead {
-		display: flex;
-		flex-direction: row-reverse;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
-
-		max-width: 100%;
-
-		margin: 0 auto;
-		margin-bottom: 1rem;
-	}
-	.lead__content {
-		flex: 1;
-		max-width: 30rem;
-		min-width: 50%;
-	}
-	.lead__image {
-		margin: 0;
-		padding: 0 1.5rem 0 0;
-	}
-}
-
 .lead {
 	font-size: 1.15em;
-	font-weight: 400;
-}
-.lead strong {
-	font-weight: 550;
+	font-weight: var(--font-weight-base);
+
+	--font-weight-base: 400;
+	--font-weight-heavy: 550;
 }
 
 .center {
 	text-align: center;
+}
+
+/* Basic transitions */
+a,
+summary,
+button {
+	transition-property: color, background-color, border-color,
+		text-decoration-color, box-shadow, transform, filter, opacity;
+	transition-timing-function: ease-in-out;
+	transition-duration: var(--transition-duration, 300ms);
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
@@ -406,6 +339,7 @@ aside {
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
+		--transition-duration: 0.01ms;
 	}
 }
 

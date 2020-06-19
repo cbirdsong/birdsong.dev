@@ -3,6 +3,13 @@ layout: base.njk
 section: home
 ---
 
+{% set css %}
+{% include "assets/css/home.css" %}
+{% endset %}
+<style>
+		{{css | cssmin | safe}}
+</style>
+
 <article>
 
 {{ layoutContent | safe }}

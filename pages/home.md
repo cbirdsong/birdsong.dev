@@ -24,7 +24,7 @@ eleventyNavigation:
 
 <picture>
 	<source srcset="static/img/portrait.webp" type="image/webp">
-	<img src="static/img/portrait.jpg" alt="Cory Birdsong" loading="eager">
+	<img src="static/img/portrait.jpg" alt="Cory Birdsong" width="600" height="600" loading="eager">
 </picture>
 
 </figure>
