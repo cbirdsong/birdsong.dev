@@ -59,12 +59,12 @@ body {
 }
 
 body > * {
+	margin: 0;
 	padding: calc(0.5vh + 0.5rem) calc(1vw + 1rem);
-	
+
 	padding-left: calc(1vw + 1rem + env(safe-area-inset-left));
 	padding-right: calc(1vw + 1rem + env(safe-area-inset-right));
 }
-
 
 /* Set up HTML 5 Elements in old browsers */
 article,
@@ -314,7 +314,7 @@ aside {
 	font-size: 1.15em;
 	font-weight: var(--font-weight-base);
 
-	--font-weight-base: 400;	
+	--font-weight-base: 400;
 	--font-weight-heavy: 550;
 }
 
@@ -323,7 +323,9 @@ aside {
 }
 
 /* Basic transitions */
-a, summary, button {
+a,
+summary,
+button {
 	transition-property: color, background-color, border-color,
 		text-decoration-color, box-shadow, transform, filter, opacity;
 	transition-timing-function: ease-in-out;
