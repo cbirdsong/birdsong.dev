@@ -20,7 +20,7 @@
 	--orange-light: hsl(14, 71%, 59%);
 	--green-light: hsl(76, 42%, 49%);
 	--blue-light: hsla(195, 62%, 49%, 1);
-	
+
 	/* --- */
 
 	/* Set colors */
@@ -32,7 +32,7 @@
 	--link-color: var(--green);
 	--link-color-hover: var(--blue);
 	--focus-color: var(--yellow);
-	
+
 	/* Set type */
 	--font-weight-base: 350;
 	--font-weight-light: 250;
@@ -57,7 +57,7 @@ body {
 		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		"Helvetica", "Arial", sans-serif;
 	font-synthesis: style;
-	
+
 	font-weight: var(--font-weight-base);
 }
 
@@ -227,7 +227,6 @@ section[aria-label="More information"] {
 .site-footer a {
 	font-weight: 667;
 }
-
 
 .nav-contact,
 .nav-contact ul {
