@@ -20,10 +20,10 @@
 	--orange-light: hsl(14, 71%, 59%);
 	--green-light: hsl(76, 42%, 49%);
 	--blue-light: hsla(195, 62%, 49%, 1);
+}
 
-	/* --- */
-
-	/* Set colors */
+/* Set colors */
+:root {
 	--background-color: var(--tan);
 	--background-color--translucent: hsla(0, 0%, 100%, 0.5);
 	--text-color: var(--brown);
@@ -32,13 +32,7 @@
 	--link-color: var(--green);
 	--link-color-hover: var(--blue);
 	--focus-color: var(--yellow);
-
-	/* Set type */
-	--font-weight-base: 350;
-	--font-weight-light: 250;
-	--font-weight-heavy: 450;
 }
-
 @media screen and (prefers-color-scheme: dark) {
 	:root {
 		--background-color: var(--brown);
@@ -52,13 +46,14 @@
 	}
 }
 
+/* ====== */
+
 body {
-	font-family: "Dosis", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
-		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-		"Helvetica", "Arial", sans-serif;
+	font-family: "Dosis", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+		"Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-synthesis: style;
 
-	font-weight: var(--font-weight-base);
+	font-weight: var(--font-weight-normal);
 }
 
 /* Fancy focus styles */
@@ -97,7 +92,7 @@ nav {
 /* Basic styles */
 
 a {
-	font-weight: calc(var(--font-weight-base) + 25);
+	font-weight: calc(var(--font-weight-normal) + 50);
 }
 
 @counter-style circles {
@@ -145,8 +140,7 @@ ul {
 		bottom: 6vw;
 
 		border-radius: 0% 0% 10vw 0% / 0% 0% 10vw 0%;
-		box-shadow: 0 0 0 2vw var(--orange), 0 0 0 4vw var(--yellow),
-			0 0 0 6vw var(--green);
+		box-shadow: 0 0 0 2vw var(--orange), 0 0 0 4vw var(--yellow), 0 0 0 6vw var(--green);
 
 		background-color: var(--background-color--translucent);
 	}

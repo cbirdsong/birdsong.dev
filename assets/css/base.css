@@ -22,15 +22,27 @@
 	-webkit-font-smoothing: antialiased;
 
 	scroll-behavior: smooth;
+}
+
+/* Set type */
+:root {
+	--font-weight-normal: var(--font-weight-base);
+	--font-weight-light: calc(var(--font-weight-normal) - 100);
+	--font-weight-heavy: calc(var(--font-weight-normal) + 100);
 
 	font-size: 120%;
+	font-size: calc(100% + 1vw);
+
 	line-height: 1.5;
 }
-@supports (font-size: calc(100% + 1vw)) {
-	@media screen {
-		:root {
-			font-size: calc(100% + 1vw);
-		}
+@media screen and (min-width: 40rem) {
+	:root {
+		--font-weight-base: 375;
+	}
+}
+@media screen and (min-width: 60rem) {
+	:root {
+		--font-weight-base: 350;
 	}
 }
 
@@ -62,6 +74,7 @@ body > * {
 	margin: 0;
 	padding: calc(0.5vh + 0.5rem) calc(1vw + 1rem);
 
+	/* for notched iPhones */
 	padding-left: calc(1vw + 1rem + env(safe-area-inset-left));
 	padding-right: calc(1vw + 1rem + env(safe-area-inset-right));
 }
@@ -123,7 +136,8 @@ a[target="_blank"] + small {
 /* Text states */
 
 strong {
-	--font-weight-base: var(--font-weight-heavy);
+	--font-weight-normal: calc(var(--font-weight-base) + 100);
+
 	font-weight: var(--font-weight-heavy);
 	font-feature-settings: "salt" on;
 }
@@ -311,11 +325,11 @@ aside {
 }
 
 .lead {
-	font-size: 1.15em;
-	font-weight: var(--font-weight-base);
+	--font-weight-normal: calc(var(--font-weight-base) + 50);
+	--font-weight-heavy: calc(var(--font-weight-base) + 200);
 
-	--font-weight-base: 400;
-	--font-weight-heavy: 550;
+	font-size: 1.15em;
+	font-weight: var(--font-weight-normal);
 }
 
 .center {
@@ -326,8 +340,8 @@ aside {
 a,
 summary,
 button {
-	transition-property: color, background-color, border-color,
-		text-decoration-color, box-shadow, transform, filter, opacity;
+	transition-property: color, background-color, border-color, text-decoration-color, box-shadow, transform, filter,
+		opacity;
 	transition-timing-function: ease-in-out;
 	transition-duration: var(--transition-duration, 300ms);
 }
