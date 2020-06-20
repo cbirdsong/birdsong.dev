@@ -23,8 +23,31 @@ eleventyNavigation:
 <figure class="lead__image">
 
 <picture>
-	<source srcset="static/img/portrait.webp" type="image/webp">
-	<img src="static/img/portrait.jpg" alt="Cory Birdsong" width="600" height="600" loading="eager">
+	<source 
+		srcset="
+			static/img/portrait-308px.webp 308w,
+			static/img/portrait-615px.webp 615w,
+			static/img/portrait.webp 1230w
+		"
+		sizes="
+			(min-width: 1200px) 20vw, 
+			(min-width: 767px) 33vw, 
+			50vw
+		"
+		 type="image/webp">
+	<img src="static/img/portrait.jpg" alt="Cory Birdsong" 
+		width="600" height="600" 
+		srcset="
+			static/img/portrait-308px.jpg 308w,
+			static/img/portrait-615px.jpg 615w,
+			static/img/portrait.jpg 1230w
+		"
+		sizes="
+			(min-width: 1200px) 20vw, 
+			(min-width: 767px) 33vw, 
+			50vw
+		"
+		loading="eager">
 </picture>
 
 </figure>
