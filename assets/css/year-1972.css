@@ -36,7 +36,7 @@
 @media screen and (prefers-color-scheme: dark) {
 	:root {
 		--background-color: var(--brown);
-		--background-color--translucent: hsla(0, 0%, 100%, 0.1);
+		--background-color--translucent: hsla(0, 0%, 0%, 0.25);
 		--text-color: var(--tan);
 		--accent-color: var(--yellow);
 		--heading-color: var(--yellow);
