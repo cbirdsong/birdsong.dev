@@ -21,13 +21,18 @@
 {% endblock %}
 
 {% set css %}
+	{% include "assets/css/year-1972-colors.css" %}
 	{% include "assets/css/base.css" %}
 	{% include "assets/css/year-1972.css" %}
 {% endset %}
 <style>
 	{{ css | cssmin | safe }}
-</style>
+</style> 
 
-<link rel="stylesheet" href="/assets/css/print.css" media="print" as="style"/>
+
+{# <link rel="stylesheet" href="/assets/css/year-1972-colors.css" media="all" as="style" />
+<link rel="stylesheet" href="/assets/css/base.css" media="all" as="style" />
+<link rel="stylesheet" href="/assets/css/year-1972.css" media="all" as="style" /> #}
+<link rel="stylesheet" href="/assets/css/print.css" media="print" as="style" />
 
 {% include "_includes/favicon.njk" %}

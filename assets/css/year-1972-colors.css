@@ -1,0 +1,90 @@
+:root {
+	/* Define colors */
+	--black: hsl(0, 0%, 0%);
+	--black--translucent: hsla(0, 0%, 0%, 0.25);
+	--gray-darker: hsl(0, 0%, 20%);
+	--gray-dark: hsl(0, 0%, 30%);
+	--gray-light: hsl(0, 0%, 80%);
+	--gray-lighter: hsl(0, 0%, 90%);
+	--gray-lightest: hsl(0, 0%, 97.5%);
+	--white: hsl(0, 0%, 100%);
+	--white--translucent: hsla(0, 0%, 100%, 0.5);
+
+	/* Day */
+	--brown: hsl(29, 67%, 15%);
+	--tan: hsl(35, 43%, 88%);
+	--orange: hsl(14, 71%, 47%);
+	--green: hsl(76, 42%, 30%);
+	--blue: hsl(195, 48%, 37%);
+	--yellow: hsl(34, 92%, 63%);
+
+	/* Night */
+	--orange-light: hsla(14, 71%, 59%, 1);
+	--green-light: hsla(76, 42%, 49%, 1);
+	--blue-light: hsla(195, 62%, 49%, 1);
+}
+@supports (color: color(display-p3 1 1 1)) {
+	@media screen and (color-gamut: p3) {
+		:root {
+			--brown: color(display-p3 0.225 0.11 0.008);
+			--tan: color(display-p3 0.985 0.901 0.778);
+			--orange: color(display-p3 0.74 0.232 0.07);
+			--green: color(display-p3 0.344 0.425 0.081);
+			--blue: color(display-p3 0.2646 0.4529 0.5379);
+			--yellow: color(display-p3 0.92 0.587 0.133);
+
+			--orange-light: color(display-p3 0.965 0.506 0.347);
+			--green-light: color(display-p3 0.599 0.795 0.012);
+			--blue-light: color(display-p3 0.293 0.713 0.915);
+		}
+	}
+}
+
+/* Set colors */
+:root {
+	--background-color: var(--tan);
+	--background-color--translucent: var(--white--translucent);
+	--text-color: var(--brown);
+	--accent-color: var(--blue);
+	--heading-color: var(--orange);
+	--link-color: var(--green);
+	--link-color-hover: var(--blue);
+	--focus-color: var(--yellow);
+}
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--background-color: var(--brown);
+		--background-color--translucent: var(--black--translucent);
+		--text-color: var(--tan);
+		--accent-color: var(--yellow);
+		--heading-color: var(--yellow);
+		--link-color: var(--green-light);
+		--link-color-hover: var(--blue-light);
+		--focus-color: var(--orange-light);
+	}
+}
+
+/* @supports (color: color(display-p3 1 1 1)) {
+	@media screen and (color-gamut: p3) {
+		:root {
+			--background-color: color(display-p3 0.985 0.901 0.778);
+			--text-color: color(display-p3 0.225 0.11 0.008);
+			--accent-color: color(display-p3 0.2646 0.4529 0.5379);
+			--heading-color: color(display-p3 0.74 0.232 0.07);
+			--link-color: color(display-p3 0.344 0.425 0.081);
+			--link-color-hover: color(display-p3 0.2646 0.4529 0.5379);
+			--focus-color: color(display-p3 0.92 0.587 0.133);
+		}
+	}
+	@media screen and (color-gamut: p3) and (prefers-color-scheme: dark) {
+		:root {
+			--background-color: color(display-p3 0.225 0.11 0.008);
+			--text-color: color(display-p3 0.985 0.901 0.778);
+			--accent-color: color(display-p3 0.92 0.587 0.133);
+			--heading-color: color(display-p3 0.92 0.587 0.133);
+			--link-color: color(display-p3 0.599 0.795 0.012);
+			--link-color-hover: color(display-p3 0.293 0.713 0.915);
+			--focus-color: color(display-p3 0.965 0.506 0.347);
+		}
+	}
+} */

@@ -1,37 +1,38 @@
 {
-  "name": "internet-web-site",
-  "version": "1.0.0",
-  "description": "A boilerplate for building a fast static website with the Eleventy static site generator, for deployment to Netlify.",
-  "scripts": {
-    "build": "npx eleventy",
-    "watch": "npx eleventy --watch",
-    "serve": "netlify dev",
-    "debug": "DEBUG=* npx eleventy"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cbirdsong/internet-web-site"
-  },
-  "author": {
-    "name": "Cory Birdsong",
-    "email": "cory@birdsong.cc",
-    "url": "https://www.corybirdsong.com/"
-  },
-  "bugs": {
-    "url": "https://github.com/cbirdsong/internet-web-site/issues"
-  },
-  "homepage": "https://github.com/cbirdsong/internet-web-site",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "@11ty/eleventy-plugin-rss": "^1.0.7",
-    "luxon": "^1.21.3",
-    "markdown-it": "^10.0.0",
-    "markdown-it-anchor": "^5.2.5"
-  },
-  "dependencies": {
-    "@11ty/eleventy-navigation": "^0.1.4",
-    "clean-css": "^4.2.1",
-    "html-minifier": "^4.0.0",
-    "uglify-es": "^3.3.9"
-  }
+	"name": "internet-web-site",
+	"version": "1.0.0",
+	"description": "A boilerplate for building a fast static website with the Eleventy static site generator, for deployment to Netlify.",
+	"scripts": {
+		"build": "npx eleventy",
+		"watch": "npx eleventy --watch",
+		"serve": "netlify dev",
+		"debug": "DEBUG=* npx eleventy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cbirdsong/internet-web-site"
+	},
+	"author": {
+		"name": "Cory Birdsong",
+		"email": "cory@birdsong.cc",
+		"url": "https://www.corybirdsong.com/"
+	},
+	"bugs": {
+		"url": "https://github.com/cbirdsong/internet-web-site/issues"
+	},
+	"homepage": "https://github.com/cbirdsong/internet-web-site",
+	"devDependencies": {
+		"@11ty/eleventy": "^0.10.0",
+		"@11ty/eleventy-plugin-rss": "^1.0.7",
+		"luxon": "^1.21.3",
+		"markdown-it": "^10.0.0",
+		"markdown-it-anchor": "^5.2.5",
+		"sass": "^1.26.10"
+	},
+	"dependencies": {
+		"@11ty/eleventy-navigation": "^0.1.4",
+		"clean-css": "^4.2.1",
+		"html-minifier": "^4.0.0",
+		"uglify-es": "^3.3.9"
+	}
 }
