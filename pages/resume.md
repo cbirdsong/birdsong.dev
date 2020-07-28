@@ -5,7 +5,7 @@ permalink: /resume/
 layout: page.njk
 eleventyNavigation:
   key: Résumé
-  order: 10
+  order: 20
 ---
 
 <section aria-label="Skills">
