@@ -25,7 +25,8 @@
 }
 @supports (color: color(display-p3 1 1 1)) {
 	@media screen and (color-gamut: p3) {
-		:root {
+		/* There is a weird inheritance bug in safari when this is :root */
+		body {
 			--brown: color(display-p3 0.225 0.11 0.008);
 			--tan: color(display-p3 0.985 0.901 0.778);
 			--orange: color(display-p3 0.74 0.232 0.07);
