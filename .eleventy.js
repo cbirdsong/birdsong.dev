@@ -55,21 +55,13 @@ module.exports = function(eleventyConfig) {
 		});
 	});
 
-	// Universal slug filter strips unsafe chars from URLs
-	eleventyConfig.addFilter("slugify", function(str) {
-		return slugify(str, {
-			lower: true,
-			replacement: "-",
-			remove: /[*+~.·,()'"`´%!?¿:@]/g
-		});
-	});
-
 	// Don't process folders with static assets e.g. images
 	eleventyConfig.addPassthroughCopy("_redirects");
 	eleventyConfig.addPassthroughCopy("static/");
 	eleventyConfig.addPassthroughCopy("assets/");
 	eleventyConfig.addPassthroughCopy("favicon.ico");
 	eleventyConfig.addPassthroughCopy("favicon.png");
+	eleventyConfig.addPassthroughCopy("favicon.svg");
 	eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
 
 	/* Markdown Plugins */
@@ -78,7 +70,8 @@ module.exports = function(eleventyConfig) {
 	let options = {
 		html: true,
 		breaks: true,
-		linkify: true
+		linkify: true,
+		typographer: true,
 	};
 	let opts = {
 		permalink: false

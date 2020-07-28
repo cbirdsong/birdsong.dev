@@ -1,17 +1,16 @@
 {% extends "_layouts/base.njk" %} 
 
-{% block head_css %}
-{% set css %}
-{% include "assets/css/about.css" %}
-{% endset %}
-<style>
-	{{css | cssmin | safe}}
-</style>
-{% endblock %}
-
-
 {% block content %}
 <article>
 	{{ layoutContent | safe }}
 </article>
+{% endblock %}
+
+{% block head_css %}
+{% set css %}
+{% include "assets/css/about.css" %}
+{% endset %}
+<style id="about-css">
+	{{css | cssmin | safe}}
+</style>
 {% endblock %}

@@ -61,22 +61,32 @@
 
 body {
 	margin: 0;
-	padding-bottom: env(safe-area-inset-bottom);
-
+	
 	color: hsl(0, 0%, 10%);
 	color: var(--text-color);
 
 	background-color: hsl(0, 0%, 95%);
 	background-color: var(--background-color);
 }
-
 body > * {
+	margin: 0;
+}
+
+.site-wrapper {
+	margin: 0;
+	padding-bottom: env(safe-area-inset-bottom);
+}
+.site-wrapper > * {
 	margin: 0;
 	padding: calc(0.5vh + 0.5rem) calc(1vw + 1rem);
 
 	/* for notched iPhones */
 	padding-left: calc(1vw + 1rem + env(safe-area-inset-left));
 	padding-right: calc(1vw + 1rem + env(safe-area-inset-right));
+}
+.site-wrapper > main {
+	padding-top: calc(1vh + 1rem);
+	padding-bottom: calc(1vh + 1rem);
 }
 
 /* Set up HTML 5 Elements in old browsers */
