@@ -21,14 +21,6 @@
 			}
 		},
 		{
-			"name": "Lafayette General Ortho",
-			"url": "https://lafayettegeneralortho.com",
-			"award": {
-				"name": "Silver Addy",
-				"year": "2020"
-			}
-		},
-		{
 			"name": "Bye to Banks",
 			"url": "https://byetobanks.com"
 		},
@@ -37,7 +29,27 @@
 			"url": "https://cajuncountryrice.com"
 		}
 	],
+	"fun": [
+		{
+			"name": "Jet Set",
+			"url": "https://stylestage.dev/styles/jet-set/",
+			"desc": "a very over-the-top Style Stage theme"
+		},
+		{
+			"name": "touchfuzzy",
+			"url": "https://cbirdsong.github.io/touchfuzzy/",
+			"desc": "a nausea-inducing bookmarklet"
+		}
+	],
 	"old": [
+		{
+			"name": "Lafayette General Ortho",
+			"url": "https://lafayettegeneralortho.com",
+			"award": {
+				"name": "Silver Addy",
+				"year": "2020"
+			}
+		},
 		{
 			"name": "RES",
 			"url": "https://web.archive.org/web/20190627172805/https://res.us/"

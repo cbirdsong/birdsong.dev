@@ -18,11 +18,11 @@ eleventyNavigation:
 
 ### **Adept**:
 
-Web accessibility, <abbr title="Scalable Vector Graphics">SVG</abbr>, Git, [Pattern Lab](https://patternlab.io), custom <abbr title="HyperText Markup Language">HTML</abbr> email development, [Schema.org](https://schema.org), Google Analytics / Google Tag Manager, [Eleventy](https://www.11ty.dev)
+Web accessibility, <abbr title="Scalable Vector Graphics">SVG</abbr>, Git, [Pattern Lab](https://patternlab.io), custom <abbr title="HyperText Markup Language">HTML</abbr> email development, [Schema.org](https://schema.org), [Eleventy](https://www.11ty.dev), [Netlify](https://netlify.com)
 
 ### **Proficient**:
 
-PHP, Shopify, HubSpot, [Netlify](https://netlify.com), npm, [Parcel](https://parceljs.org)
+PHP, Shopify, MailChimp, HubSpot, npm, [Parcel](https://parceljs.org), Google Analytics, Google Tag Manager
 
 </section>
 
@@ -93,7 +93,7 @@ Bachelor of Arts in Mass Communication (Print Journalism Concentration), Univers
 ## Contact
 
 - Phone: (985) 570-3709
-- Email: resume@cory.birdsong.cc
+- Email: cory@birdsong.dev
 - Github: github.com/cbirdsong
 
 </section>

@@ -1,9 +1,9 @@
 {
-  "title": "Cory Birdsong",
-  "url": "https://corybirdsong.com.com",
-  "author": {
-    "name": "Cory Birdsong",
-    "email": "cory@birdsong.cc",
-    "github": "https://github.com/cbirdsong"
-  }
+	"title": "Cory Birdsong",
+	"url": "https://corybirdsong.com.com",
+	"author": {
+		"name": "Cory Birdsong",
+		"email": "cory@birdsong.dev",
+		"github": "https://github.com/cbirdsong"
+	}
 }
