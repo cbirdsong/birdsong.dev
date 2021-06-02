@@ -45,6 +45,7 @@
 :root {
 	--background-color: var(--tan);
 	--background-color--translucent: var(--white--translucent);
+	--background-color--full: var(--white);
 	--text-color: var(--brown);
 	--accent-color: var(--blue);
 	--heading-color: var(--orange);
@@ -56,6 +57,7 @@
 	:root {
 		--background-color: var(--brown);
 		--background-color--translucent: var(--black--translucent);
+		--background-color--full: var(--black);
 		--text-color: var(--tan);
 		--accent-color: var(--yellow);
 		--heading-color: var(--yellow);

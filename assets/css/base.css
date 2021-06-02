@@ -377,7 +377,8 @@ button {
 }
 
 /* content made available only to screen readers */
-.visually-hidden {
+.visually-hidden,
+.skip-link {
 	position: absolute;
 	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
@@ -387,4 +388,30 @@ button {
 	padding: 0;
 	border: 0;
 	white-space: nowrap;
+}
+.skip-link {
+	z-index: 10000;
+	display: inline-block;
+	padding: 0.5em;
+
+	top: 1rem;
+	left: 1rem;
+
+	font-weight: var(--font-weight-heavy);
+
+	--focus-background-color: var(--background-color--full);
+}
+.skip-link ~ * {
+	transition: 250ms ease filter;
+}
+.skip-link:focus {
+	width: auto;
+	height: auto;
+	overflow: visible;
+	clip: auto;
+	clip-path: none;
+	white-space: normal;
+}
+.skip-link:focus ~ * {
+	filter: sepia(100%) saturate(0.5) opacity(0.5);
 }

@@ -1,39 +1,39 @@
 <!doctype html>
-<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+<html {% if section %} data-current="{{ section }}" {% endif %} lang="en">
 
-	<head>
-		{% include "_includes/head.njk" %}
+		<head>
+				{% include "_includes/head.njk" %}
 
-		{% block head_css %}{% endblock %}
-	</head>
+				{% block head_css %}{% endblock %}
+		</head>
 
-	<body>
-		<a href="#main" class="visually-hidden">Skip to main content</a>
+		<body>
+				<a href="#main" class="skip-link | visually-hidden">Skip to main content</a>
 
-		<div class="site-wrapper">
+				<div class="site-wrapper">
 
-			<header class="site-header">
-			{% block header %}
-				{% include "_includes/site-header.njk" %}
-			{% endblock %}
-			</header>
+						<header class="site-header">
+								{% block header %}
+										{% include "_includes/site-header.njk" %}
+								{% endblock %}
+						</header>
 
-			<main id="main">
-			{% block content %}
-				{{ layoutContent | safe }}
-			{% endblock %}
-			</main>
+						<main id="main">
+								{% block content %}
+										{{ layoutContent | safe }}
+								{% endblock %}
+						</main>
 
-			<footer class="site-footer">
-			{% block footer %}
-				{% include "_includes/site-footer.njk" %}
-			{% endblock %}
-			</footer>
+						<footer class="site-footer">
+								{% block footer %}
+										{% include "_includes/site-footer.njk" %}
+								{% endblock %}
+						</footer>
 
-		</div>
-			
-		{% include "_includes/js.njk" %}
-		{% block body_js %}{% endblock %}
-	</body>
+				</div>
+
+				{% include "_includes/js.njk" %}
+				{% block body_js %}{% endblock %}
+		</body>
 
 </html>

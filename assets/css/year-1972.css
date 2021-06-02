@@ -21,7 +21,7 @@ body {
 		bottom: -0.2em;
 
 		border-radius: 0.5em;
-		background-color: var(--background-color--translucent);
+		background-color: var(--focus-background-color, var(--background-color--translucent));
 
 		border-width: 0.1em;
 		border-style: dashed;
