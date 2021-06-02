@@ -22,16 +22,16 @@
 	},
 	"homepage": "https://github.com/cbirdsong/internet-web-site",
 	"devDependencies": {
-		"@11ty/eleventy": "^0.10.0",
-		"@11ty/eleventy-plugin-rss": "^1.0.7",
+		"@11ty/eleventy": "^0.12.1",
+		"@11ty/eleventy-plugin-rss": "^1.1.1",
 		"luxon": "^1.21.3",
-		"markdown-it": "^10.0.0",
-		"markdown-it-anchor": "^5.2.5",
-		"sass": "^1.26.10"
+		"markdown-it": "^12.0.6",
+		"markdown-it-anchor": "^7.1.0",
+		"sass": "^1.34.0"
 	},
 	"dependencies": {
-		"@11ty/eleventy-navigation": "^0.1.4",
-		"clean-css": "^4.2.1",
+		"@11ty/eleventy-navigation": "^0.2.0",
+		"clean-css": "^5.1.2",
 		"html-minifier": "^4.0.0",
 		"uglify-es": "^3.3.9"
 	}
