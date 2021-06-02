@@ -8,6 +8,10 @@ eleventyNavigation:
   order: 20
 ---
 
+<aside class="print-only">
+<em>This document is available online at <strong>{{ metadata.domain }}{{ page.url }}</strong></em>
+</aside>
+
 <section aria-label="Skills">
 
 ## Skills
@@ -92,8 +96,10 @@ Bachelor of Arts in Mass Communication (Print Journalism Concentration), Univers
 
 ## Contact
 
-- Phone: (985) 570-3709
-- Email: cory@birdsong.dev
-- Github: github.com/cbirdsong
+- Phone: **(985) 570-3709**
+- Time Zone: **GMT-6** (Central Standard Time)
+- Email: **cory@birdsong.dev**
+- Web: **birdsong.dev**
+- Github: **github.com/cbirdsong**
 
 </section>

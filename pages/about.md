@@ -15,21 +15,22 @@ eleventyNavigation:
 ## I've worked with:
 
 - <abbr title="HTML">HTML</abbr> templating languages like **Liquid**, **Twig**, and **Nunjucks**
-- <abbr title="Cascading Stylesheets">CSS</abbr> preprocessors like **Sass** and **Less** <small>(as well as **PostCSS**, which insists it's not a preprocessor)</small>
+- <abbr title="Cascading Stylesheets">CSS</abbr> processing tools like **Sass**, **Less** and **PostCSS**
 - **jQuery**
 - **Git**, GitHub and BitBucket
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
 - **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)** and building editor blocks using **[Advanced Custom Fields](https://advancedcustomfields.com)**
 - **[Netlify](https://netlify.com)**
-- **[Eleventy](https://www.11ty.dev)**, building full sites, landing pages and one-off page components
+- **[Eleventy](https://11ty.dev)**, building full sites, landing pages and one-off page components
 - **[Pattern Lab](https://patternlab.io/)**, building pattern libraries for design systems
 
 <details>
 <summary>I've also worked with:</summary>
 
+
 - **Vue**
-- **Bootstrap** and other CSS frameworks <small>(compiled from source and customized to the project whenever possible)</small>
 - **[Parcel](https://parceljs.org)**
+- **Bootstrap** and other CSS frameworks <small>(compiled from source and customized to the project whenever possible)</small>
 - Image editors like **Photoshop**, **Illustrator**, **Pixelmator Pro** and **Affinity Designer**
 - Design tools like **Sketch** and **Figma**
 - Performance auditing tools like **Google Lighthouse** and **WebPageTest**

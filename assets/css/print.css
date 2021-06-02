@@ -142,7 +142,6 @@ nav {
 
 article {
 	max-width: 100%;
-	grid-gap: 1rem 0;
 }
 
 section {
@@ -207,4 +206,8 @@ details:not([open]) {
 
 .site-footer {
 	display: none;
+}
+
+.print-only {
+	display: block;
 }

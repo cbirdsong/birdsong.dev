@@ -311,10 +311,10 @@ article {
 	margin: 0 auto;
 }
 article > * + * {
-	margin-top: 3rem;
+	margin-top: 2em;
 }
 
-@supports (display: grid) {
+/* @supports (display: grid) {
 	article {
 		max-width: 100%;
 
@@ -330,7 +330,7 @@ article > * + * {
 		margin-top: 0;
 		grid-column: content-start / content-end;
 	}
-}
+} */
 
 section {
 }
@@ -348,6 +348,11 @@ aside {
 
 .center {
 	text-align: center;
+}
+
+.print-only {
+	display: none;
+	margin: 0;
 }
 
 /* Basic transitions */

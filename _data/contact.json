@@ -7,32 +7,28 @@
 	},
 	{
 		"title": "Email",
-		"value": "resume@cory.birdsong.dev",
-		"href": "mailto:resume@cory.birdsong.dev",
+		"value": "cory@birdsong.dev",
+		"href": "mailto:cory@birdsong.dev",
 		"featured": true
 	},
 	{
 		"title": "Telegram",
 		"value": "cbirdsong",
-		"href": "https://telegram.me/cbirdsong",
-		"icon": ""
+		"href": "https://telegram.me/cbirdsong"
 	},
 	{
 		"title": "GitHub",
 		"value": "cbirdsong",
-		"href": "https://github.com/cbirdsong",
-		"icon": ""
+		"href": "https://github.com/cbirdsong"
 	},
 	{
 		"title": "Twitter",
 		"value": "cbirdsong",
-		"href": "https://twitter.com/cbirdsong",
-		"icon": ""
+		"href": "https://twitter.com/cbirdsong"
 	},
 	{
 		"title": "LinkedIn",
 		"value": "cbirdsong",
-		"href": "https://linkedin.com/in/cbirdsong",
-		"icon": ""
+		"href": "https://linkedin.com/in/cbirdsong"
 	}
 ]
