@@ -17,37 +17,41 @@ eleventyNavigation:
 - **Templating languages** (Liquid, Twig, Nunjucks, Smarty)
 - **<abbr title="Cascading Stylesheets">CSS</abbr> preprocessors** (Sass and Less)
 - **jQuery**
-- **npm**
 - **Git**, GitHub and BitBucket
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
 - **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)**
+- **[Netlify](https://netlify.com)**
+- **[Eleventy](https://www.11ty.dev)**, building full sites, prototypes, landing pages and one-off page components
 - **[Pattern Lab](https://patternlab.io/)**, building pattern libraries for design systems
-- **HubSpot**, building custom landing pages and email templates, customizing form embeds
 
 <details>
 <summary>I've also worked with:</summary>
 
-- **Photoshop**, **Illustrator** and **Sketch**
+- **npm**
+- **Vue**
+- **[Parcel](https://parceljs.org)**
+- **[Craft CMS](https://www.craftcms.com/)**
+- Many common **Wordpress plugins**, such as **[Advanced Custom Fields](https://advancedcustomfields.com)**, **Gravity Forms** and **WPForms**
+- Image editors like **Photoshop**, **Illustrator**, **Pixelmator Pro** and **Affinity Designer**
+- Design tools like **Sketch** and **Figma**
 - **Google Analytics** and **Google Tag Manager** <small>(implemented as performantly as possible)</small>
 - **Google Lighthouse** and **WebPageTest** for performance auditing
-- **Schema.org** and other similar metadata
-- **Cloudflare**, for doing edge <abbr title="search engine optimization">SEO</abbr> optimization via Cloudflare Workers
-- **[Buddy](https://buddy.works)**, for <abbr title="continuous integration and delivery">CI/CD</abbr> and deployment
+- **Schema.org**, **OpenGraph** and other similar metadata
+- **Cloudflare**, as a DNS provider/CDN and doing edge <abbr title="search engine optimization">SEO</abbr> optimization via Cloudflare Workers
+- **[Buddy](https://buddy.works)**, **[DeployHQ](https://deployhq.com)**, and **GitHub Actions**, for <abbr title="continuous integration and delivery">CI/CD</abbr> and deployment
 - **Shopify**
 - **MailChimp**
-- **[Netlify](https://netlify.com)**
-- **[Eleventy](https://www.11ty.dev)**
-- **[Parcel](https://parceljs.org)**
-- **[Litmus](https://litmus.com)**
-  </details>
+- **HubSpot**, building custom landing pages and email templates and customizing form embeds
+- **[BrowserStack]()** and **[LambdaTest](https://www.lambdatest.com/)**, for browser compatibility testing
+- **[Litmus](https://litmus.com)** and **[EmailOnAcid](https://emailonacid.com)**, for email client compatibility testing
+</details>
 
 <details>
 
 <summary>I'd love to learn more about:</summary>
 
 - **Web components**
-- **[Svelte](https://svelte.dev/)** and **[Sapper](https://sapper.svelte.dev/)**
-- **[Craft CMS](https://www.craftcms.com/)**
+- **[Svelte](https://svelte.dev/)**
 
 </details>
 
