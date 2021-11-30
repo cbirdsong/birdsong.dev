@@ -78,7 +78,7 @@ Customized and maintained a fork of Bootstrap to facilitate faster and higher-qu
 
 ## Education
 
-Bachelor of Arts in Mass Communication (Print Journalism Concentration), University of Louisiana at Lafayette. <time>2007</time>.
+**Bachelor of Arts in Mass Communication** _(Print Journalism Concentration)_, University of Louisiana at Lafayette. <time>2007</time>.
 
 </section>
 

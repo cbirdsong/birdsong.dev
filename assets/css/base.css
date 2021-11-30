@@ -140,8 +140,8 @@ a[target="_blank"]::after {
 
 	display: inline-block;
 	color: var(--link-color-hover);
-	margin-right: -0.1em;
 	transform: translateY(0.1667em);
+	line-height: 1;
 }
 a[target="_blank"] + small {
 	margin-left: 0.5em;
@@ -322,37 +322,36 @@ article > * + * {
 	margin-top: 2em;
 }
 
-/* @supports (display: grid) {
-	article {
-		max-width: 100%;
-
-		display: grid;
-		grid-gap: 3rem 0;
-		grid-template-columns:
-			[full-start] minmax(0, 1fr)
-			[content-start] minmax(0, 30rem)
-			[content-end] minmax(0, 1fr)
-			[full-end];
-	}
-	article > * {
-		margin-top: 0;
-		grid-column: content-start / content-end;
-	}
-} */
-
 section {
 }
 aside {
 	font-size: 0.9em;
 }
 
+/* Site Header Elements */
+
+.site-logo {
+	--link-color: var(--text-color);
+}
+.site-logo a {
+	display: inline-block;
+}
+
+.site-header-contact-info {
+	display: none;
+}
+
+/* Site Content Elements */
+
 .lead {
 	--font-weight-normal: calc(var(--font-weight-base) + 50);
 	--font-weight-heavy: calc(var(--font-weight-base) + 200);
 
-	font-size: 1.15em;
+	font-size: 1.25em;
 	font-weight: var(--font-weight-normal);
 }
+
+/* Utilities */
 
 .center {
 	text-align: center;
@@ -397,6 +396,15 @@ button {
 	border: 0;
 	white-space: nowrap;
 }
+.visually-hidden-focusable:focus {
+	width: auto;
+	height: auto;
+	overflow: visible;
+	clip: auto;
+	clip-path: none;
+	white-space: normal;
+}
+
 .skip-link {
 	z-index: 10000;
 	display: inline-block;
@@ -412,27 +420,6 @@ button {
 .skip-link ~ * {
 	transition: 250ms ease filter;
 }
-.skip-link:focus {
-	width: auto;
-	height: auto;
-	overflow: visible;
-	clip: auto;
-	clip-path: none;
-	white-space: normal;
-}
 .skip-link:focus ~ * {
 	filter: sepia(100%) saturate(0.5) opacity(0.5);
-}
-
-/* Site Header Elements */
-
-.site-logo {
-	--link-color: var(--text-color);
-}
-.site-logo a {
-	display: inline-block;
-}
-
-.site-header-contact-info {
-	display: none;
 }

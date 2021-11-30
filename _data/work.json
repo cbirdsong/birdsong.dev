@@ -1,16 +1,20 @@
 {
 	"featured": [
 		{
+			"name": "Civix",
+			"url": "https://web.archive.org/web/20210717021817/https://gocivix.com/"
+		},
+		{
+			"name": "The Current",
+			"url": "https://thecurrentla.com"
+		},
+		{
 			"name": "Eye on 2020",
 			"url": "https://2020.bbrcreative.com",
 			"award": {
 				"name": "Best In Show Addy",
 				"year": "2020"
 			}
-		},
-		{
-			"name": "The Current",
-			"url": "https://thecurrentla.com"
 		},
 		{
 			"name": "Food Marketing Now",
@@ -22,7 +26,8 @@
 		},
 		{
 			"name": "Bye to Banks",
-			"url": "https://byetobanks.com"
+			"url": "https://byetobanks.com",
+			"alternate_url": "https://web.archive.org/web/20210226162648/https://byetobanks.com/"
 		},
 		{
 			"name": "Cajun Country Rice",
@@ -39,6 +44,11 @@
 			"name": "touchfuzzy",
 			"url": "https://cbirdsong.github.io/touchfuzzy/",
 			"desc": "a nausea-inducing bookmarklet"
+		},
+		{
+			"name": "minimum-viable-wordpress",
+			"url": "https://github.com/cbirdsong/minimum-viable-wordpress",
+			"desc": "a single-file WordPress theme"
 		}
 	],
 	"old": [
