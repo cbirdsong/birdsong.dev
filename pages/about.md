@@ -15,9 +15,8 @@ eleventyNavigation:
 ## I've worked with:
 
 - <strong><abbr title="HTML">HTML</abbr></strong> templating languages like **Liquid**, **Twig**, and **Nunjucks**
-- <strong>**<abbr title="Cascading Stylesheets">CSS</abbr></strong> processing tools like **Sass**, **Less** and **PostCSS\*\*
-- **JavaScript** libraries like **Alpine**, **Vue** and **jQuery**
-- **Git**, GitHub and BitBucket
+- <strong><abbr title="Cascading Stylesheets">CSS</abbr></strong> processing tools like **Sass**, **Less** and **PostCSS**
+- **JavaScript**, including web components and libraries like **[Alpine](https://alpinejs.dev/)**, **[Vue](https://vuejs.org/)** and **jQuery**
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
 - **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)** and building editor blocks using **[Advanced Custom Fields](https://advancedcustomfields.com)**
 - **[Eleventy](https://11ty.dev)**, building full sites, landing pages and one-off page components
@@ -25,27 +24,35 @@ eleventyNavigation:
 <details>
 <summary>I've also worked with:</summary>
 
-- **PHP**
-- **Web components**
+### Technologies and Frameworks:
+
+- **Git**, GitHub and BitBucket
+- **PHP**, primarily in the context of WordPress theming and templating
+- **Node**, primarily in the context of Eleventy
+- **Schema.org**, **OpenGraph** and other bits of metadata
+- **[GSAP](https://greensock.com/)** framework for web animations
+- **<abbr title="Cascading Stylesheets">CSS</abbr> frameworks** like **Bootstrap**, compiled from source and customized to the project whenever possible
+
+### <abbr title="Content Management Systems">CMSes</abbr> and Platforms:
+
+- **[Craft CMS](https://www.craftcms.com/)**
 - **Shopify**
 - **MailChimp**
 - **HubSpot**
-- **[Netlify](https://netlify.com)**
-- **[Craft CMS](https://www.craftcms.com/)**
 - **[Pattern Lab](https://patternlab.io/)**, building pattern libraries for design systems
-- **Google Maps' JavaScript <abbr title="application programming interface">API</abbr>**
-- **[Alpine](https://alpinejs.dev/)**
-- **[Vue](https://vuejs.org/)**
-- **[Parcel](https://parceljs.org)**
-- **Bootstrap** and other <abbr title="Cascading Stylesheets">CSS</abbr> frameworks, compiled from source and customized to the project whenever possible
+- **[Netlify](https://netlify.com)**
+- **Cloudflare**, as a DNS provider/CDN and doing edge <abbr title="search engine optimization">SEO</abbr> optimization via Cloudflare Workers
+- **Google Maps' JavaScript <abbr title="application programming interface">API</abbr>**, for searches, geocoding and design customization
+- **WP Engine**
+
+### Software and Services:
+
+- Developer tooling like **npm**, **[Parcel](https://parceljs.org)** and **[gulp](https://gulpjs.com/)**
 - Image editors like **Photoshop**, **Illustrator**, **Pixelmator Pro** and **Affinity Designer**
 - Design tools like **Sketch**, **Figma** and **Adobe XD**
 - Accessibility auditing tools like **[axe](https://www.deque.com/axe/)** and **[WAVE](https://wave.webaim.org/)**
 - Performance auditing tools like **Google Lighthouse** and **WebPageTest**
-- **Schema.org**, **OpenGraph** and other bits of metadata
-- **Cloudflare**, as a DNS provider/CDN and doing edge <abbr title="search engine optimization">SEO</abbr> optimization via Cloudflare Workers
 - **Google Analytics** and **Google Tag Manager**, implemented as performantly as possible
-- <abbr title="continuous integration and delivery">CI/CD</abbr> and deployment tools like **[Buddy](https://buddy.works)** and **[DeployHQ](https://deployhq.com)**
 - **[Screaming Frog](https://www.screamingfrog.co.uk/)**, to audit sites for accessibility, performance and <abbr title="search engine optimization">SEO</abbr> issues
 - **[BrowserStack](https://www.browserstack.com/)** and **[LambdaTest](https://www.lambdatest.com/)**, for browser compatibility testing
 - **[Litmus](https://litmus.com)** and **[EmailOnAcid](https://emailonacid.com)**, for email client compatibility testing
@@ -58,6 +65,7 @@ eleventyNavigation:
 
 - **[Svelte](https://svelte.dev/)**, and other similar tools that compile the framework away during the build process instead of delivering it to the client
 - **Privacy-minded analytics tools**
+- **[Storybook](https://storybook.js.org/)**
 
 </details>
 

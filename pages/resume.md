@@ -16,7 +16,7 @@ eleventyNavigation:
 
 **Adept**: Web accessibility, <abbr title="Scalable Vector Graphics">SVG</abbr>, Git, [Pattern Lab](https://patternlab.io), custom <abbr title="HyperText Markup Language">HTML</abbr> email development, [Schema.org](https://schema.org), [Eleventy](https://www.11ty.dev), [Netlify](https://netlify.com)
 
-**Proficient**: PHP, Craft, Shopify, MailChimp, HubSpot, npm, [Parcel](https://parceljs.org), Google Analytics, Google Tag Manager
+**Proficient**: PHP, [Craft CMS](https://www.craftcms.com/), [Alpine](https://alpinejs.dev/), [Vue](https://vuejs.org/), Shopify, MailChimp, HubSpot, npm, [Parcel](https://parceljs.org), Google Analytics, Google Tag Manager, [GSAP](https://greensock.com/)
 
 </section>
 

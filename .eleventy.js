@@ -82,7 +82,7 @@ module.exports = function (eleventyConfig) {
 		permalink: false,
 	};
 
-	eleventyConfig.setLibrary("md", markdownIt(options).use(markdownItAnchor, opts));
+	eleventyConfig.setLibrary("md", markdownIt(options));
 
 	return {
 		templateFormats: ["md", "njk", "html", "liquid"],
