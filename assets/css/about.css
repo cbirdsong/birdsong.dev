@@ -1,11 +1,3 @@
-.intro {
-	grid-column: full-start / full-end;
-}
-.intro__content {
-	margin: 0 auto;
-	max-width: 30rem;
-}
-
 .lead {
 	margin: 0 auto;
 	max-width: 30rem;
