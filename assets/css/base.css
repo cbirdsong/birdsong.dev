@@ -28,7 +28,7 @@
 :root {
 	--font-weight-normal: var(--font-weight-base);
 	--font-weight-light: calc(var(--font-weight-normal) - 100);
-	--font-weight-heavy: calc(var(--font-weight-normal) + 100);
+	--font-weight-heavy: calc(var(--font-weight-normal) + 150);
 
 	font-size: 120%;
 
@@ -107,9 +107,7 @@ details {
 }
 
 a {
-	color: hsl(76, 42%, 38%);
-
-	text-decoration-thickness: 0.05em;
+	text-decoration-thickness: 2px;
 	text-underline-offset: 0.1em;
 	text-decoration-skip-ink: auto;
 }
@@ -153,7 +151,6 @@ strong {
 	--font-weight-normal: calc(var(--font-weight-base) + 100);
 
 	font-weight: var(--font-weight-heavy);
-	font-feature-settings: "salt" on;
 }
 
 small {
@@ -166,8 +163,6 @@ small {
 		em {
 			display: inline-block;
 			margin: 0;
-			transform: skew(-10deg, 0deg);
-			--explanation-for-transform-skew: "Chromium doesn't support 'font-synthesis' to make fake italics when variable fonts do not include italics.";
 		}
 	}
 }
@@ -178,11 +173,11 @@ abbr {
 	text-decoration-line: underline;
 	text-decoration-style: dashed;
 	text-decoration-color: var(--accent-color);
-	text-decoration-thickness: 0.05em;
+	text-decoration-thickness: 2px;
 	text-underline-offset: 0.1em;
 }
 a abbr {
-	text-decoration-color: var(--link-color);
+	text-decoration-color: transparent;
 }
 
 /* Headings */
@@ -197,8 +192,6 @@ h6 {
 
 	line-height: 1.25;
 	font-weight: 550;
-
-	font-feature-settings: "salt" on;
 }
 
 h1,

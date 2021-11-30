@@ -1,7 +1,6 @@
 {
 	"name": "internet-web-site",
 	"version": "1.0.0",
-	"description": "A boilerplate for building a fast static website with the Eleventy static site generator, for deployment to Netlify.",
 	"scripts": {
 		"build": "npx eleventy",
 		"watch": "npx eleventy --watch",
@@ -23,16 +22,19 @@
 	"homepage": "https://github.com/cbirdsong/internet-web-site",
 	"devDependencies": {
 		"@11ty/eleventy": "^0.12.1",
+		"@11ty/eleventy-navigation": "^0.3.2",
 		"@11ty/eleventy-plugin-rss": "^1.1.1",
-		"luxon": "^1.21.3",
-		"markdown-it": "^12.0.6",
-		"markdown-it-anchor": "^7.1.0",
-		"sass": "^1.34.0"
+		"clean-css": "^5.1.5",
+		"html-minifier": "^4.0.0",
+		"luxon": "^2.0.2",
+		"markdown-it": "^12.2.0",
+		"markdown-it-anchor": "^8.1.2",
+		"sass": "^1.38.0",
+		"uglify-es": "^3.3.9"
 	},
 	"dependencies": {
-		"@11ty/eleventy-navigation": "^0.2.0",
-		"clean-css": "^5.1.2",
-		"html-minifier": "^4.0.0",
-		"uglify-es": "^3.3.9"
+		"@fontsource/dosis": "^4.5.1",
+		"@fontsource/jost": "^4.5.1",
+		"@fontsource/work-sans": "^4.5.2"
 	}
 }

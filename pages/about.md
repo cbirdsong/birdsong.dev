@@ -20,19 +20,25 @@ eleventyNavigation:
 - **Git**, GitHub and BitBucket
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
 - **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)** and building editor blocks using **[Advanced Custom Fields](https://advancedcustomfields.com)**
-- **[Netlify](https://netlify.com)**
 - **[Eleventy](https://11ty.dev)**, building full sites, landing pages and one-off page components
-- **[Pattern Lab](https://patternlab.io/)**, building pattern libraries for design systems
 
 <details>
 <summary>I've also worked with:</summary>
 
-
-- **Vue**
+- **PHP**
+- **Web components**
+- **Shopify**
+- **MailChimp**
+- **HubSpot**
+- **[Netlify](https://netlify.com)**
+- **[Craft CMS](https://www.craftcms.com/)**
+- **[Pattern Lab](https://patternlab.io/)**, building pattern libraries for design systems
+- **Google Maps' JavaScript <abbr title="application programming interface">API</abbr>**
+- **[Vue](https://vuejs.org/)**
 - **[Parcel](https://parceljs.org)**
-- **Bootstrap** and other CSS frameworks <small>(compiled from source and customized to the project whenever possible)</small>
+- **Bootstrap** and other <abbr title="Cascading Stylesheets">CSS</abbr> frameworks <small>(compiled from source and customized to the project whenever possible)</small>
 - Image editors like **Photoshop**, **Illustrator**, **Pixelmator Pro** and **Affinity Designer**
-- Design tools like **Sketch** and **Figma**
+- Design tools like **Sketch**, **Figma** and **Adobe XD**
 - Performance auditing tools like **Google Lighthouse** and **WebPageTest**
 - **Schema.org**, **OpenGraph** and other similar bits of metadata
 - **Cloudflare**, as a DNS provider/CDN and doing edge <abbr title="search engine optimization">SEO</abbr> optimization via Cloudflare Workers
@@ -41,11 +47,6 @@ eleventyNavigation:
 - **[Screaming Frog](https://www.screamingfrog.co.uk/)**, to audit sites for accessibility, performance and <abbr title="search engine optimization">SEO</abbr> issues
 - **[BrowserStack](https://www.browserstack.com/)** and **[LambdaTest](https://www.lambdatest.com/)**, for browser compatibility testing
 - **[Litmus](https://litmus.com)** and **[EmailOnAcid](https://emailonacid.com)**, for email client compatibility testing
-- **Shopify**
-- **MailChimp**
-- **HubSpot**
-- **Google Maps' JavaScript <abbr title="application programming interface">API</abbr>**
-- **[Craft CMS](https://www.craftcms.com/)** 
 
 </details>
 
@@ -53,9 +54,7 @@ eleventyNavigation:
 
 <summary>I'd love to learn more about:</summary>
 
-- **Web components**
 - **[Svelte](https://svelte.dev/)**, and other similar tools that compile the framework away during the build process instead of delivering it to the client
-- **[Craft CMS](https://www.craftcms.com/)** (I've worked with it a bit and really like what I saw)
 - **Privacy-minded analytics tools**
 
 </details>
