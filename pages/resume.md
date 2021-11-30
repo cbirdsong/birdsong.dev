@@ -8,10 +8,6 @@ eleventyNavigation:
   order: 20
 ---
 
-<aside class="print-only">
-<em>This document is available online at <strong>{{ metadata.domain }}{{ page.url }}</strong></em>
-</aside>
-
 <section aria-label="Skills">
 
 ## Skills

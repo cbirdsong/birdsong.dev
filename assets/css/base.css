@@ -26,6 +26,8 @@
 
 /* Set type */
 :root {
+	--font-weight-base: 400;
+
 	--font-weight-normal: var(--font-weight-base);
 	--font-weight-light: calc(var(--font-weight-normal) - 100);
 	--font-weight-heavy: calc(var(--font-weight-normal) + 150);
@@ -39,12 +41,12 @@
 		font-size: calc(100% + 1vw);
 	}
 }
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 40em) {
 	:root {
 		--font-weight-base: 375;
 	}
 }
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 60em) {
 	:root {
 		--font-weight-base: 350;
 	}
@@ -299,8 +301,10 @@ main {
 	padding: calc(1vh + 1rem) calc(1vw + 1rem);
 }
 
-article {
-	max-width: 30rem;
+article,
+.l-container {
+	width: 34rem;
+	max-width: 100%;
 	margin: 0 auto;
 }
 article > * + * {
@@ -407,4 +411,17 @@ button {
 }
 .skip-link:focus ~ * {
 	filter: sepia(100%) saturate(0.5) opacity(0.5);
+}
+
+/* Site Header Elements */
+
+.site-logo {
+	--link-color: var(--text-color);
+}
+.site-logo a {
+	display: inline-block;
+}
+
+.site-header-contact-info {
+	display: none;
 }

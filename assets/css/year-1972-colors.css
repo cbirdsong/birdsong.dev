@@ -53,7 +53,7 @@
 	--link-color-hover: var(--blue);
 	--focus-color: var(--yellow);
 }
-@media screen and (prefers-color-scheme: dark) {
+/* @media screen and (prefers-color-scheme: dark) {
 	:root {
 		--background-color: var(--brown);
 		--background-color--translucent: var(--black--translucent);
@@ -65,7 +65,7 @@
 		--link-color-hover: var(--blue-light);
 		--focus-color: var(--orange-light);
 	}
-}
+} */
 
 /* @supports (color: color(display-p3 1 1 1)) {
 	@media screen and (color-gamut: p3) {

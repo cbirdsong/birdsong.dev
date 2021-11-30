@@ -13,9 +13,11 @@
 				<div class="site-wrapper">
 
 						<header class="site-header">
-								{% block header %}
-										{% include "_includes/site-header.njk" %}
-								{% endblock %}
+								<div class="l-container site-header__container">
+										{% block header %}
+												{% include "_includes/site-header.njk" %}
+										{% endblock %}
+								</div>
 						</header>
 
 						<main id="main">
@@ -25,9 +27,11 @@
 						</main>
 
 						<footer class="site-footer">
-								{% block footer %}
-										{% include "_includes/site-footer.njk" %}
-								{% endblock %}
+								<div class="container site-footer__container">
+										{% block footer %}
+												{% include "_includes/site-footer.njk" %}
+										{% endblock %}
+								</div>
 						</footer>
 
 				</div>

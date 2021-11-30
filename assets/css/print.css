@@ -37,6 +37,9 @@ body {
 	background-color: transparent;
 	padding: 0;
 	margin: 0;
+
+	font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 body > * {
 	padding: 1rem;
@@ -44,21 +47,30 @@ body > * {
 
 a {
 	text-decoration: none;
+	font-weight: inherit;
 }
 a[href]::after {
 	content: attr(href);
 
 	display: inline-block;
-	margin: 0 0.2em;
-	padding: 0.1em 0.4em;
+	margin: 0 0.45em 0 0.3em;
+	padding: 0.15em 0.45em;
 
 	font-size: 70%;
+
+	line-height: 1;
+
 	text-decoration: none;
 	transform: none;
-	vertical-align: text-bottom;
+	vertical-align: middle;
 
 	border-radius: 0.75em;
+	border-width: 1px;
+	border-style: dashed;
+	border-color: var(--gray-light);
 	background-color: var(--gray-lightest);
+
+	opacity: 0.75;
 }
 a[href^="#"]::after,
 a[href*="archive.org"]::after,
@@ -154,6 +166,10 @@ section + section {
 	margin-top: 0.75cm;
 }
 
+section + aside {
+	padding: 0.75cm 0;
+}
+
 table {
 	page-break-inside: avoid;
 	break-inside: avoid-page;
@@ -167,7 +183,8 @@ details:not([open]) {
 .site-header {
 	font-weight: 600;
 	font-size: 1.1em;
-
+}
+.site-header__container {
 	flex-direction: column;
 }
 .site-header a::after {
@@ -205,6 +222,13 @@ details:not([open]) {
 }
 
 .site-footer {
+	margin: 0;
+	font-weight: inherit;
+
+	border-top: 1px dotted var(--gray-light);
+}
+
+.site-footer > .nav {
 	display: none;
 }
 

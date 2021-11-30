@@ -2,9 +2,10 @@
 	"name": "internet-web-site",
 	"version": "1.0.0",
 	"scripts": {
+		"start": "npm run serve",
 		"build": "npx eleventy",
 		"watch": "npx eleventy --watch",
-		"serve": "netlify dev",
+		"serve": "npx eleventy --serve",
 		"debug": "DEBUG=* npx eleventy"
 	},
 	"repository": {
