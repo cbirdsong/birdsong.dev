@@ -7,6 +7,10 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 module.exports = function (eleventyConfig) {
 	eleventyConfig.setQuietMode(true);
 
+	eleventyConfig.addWatchTarget("./src/css/");
+	eleventyConfig.addWatchTarget("./src/sass/");
+	eleventyConfig.addWatchTarget("./src/js/");
+
 	// Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
 	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
@@ -48,26 +52,25 @@ module.exports = function (eleventyConfig) {
 		return content;
 	});
 
-	// only content in the `posts/` directory
+	// Add posts collection
 	eleventyConfig.addCollection("posts", function (collection) {
 		return collection.getAllSorted().filter(function (item) {
 			return item.inputPath.match(/^\.\/posts\//) !== null;
 		});
 	});
 
+	// Pass through stuff
 	eleventyConfig.addPassthroughCopy({
-		"./node_modules/@fontsource/*/files/*-latin-variable-*.woff2": "static/fonts",
-		"./node_modules/@fontsource/*/files/*-latin-ext-variable-*.woff2": "static/fonts",
+		"./src/fonts": "fonts",
+		"./node_modules/@fontsource/*/files/*-latin-variable-*.woff2": "fonts",
+		"./node_modules/@fontsource/*/files/*-latin-ext-variable-*.woff2": "fonts",
 	});
+	eleventyConfig.addPassthroughCopy({ "src/images": "images" });
+	eleventyConfig.addPassthroughCopy({ "src/js": "js" });
+	eleventyConfig.addPassthroughCopy({ "src/themes": "themes" });
 
-	// Don't process folders with static assets e.g. images
+	// Various other things in the root
 	eleventyConfig.addPassthroughCopy("_redirects");
-	eleventyConfig.addPassthroughCopy("static/");
-	eleventyConfig.addPassthroughCopy("assets/");
-	eleventyConfig.addPassthroughCopy("favicon.ico");
-	eleventyConfig.addPassthroughCopy("favicon.png");
-	eleventyConfig.addPassthroughCopy("favicon.svg");
-	eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
 
 	/* Markdown Plugins */
 	let markdownIt = require("markdown-it");
@@ -85,12 +88,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.setLibrary("md", markdownIt(options));
 
 	return {
-		templateFormats: ["md", "njk", "html", "liquid"],
+		templateFormats: ["md", "njk", "html"],
 
-		// If your site lives in a different subdirectory, change this.
-		// Leading or trailing slashes are all normalized away, so don’t worry about it.
-		// If you don’t have a subdirectory, use "" or "/" (they do the same thing)
-		// This is only used for URLs (it does not affect your file structure)
 		pathPrefix: "/",
 
 		markdownTemplateEngine: "njk",
@@ -102,7 +101,7 @@ module.exports = function (eleventyConfig) {
 			includes: "_includes",
 			layouts: "_layouts",
 			data: "_data",
-			output: "_site",
+			output: "dist",
 		},
 	};
 };

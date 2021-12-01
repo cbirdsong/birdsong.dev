@@ -8,8 +8,6 @@ eleventyNavigation:
   order: 10
 ---
 
-{% include "_includes/section-about.njk" %}
-
 <section aria-label="Skills">
 
 ## I've worked with:
@@ -124,7 +122,7 @@ eleventyNavigation:
 
 </section>
 
-<section id="more-info" class="text-center" aria-label="More information">
+<section id="more-info" class="has-text-align-center" aria-label="More information">
 
 **[View my full resume](/resume/)**.
 

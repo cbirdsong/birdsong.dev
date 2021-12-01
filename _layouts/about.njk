@@ -1,16 +1,18 @@
-{% extends "_layouts/base.njk" %} 
+{% extends "_layouts/_base.njk" %}
 
 {% block content %}
-<article>
-	{{ layoutContent | safe }}
-</article>
+  <article>
+    {%- include "_includes/section-about.njk" -%}
+    {{ layoutContent | safe }}
+  </article>
 {% endblock %}
 
 {% block head_css %}
-{% set css %}
-{% include "assets/css/about.css" %}
-{% endset %}
-<style id="about-css">
-	{{css | cssmin | safe}}
-</style>
+  {{ super() }}
+  {% set css %}
+  {% include "dist/css/about.css" %}
+  {% endset %}
+  <style id="about-css">
+    {{css | cssmin | safe}}
+  </style>
 {% endblock %}

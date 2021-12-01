@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" class="page-{{ page.fileSlug }}">
+
+  <head>
+    {% include "_includes/head.njk" %}
+
+    {% block head_css %}{% endblock %}
+  </head>
+
+  <body>
+    <a href="#main" class="skip-link | visually-hidden visually-hidden-focusable">Skip to main content</a>
+
+    <div class="site-wrapper">
+
+      <header class="site-header">
+        <div class="l-container site-header__container">
+          {% block header %}
+            {% include "_includes/site-header.njk" %}
+          {% endblock %}
+        </div>
+      </header>
+
+      <main id="main">
+        {% block content %}
+          {{ layoutContent | safe }}
+        {% endblock %}
+      </main>
+
+      <footer class="site-footer">
+        <div class="l-container site-footer__container">
+          {% block footer %}
+            {% include "_includes/site-footer.njk" %}
+          {% endblock %}
+        </div>
+      </footer>
+
+    </div>
+
+    {% block body_js %}{% endblock %}
+  </body>
+
+</html>

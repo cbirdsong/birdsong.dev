@@ -6,5 +6,3 @@ permalink: /
 #   key: Home
 #   order: 1
 ---
-
-{% include "_includes/section-about.njk" %}

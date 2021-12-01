@@ -1,0 +1,11 @@
+[modern]
+supports es6-module
+
+[legacy]
+> 0.1%
+Firefox ESR
+Opera 12.1
+ie 11
+not ie <= 10
+not dead
+unreleased versions

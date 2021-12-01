@@ -1,3 +1,5 @@
+@import "plumbing";
+
 /* Global reset */
 *,
 *::before,
@@ -26,6 +28,8 @@
 
 /* Set type */
 :root {
+	--font-family-base: #{$system-font-family};
+
 	--font-weight-base: 400;
 
 	--font-weight-normal: var(--font-weight-base);
@@ -68,11 +72,13 @@
 body {
 	margin: 0;
 
-	color: hsl(0, 0%, 10%);
 	color: var(--text-color);
 
-	background-color: hsl(0, 0%, 95%);
 	background-color: var(--background-color);
+
+	font-family: var(--font-weight-base);
+
+	font-weight: var(--font-weight-normal);
 }
 body > * {
 	margin: 0;
@@ -111,25 +117,16 @@ details {
 a {
 	text-decoration-thickness: 2px;
 	text-underline-offset: 0.1em;
-	text-decoration-skip-ink: auto;
-}
 
-@supports (color: var(--link-color)) {
-	a {
-		color: var(--link-color);
-	}
-	a:visited {
-	}
-	a:hover,
-	a:active {
-		color: var(--link-color-hover);
-	}
-}
+	text-decoration-color: var(--link-color-hover);
 
-@supports (text-decoration-color: var(--link-color-hover)) {
-	a {
-		text-decoration-color: var(--link-color-hover);
-	}
+	color: var(--link-color);
+}
+a:visited {
+}
+a:hover,
+a:active {
+	color: var(--link-color-hover);
 }
 
 /* External links */
@@ -150,23 +147,12 @@ a[target="_blank"] + small {
 /* Text states */
 
 strong {
-	--font-weight-normal: calc(var(--font-weight-base) + 100);
-
 	font-weight: var(--font-weight-heavy);
 }
 
 small {
 	font-weight: calc(var(--font-weight-base) + 25);
 	font-size: 75%;
-}
-
-@supports not (font-synthesis: style) {
-	@media screen {
-		em {
-			display: inline-block;
-			margin: 0;
-		}
-	}
 }
 
 abbr {
@@ -194,30 +180,28 @@ h6 {
 
 	line-height: 1.25;
 	font-weight: 550;
+
+	a {
+		font-weight: inherit;
+	}
 }
 
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-	font-weight: inherit;
-}
-
-h1 {
+h1,
+.h1 {
 	font-size: 1.9em;
 	font-size: clamp(1.7em, 7.5vw, 1.9em);
 
 	font-weight: 800;
 }
-h2 {
+h2,
+.h2 {
 	font-size: 1.5em;
 	font-size: clamp(1.25em, 7.5vw, 1.5em);
 
 	font-weight: 700;
 }
-h3 {
+h3,
+.h3 {
 	font-size: 1.2em;
 	font-size: clamp(1.1em, 7.5vw, 1.2em);
 
@@ -225,11 +209,10 @@ h3 {
 }
 
 h1,
-h2 {
+.h1,
+h2,
+.h2 {
 	color: var(--heading-color);
-}
-h3,
-h4 {
 }
 
 /* Reasonable list defaults */
@@ -353,7 +336,7 @@ aside {
 
 /* Utilities */
 
-.center {
+.has-text-align-center {
 	text-align: center;
 }
 
