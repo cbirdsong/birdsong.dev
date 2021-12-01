@@ -148,11 +148,19 @@ a[target="_blank"] + small {
 
 strong {
 	font-weight: var(--font-weight-heavy);
+
+	a {
+		font-weight: calc(var(--font-weight-heavy) + 100);
+	}
 }
 
 small {
-	font-weight: calc(var(--font-weight-base) + 25);
+	font-weight: calc(var(--font-weight-normal) + 25);
 	font-size: 75%;
+
+	a {
+		font-weight: calc(var(--font-weight-normal) + 75);
+	}
 }
 
 abbr {
