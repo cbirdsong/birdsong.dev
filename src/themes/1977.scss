@@ -75,7 +75,7 @@ ul {
 .site-header {
 	position: relative;
 	text-align: center;
-	
+
 	padding-top: 2vw;
 	padding-bottom: 8vw;
 }
@@ -96,14 +96,13 @@ ul {
 
 	.page-home & {
 		animation-name: headerReveal;
-		animation-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
-		animation-timing-function: cubic-bezier(.44,.02,.81,.88);
-		animation-timing-function: cubic-bezier(.37,0,.67,.98);
+		animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+		animation-timing-function: cubic-bezier(0.44, 0.02, 0.81, 0.88);
+		animation-timing-function: cubic-bezier(0.37, 0, 0.67, 0.98);
 		animation-duration: 1.5s;
 		animation-iteration-count: 1;
 		animation-fill-mode: both;
 	}
-
 }
 
 @keyframes headerReveal {
@@ -115,11 +114,11 @@ ul {
 	90% {
 		background-color: transparent;
 	}
- 
+
 	100% {
 		background-color: var(--background-color--translucent);
 		clip-path: inset(-6vw -6vw -6vw -6vw);
- }
+	}
 }
 
 .site-header__container {
