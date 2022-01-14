@@ -1,20 +1,8 @@
 [
 	{
-		"title": "Phone",
-		"value": "(985) 570-3709",
-		"href": "tel:+19855703709",
-		"featured": true
-	},
-	{
 		"title": "Email",
 		"value": "cory@birdsong.dev",
-		"href": "mailto:cory@birdsong.dev",
-		"featured": true
-	},
-	{
-		"title": "Telegram",
-		"value": "cbirdsong",
-		"href": "https://telegram.me/cbirdsong"
+		"href": "mailto:cory@birdsong.dev"
 	},
 	{
 		"title": "GitHub",

@@ -1,13 +1,12 @@
 <nav class="nav nav-horizontal" id="nav-contact" aria-label="Contact">
-		<h2 class="nav__title">Contact:</h2>
-		{% set navPages = contact %}
-		<ul>
-				{%- for item in navPages %}
-						<li>
-								<a href="{{ item.href | url }}" data-print-label="{{ item.value }}" aria-label="{{ item.title }}: {{ item.value }}">
-										{{ item.title }}
-								</a>
-						</li>
-				{%- endfor %}
-		</ul>
+  <h2 class="nav__title">Contact:</h2>
+  <ul>
+    {%- for item in contact %}
+      <li>
+        <a href="{{ item.href | url }}" data-print-label="{{ item.value }}" aria-label="{{ item.title }}: {{ item.value }}">
+          {{ item.title }}
+        </a>
+      </li>
+    {%- endfor %}
+  </ul>
 </nav>

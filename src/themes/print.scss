@@ -208,6 +208,10 @@ details:not([open]) {
 	content: none;
 }
 
+.site-logo {
+	font-size: 36pt;
+	font-weight: bold;
+}
 .site-logo svg {
 	width: 350px;
 	margin-bottom: 0.67rem;
@@ -217,14 +221,18 @@ details:not([open]) {
 	display: block;
 	display: flex;
 	flex-flow: row wrap;
+	padding: 0;
 }
 .site-header-contact-info li {
-	margin: 0.5em;
+	margin: 0;
+	margin-right: 1.5ch;
+	margin-bottom: 0.5em;
+	list-style: none;
 }
 .site-header-contact-info li::before {
-	margin-right: 0.1em;
-	filter: grayscale(100%);
+	margin-right: 0.75ch;
 	font-size: 0.8em;
+	text-align: revert;
 }
 
 .site-header-contact-info li.url::before {
