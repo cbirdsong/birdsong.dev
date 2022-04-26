@@ -55,6 +55,12 @@ eleventyNavigation:
 
 ## Experience
 
+### Freelance <small>(<time>2020</time>-)</small>
+
+Worked with a number of agencies on projects using Eleventy, WordPress and Craft CMS. Collaborated with designers using Sketch, Figma and Adobe XD.
+
+Built a personal toolkit for development of custom WordPress themes. Helped contribute to proposals around the development of the WordPress block editor.
+
 ### [The Current](https://thecurrentla.com) <small>(<time>2018</time>-)</small>
 
 Helped (re)launch and run a WordPress-powered non-profit news organization. Customized and eventually replaced a prebuilt theme. Managed WordPress integrations and transitions between Mailchimp/Active Campaign and Memberful/Pico.
