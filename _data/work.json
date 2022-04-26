@@ -1,8 +1,19 @@
 {
 	"featured": [
 		{
+			"name": "Easy Tiger",
+			"url": "https://easytigerusa.com",
+			"original_url": "https://easytigerusa.com",
+			"award": {
+				"name": "Gold Addy",
+				"year": "2022"
+			}
+		},
+		{
 			"name": "Civix",
-			"url": "https://web.archive.org/web/20210717021817/https://gocivix.com/"
+			"url": "https://gocivix.com",
+			"original_url": "https://gocivix.com",
+			"archive_url": "https://web.archive.org/web/20210717021817/https://gocivix.com/"
 		},
 		{
 			"name": "The Current",
@@ -11,6 +22,8 @@
 		{
 			"name": "Eye on 2020",
 			"url": "https://2020.bbrcreative.com",
+			"original_url": "https://2020.bbrcreative.com",
+			"archive_url": "https://web.archive.org/web/20201031075505/https://2020.bbrcreative.com/",
 			"award": {
 				"name": "Best In Show Addy",
 				"year": "2020"
@@ -18,7 +31,9 @@
 		},
 		{
 			"name": "Food Marketing Now",
-			"url": "https://foodmarketingnow.com",
+			"url": "https://web.archive.org/web/20201125184829/https://foodmarketingnow.com/",
+			"original_url": "https://foodmarketingnow.com",
+			"archive_url": "https://web.archive.org/web/20200922001842/https://foodmarketingnow.com/",
 			"award": {
 				"name": "Silver Addy",
 				"year": "2020"
@@ -26,12 +41,9 @@
 		},
 		{
 			"name": "Bye to Banks",
-			"url": "https://byetobanks.com",
-			"alternate_url": "https://web.archive.org/web/20210226162648/https://byetobanks.com/"
-		},
-		{
-			"name": "Cajun Country Rice",
-			"url": "https://cajuncountryrice.com"
+			"url": "https://web.archive.org/web/20210226162648/https://byetobanks.com/",
+			"original_url": "https://byetobanks.com",
+			"archive_url": "https://web.archive.org/web/20210226162648/https://byetobanks.com/"
 		}
 	],
 	"fun": [
@@ -53,8 +65,15 @@
 	],
 	"old": [
 		{
+			"name": "Cajun Country Rice",
+			"url": "https://cajuncountryrice.com",
+			"original_url": "https://cajuncountryrice.com",
+			"archive_url": "https://web.archive.org/web/20200811223051/https://cajuncountryrice.com/"
+		},
+		{
 			"name": "Lafayette General Ortho",
 			"url": "https://lafayettegeneralortho.com",
+			"archive_url": "https://web.archive.org/web/20200926000942/https://lafayettegeneralortho.com/",
 			"award": {
 				"name": "Silver Addy",
 				"year": "2020"
@@ -62,7 +81,9 @@
 		},
 		{
 			"name": "RES",
-			"url": "https://web.archive.org/web/20190627172805/https://res.us/"
+			"url": "https://web.archive.org/web/20190627172805/https://res.us/",
+			"original_url": "https://res.us/",
+			"archive_url": "https://web.archive.org/web/20190627172805/https://res.us/"
 		},
 		{
 			"name": "2m-tek",
