@@ -55,11 +55,11 @@ eleventyNavigation:
 
 ## Experience
 
-### [The Current](https://thecurrentla.com) <small>(<time>2018</time>-)
+### [The Current](https://thecurrentla.com) <small>(<time>2018</time>-)</small>
 
 Helped (re)launch and run a WordPress-powered non-profit news organization. Customized and eventually replaced a prebuilt theme. Managed WordPress integrations and transitions between Mailchimp/Active Campaign and Memberful/Pico.
 
-### [BBR Creative](https://bbrcreative.com) <small>(<time>2018</time>-<time>2020</time>)
+### [BBR Creative](https://bbrcreative.com) <small>(<time>2018</time>-<time>2020</time>)</small>
 
 Use modern web technologies to accessibly implement and extend designs. Collaborated with designers to make sites beautiful, accessible and user-friendly. Built a landing page template system leveraging <abbr title="Cascading Stylesheets">CSS</abbr> custom properties from scratch.
 
