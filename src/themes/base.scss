@@ -36,9 +36,12 @@
 	--font-weight-light: calc(var(--font-weight-normal) - 100);
 	--font-weight-heavy: calc(var(--font-weight-normal) + 150);
 
+	--line-height-base: 1.5;
+	--line-height-tight: 1.25;
+
 	font-size: 120%;
 
-	line-height: 1.5;
+	line-height: var(--line-height-base);
 }
 @media screen {
 	:root {
@@ -186,7 +189,7 @@ h5,
 h6 {
 	--flow-spacing: 1.5rem;
 
-	line-height: 1.25;
+	line-height: var(--line-height-tight);
 	font-weight: 550;
 
 	a {
@@ -242,8 +245,10 @@ li + li {
 
 dl {
 	display: grid;
-	gap: 0.25em 1em;
+	gap: 0.5em 1em;
 	grid-template-columns: max-content 1fr;
+
+	line-height: var(--line-height-tight);
 
 	> * {
 		--flow-spacing: 0;

@@ -4,8 +4,7 @@
 @import "1977/colors";
 
 body {
-	font-family: "Jost", BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-		"Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-family: var(--font-family-base);
 }
 h1,
 h2,
@@ -13,7 +12,7 @@ h2,
 .site-logo,
 .nav-primary {
 	font-family: var(--font-family-heading);
-	line-height: 1.25;
+	line-height: var(--line-height-tight);
 }
 h1,
 .site-logo,
