@@ -2,6 +2,7 @@
 title: Résumé
 description: "Cory Birdsong is a front-end web developer that can do a bunch of cool stuff listed on this page. (this is how meta descriptions work, right?)"
 permalink: /resume/
+layout: resume.njk
 eleventyNavigation:
   key: Résumé
   order: 20
@@ -91,10 +92,23 @@ Customized and maintained a fork of Bootstrap to facilitate faster and higher-qu
 
 ## Contact
 
-- Phone: **(985) 570-3709**
-- Time Zone: **GMT-6** (Central Standard Time)
-- Email: **cory@birdsong.dev**
-- Web: **birdsong.dev**
-- Github: **github.com/cbirdsong**
+<dl>
+	
+<dt>Phone</dt>
+<dd><strong>(985) 570-3709</strong></dd>
+	
+<dt>Time Zone</dt>
+<dd><strong>GMT-6</strong> (Central Standard Time)</dd>
+	
+<dt>Email</dt>
+<dd><strong>cory@birdsong.dev</strong></dd>
+	
+<dt class="print-only">Web</dt>
+<dd class="print-only"><strong>birdsong.dev</strong></dd>
+	
+<dt>Github</dt>
+<dd><strong><a href="https://github.com/cbirdsong">github.com/cbirdsong</a></strong></dd>
+	
+</dl>
 
 </section>

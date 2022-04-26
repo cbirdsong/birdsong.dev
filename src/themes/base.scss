@@ -225,8 +225,7 @@ h2,
 
 /* Reasonable list defaults */
 ul,
-ol,
-dl {
+ol {
 	padding-left: 1.25em;
 }
 li ul,
@@ -239,6 +238,16 @@ li dl {
 li + li {
 	margin-top: 0.25em;
 	margin-top: var(--list-spacing, 0.25em);
+}
+
+dl {
+	display: grid;
+	gap: 0.25em 1em;
+	grid-template-columns: max-content 1fr;
+
+	> * {
+		--flow-spacing: 0;
+	}
 }
 
 /* Inherit fonts for inputs and buttons */

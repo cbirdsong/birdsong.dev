@@ -1,7 +1,6 @@
----
-layout: _base.njk
-section: page
----
+{% extends "_layouts/_base.njk" %}
+
+{% block content %}
 
 <article>
 
@@ -10,3 +9,5 @@ section: page
 {{ layoutContent | safe }}
 
 </article>
+
+{% endblock %}
