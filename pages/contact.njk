@@ -1,0 +1,20 @@
+---
+title: Contact
+permalink: /contact/
+layout: page.njk
+eleventyNavigation:
+  key: Contact
+  order: 90
+---
+
+<nav class="nav" id="nav-contact" aria-label="Contact">
+  <ul>
+    {%- for item in contact %}
+      <li>
+        <a href="{{ item.href | url }}" data-print-label="{{ item.value }}" aria-label="{{ item.title }}: {{ item.value }}">
+          {{ item.title }}
+        </a>
+      </li>
+    {%- endfor %}
+  </ul>
+</nav>

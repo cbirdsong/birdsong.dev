@@ -22,6 +22,7 @@
 	--orange-light: hsla(14, 71%, 59%, 1);
 	--green-light: hsla(76, 42%, 49%, 1);
 	--blue-light: hsla(195, 62%, 49%, 1);
+	--yellow-light: hsla(34, 92%, 78%, 1);
 }
 @supports (color: color(display-p3 1 1 1)) {
 	@media screen and (color-gamut: p3) {
@@ -53,6 +54,7 @@
 	--link-color-hover: var(--blue);
 	--focus-color: var(--yellow);
 }
+
 /* @media screen and (prefers-color-scheme: dark) {
 	:root {
 		--background-color: var(--brown);
@@ -64,30 +66,5 @@
 		--link-color: var(--green-light);
 		--link-color-hover: var(--blue-light);
 		--focus-color: var(--orange-light);
-	}
-} */
-
-/* @supports (color: color(display-p3 1 1 1)) {
-	@media screen and (color-gamut: p3) {
-		:root {
-			--background-color: color(display-p3 0.985 0.901 0.778);
-			--text-color: color(display-p3 0.225 0.11 0.008);
-			--accent-color: color(display-p3 0.2646 0.4529 0.5379);
-			--heading-color: color(display-p3 0.74 0.232 0.07);
-			--link-color: color(display-p3 0.344 0.425 0.081);
-			--link-color-hover: color(display-p3 0.2646 0.4529 0.5379);
-			--focus-color: color(display-p3 0.92 0.587 0.133);
-		}
-	}
-	@media screen and (color-gamut: p3) and (prefers-color-scheme: dark) {
-		:root {
-			--background-color: color(display-p3 0.225 0.11 0.008);
-			--text-color: color(display-p3 0.985 0.901 0.778);
-			--accent-color: color(display-p3 0.92 0.587 0.133);
-			--heading-color: color(display-p3 0.92 0.587 0.133);
-			--link-color: color(display-p3 0.599 0.795 0.012);
-			--link-color-hover: color(display-p3 0.293 0.713 0.915);
-			--focus-color: color(display-p3 0.965 0.506 0.347);
-		}
 	}
 } */

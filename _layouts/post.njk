@@ -3,32 +3,44 @@ layout: _base.njk
 section: post
 ---
 
-<article>
+<article class="l-stack gap:lg">
 
-		<h1>{{ title }}</h1>
-		<p>
-				<small>
-						<time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time>
-						by
-						{{ metadata.author.name }}
-				</small>
-		</p>
+  <header class="l-stack gap:xs">
+    <p>
+      <time datetime="{{ page.date | datetimeAttr }}">
+        {{ page.date | dateShort }}
+      </time>
+    </p>
 
-		{{ layoutContent | safe }}
+    <h1>{{ title | addNbsp | markdown | safe }}</h1>
+  </header>
 
-		{% if tags %}
-				<p>
-						{% for tag in tags %}
-								{%- if tag != "post" -%}
-										{% set tagUrl %}/tags/{{ tag }}/{% endset %}
-										<a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>, 
-								{%- endif -%}
-						{% endfor %}
-				</p>
-		{% endif %}
+  <div class="l-stack">
+    {{ layoutContent | safe }}
+  </div>
+
+  <footer class="l-stack gap:sm">
+    <p>
+      Posted 
+      <time datetime="{{ page.date | datetimeAttr }}">{{ page.date | dateFull }}</time>
+    </p>
+    
+    {% if tags %}
+    <p>
+      Tagged with 
+      {% for tag in tags %}
+        {%- if tag != "post" -%}
+          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+          <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+        {%- endif -%}
+      {% endfor %}
+    </p>
+    {% endif %}
+
+  </footer>
 
 </article>
 
-<nav>
-	<a href="{{ '/blog/' | url }}">← Blog index</a>
-</nav>
+<p>
+  <a href="{{ '/blog/' | url }}">← Blog index</a>
+</p>

@@ -3,9 +3,9 @@ title: Résumé
 description: "Cory Birdsong is a front-end web developer that can do a bunch of cool stuff listed on this page. (this is how meta descriptions work, right?)"
 permalink: /resume/
 layout: resume.njk
-eleventyNavigation:
-  key: Résumé
-  order: 20
+# eleventyNavigation:
+#   key: Résumé
+#   order: 30
 ---
 
 <section aria-label="Skills">

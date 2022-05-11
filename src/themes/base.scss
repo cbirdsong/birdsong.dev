@@ -37,7 +37,8 @@
 	--font-weight-heavy: calc(var(--font-weight-normal) + 150);
 
 	--line-height-base: 1.5;
-	--line-height-tight: 1.25;
+	--line-height-sm: 1.25;
+	--line-height-xs: 1;
 
 	font-size: 120%;
 
@@ -59,7 +60,8 @@
 	}
 }
 
-:focus {
+:focus,
+:target {
 	outline: 0.1em solid currentColor;
 
 	outline-offset: 0.05em;
@@ -179,22 +181,107 @@ a abbr {
 	text-decoration-color: transparent;
 }
 
+pre,
+code {
+	font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", system-ui,
+		monospace;
+	font-weight: inherit;
+
+	font-size: 1rem;
+	font-size: min(85%, 1rem);
+}
+pre code {
+	background-color: transparent;
+	outline-color: transparent;
+	box-shadow: none;
+}
+
+pre {
+	tab-size: 3;
+
+	padding: 0.75em 1em;
+	line-height: var(--line-height-sm);
+
+	border-radius: 0.25em;
+
+	overflow-x: auto;
+
+	$scrollbar-track-color: transparent;
+	$scrollbar-thumb-color: var(--focus-color);
+
+	$scrollbar-track-height: 0.5em;
+	$scrollbar-thumb-height: 0.35em;
+
+	$scrollbar-track-border-radius: 0.25em;
+	$scrollbar-thumb-border-radius: 0.75em;
+
+	scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
+
+	&::-webkit-scrollbar {
+		height: $scrollbar-track-height;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: $scrollbar-track-color;
+
+		border-radius: $scrollbar-track-border-radius;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		$scrollbar-track-start: $scrollbar-track-height - $scrollbar-thumb-height;
+		$scrollbar-track-end: $scrollbar-track-height - $scrollbar-track-start;
+
+		background-color: transparent;
+		background-image: linear-gradient(
+			transparent 0,
+			transparent $scrollbar-track-start,
+			$scrollbar-thumb-color $scrollbar-track-start,
+			$scrollbar-thumb-color $scrollbar-track-end,
+			transparent $scrollbar-track-end
+		);
+
+		border-radius: $scrollbar-thumb-border-radius;
+	}
+}
+code {
+	// padding-inline: 0.25em;
+	// margin-inline: 0.125em;
+
+	border-radius: 0.125em;
+
+	background-color: var(--background-color--translucent);
+	// outline: 0.125em solid var(--background-color--translucent);
+	box-shadow: 0 0 0 0.125em var(--background-color--translucent);
+}
+
 /* Headings */
 
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
 	--flow-spacing: 1.5rem;
 
-	line-height: var(--line-height-tight);
+	line-height: var(--line-height-xs);
 	font-weight: 550;
 
 	a {
 		font-weight: inherit;
 	}
+
+	code {
+		font-size: 90%;
+	}
+
+	max-width: max-content;
 }
 
 h1,
@@ -248,7 +335,7 @@ dl {
 	gap: 0.5em 1em;
 	grid-template-columns: max-content 1fr;
 
-	line-height: var(--line-height-tight);
+	line-height: var(--line-height-sm);
 
 	> * {
 		--flow-spacing: 0;
@@ -291,15 +378,25 @@ img:not([alt]) {
 }
 
 details {
-	padding: 0 0.25rem;
-	font-size: 0.9em;
+	padding: 0 1rem;
+	font-size: 0.85rem;
+	font-size: min(75%, 0.85rem);
+	--flow-spacing: 0.75em;
+	border-radius: 0.5em;
+}
+details[open] {
+	padding-bottom: 1rem;
+	background-color: var(--background-color--translucent);
 }
 
 summary {
-	margin: 0 -0.5rem;
-	padding: 0 0.25rem;
+	margin: 0 -1rem;
+	padding: 0.25rem;
+
 	font-weight: calc(var(--font-weight-heavy) + 50);
+
 	border-radius: 0.5em;
+	line-height: var(--line-height-sm);
 }
 
 summary:hover,
@@ -317,20 +414,52 @@ main {
 	padding: calc(1vh + 1rem) calc(1vw + 1rem);
 }
 
-article,
 .l-container {
 	width: 34rem;
 	max-width: 100%;
 	margin: 0 auto;
 }
-article > * + * {
-	margin-top: 2em;
+.l-stack {
+	> * + * {
+		--flow-spacing: 1em;
+	}
+
+	&.gap\:xs {
+		> * + * {
+			--flow-spacing: 0.25em;
+			--flow-spacing: min(0.25em, 0.85rem);
+		}
+	}
+
+	&.gap\:sm {
+		> * + * {
+			--flow-spacing: 0.67em;
+			--flow-spacing: min(0.67em, 1rem);
+		}
+	}
+
+	&.gap\:lg {
+		> * + * {
+			--flow-spacing: 2em;
+		}
+	}
+
+	&.gap\:xl {
+		> * + * {
+			--flow-spacing: 3em;
+		}
+	}
 }
 
 section {
 }
 aside {
 	font-size: 0.9em;
+}
+
+hr {
+	border-style: solid;
+	margin-block: var(--flow-spacing);
 }
 
 /* Site Header Elements */
@@ -356,6 +485,27 @@ aside {
 	font-weight: var(--font-weight-normal);
 }
 
+.footnotes {
+	padding: 0 0.5em;
+
+	font-size: 0.85rem;
+	font-size: min(65%, 0.75rem);
+
+	font-style: italic;
+	--list-spacing: 0.5em;
+}
+.footnote-item:target {
+}
+
+article time {
+	font-weight: var(--font-weight-heavy);
+}
+
+article footer {
+	font-size: 0.85rem;
+	font-size: min(75%, 0.85rem);
+}
+
 /* Utilities */
 
 .has-text-align-center {
@@ -373,7 +523,7 @@ summary,
 button {
 	transition-property: color, background-color, border-color, text-decoration-color, box-shadow, transform, filter,
 		opacity;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease;
 	transition-duration: var(--transition-duration, 300ms);
 }
 

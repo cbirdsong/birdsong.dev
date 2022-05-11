@@ -24,9 +24,11 @@
 
       {% block content_wrapper %}
       <main id="main">
+        <div class="l-container l-stack">
         {% block content %}
           {{ layoutContent | safe }}
         {% endblock %}
+        </div>
       </main>
       {% endblock %}
       

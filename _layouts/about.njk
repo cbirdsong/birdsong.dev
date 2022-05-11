@@ -1,10 +1,8 @@
 {% extends "_layouts/_base.njk" %}
 
 {% block content %}
-  <article>
-    {%- include "_includes/section-about.njk" -%}
-    {{ layoutContent | safe }}
-  </article>
+  {%- include "_includes/section-about.njk" -%}
+  {{ layoutContent | safe }}
 {% endblock %}
 
 {% block head_css %}
