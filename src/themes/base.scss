@@ -429,10 +429,6 @@ article a.external::before {
 article a.permalink {
 	// font-size: 0.85em;
 	// font-size: max(0.8em, 16px);
-
-	&:not(:hover) {
-		text-decoration-color: transparent;
-	}
 }
 article a.permalink::before {
 	content: "🔗";

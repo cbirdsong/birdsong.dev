@@ -1,7 +1,8 @@
 hr {
 	border-style: solid;
+	margin-block: var(--stack-gap, 1.5em);
 }
-hr:not(:first-child, :last-child) {
+hr:not(:first-child, :last-child, [class]) {
 	margin-block: calc(var(--stack-gap) * 2);
 }
 
