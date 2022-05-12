@@ -3,3 +3,12 @@ description: "Cory Birdsong is a front-end web developer that has given you one 
 layout: about.njk
 permalink: /
 ---
+
+<div class="l-stack gap:lg">
+
+<h2>Blog</h2>
+
+{% set postslist = collections.posts %}
+{% include "_includes/postslist.njk" %}
+
+</div>

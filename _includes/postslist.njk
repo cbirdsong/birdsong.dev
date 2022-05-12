@@ -1,23 +1,23 @@
 {% for post in postslist | reverse %}
-  <article class="l-stack gap:sm">
-    <header class="l-stack gap:xs">
-      <p>
-        <time datetime="{{ post.date | datetimeAttr }}">
-          {{ post.date | dateShort }}
-        </time>
-      </p>
-      <h2>
-        <a href="{{ post.url | url }}">
-          {% if post.data.title %}
-            {{ post.data.title | addNbsp | markdown | safe }}
-          {% else %}
-            Untitled
-          {% endif %}
-        </a>
-      </h2>
-    </header>
-    {% if post.data.description %}
-      <p>{{ post.data.description }}</p>
-    {% endif %}
-  </article>
+<article class="l-stack gap:sm">
+  <header class="l-stack gap:xs">
+    <p>
+      <time datetime="{{ post.date | datetimeAttr }}">
+        {{ post.date | dateShort }}
+      </time>
+    </p>
+    <h2>
+      <a href="{{ post.url | url }}">
+        {% if post.data.title %}
+          {{ post.data.title | addNbsp | markdown | safe }}
+        {% else %}
+          Untitled
+        {% endif %}
+      </a>
+    </h2>
+  </header>
+  {% if post.data.description %}
+    <p>{{ post.data.description }}</p>
+  {% endif %}
+</article>
 {% endfor %}

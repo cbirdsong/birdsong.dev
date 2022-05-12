@@ -1,0 +1,14 @@
+---
+title: Blog
+layout: _base
+eleventyNavigation:
+  key: Blog
+  order: 20
+---
+
+<div class="l-stack gap:lg">
+  <h1 class="minimal">{{ title }}</h1>
+
+  {% set postslist = collections.posts %}
+  {% include "_includes/postslist.njk" %}
+</div>
