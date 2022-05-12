@@ -172,6 +172,7 @@ module.exports = function (eleventyConfig) {
 
 	// Various other things in the root
 	eleventyConfig.addPassthroughCopy("_redirects");
+	eleventyConfig.addPassthroughCopy("robots.txt");
 
 	eleventyConfig.addPassthroughCopy({ "src/themes/1977/favicon.ico": "/favicon.ico" });
 	eleventyConfig.addPassthroughCopy({ "src/themes/1977/favicon.png": "/favicon.png" });
