@@ -1,4 +1,4 @@
-{% for post in postslist | reverse %}
+{% for post in postslist %}
   <article class="l-stack gap:sm">
     <header class="l-stack gap:xs">
       <p>
@@ -7,13 +7,13 @@
         </time>
       </p>
       <h2>
-          <a href="{{ post.url | url }}">
-            {% if post.data.title %}
-              {{ post.data.title | addNbsp | markdown | safe }}
-            {% else %}
-              Untitled
-            {% endif %}
-          </a>
+        <a href="{{ post.url | url }}">
+          {% if post.data.title %}
+            {{ post.data.title | addNbsp | markdown | safe }}
+          {% else %}
+            Untitled
+          {% endif %}
+        </a>
       </h2>
     </header>
     {% if post.data.description %}

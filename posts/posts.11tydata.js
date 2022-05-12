@@ -1,5 +1,5 @@
 let data = {
-	layout: "post.njk",
+	layout: "post",
 	permalink: "blog/{{ title | slugify }}/",
 	tags: "post",
 	// dateModified: "Last Modified",

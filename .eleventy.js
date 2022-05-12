@@ -22,6 +22,7 @@ module.exports = function (eleventyConfig) {
 		linkify: true,
 		typographer: true,
 	};
+	const markdownRenderFilter = new markdownIt(markdownItOptions);
 
 	const markdownItFootnote = require("markdown-it-footnote");
 
@@ -62,21 +63,27 @@ module.exports = function (eleventyConfig) {
 
 	// Fake an excerpt
 	// https:11ty.rocks/eleventyjs/content/#excerpt-filter
-	eleventyConfig.addFilter("excerpt", (post) => {
-		const content = post.replace(/(<([^>]+)>)/gi, "");
-		return content.substr(0, content.lastIndexOf(" ", 200)) + "...";
+	eleventyConfig.addFilter("excerpt", (content) => {
+		if (!content || typeof content !== "string") {
+			return;
+		}
+
+		let excerpt = content.replace(/(<([^>]+)>)/gi, "");
+		return excerpt.substr(0, excerpt.lastIndexOf(" ", 200)) + "...";
 	});
 
 	// Add markdown filter
 	// based on https://11ty.rocks/eleventyjs/content/#markdown-filter
 	eleventyConfig.addFilter("markdown", (content) => {
-		const markdownRender = new markdownIt(markdownItOptions);
+		if (!content || typeof content !== "string") {
+			return;
+		}
 
 		if (content.indexOf("\n") < 0) {
 			// console.log(content.indexOf("\n") + ": " + content);
-			return markdownRender.renderInline(content);
+			return markdownRenderFilter.renderInline(content);
 		}
-		return markdownRender.render(content);
+		return markdownRenderFilter.render(content);
 	});
 
 	// Add anchorHeadings filter (WIP)
@@ -129,12 +136,14 @@ module.exports = function (eleventyConfig) {
 
 	// Add nbsp; between the last two words
 	// https://11ty.rocks/eleventyjs/content/#addnbsp-filter
-	eleventyConfig.addFilter("addNbsp", (str) => {
-		if (!str) {
+	eleventyConfig.addFilter("addNbsp", (content) => {
+		if (!content || typeof content !== "string") {
 			return;
 		}
-		let title = str.replace(/((.*)\s(.*))$/g, "$2&nbsp;$3");
-		title = title.replace(/"(.*)"/g, '\\"$1\\"');
+
+		let title = content;
+		// title = title.replace(/((.*)\s(.*))$/g, "$2&nbsp;$3");
+		// title = title.replace(/"(.*)"/g, '\\"$1\\"');
 		return title;
 	});
 
@@ -162,6 +171,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("_redirects");
 	eleventyConfig.addPassthroughCopy("favicon.ico");
 	eleventyConfig.addPassthroughCopy("favicon.png");
+	eleventyConfig.addPassthroughCopy("favicon.svg");
+	eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
 
 	return {
 		templateFormats: ["md", "njk", "html"],
@@ -175,7 +186,7 @@ module.exports = function (eleventyConfig) {
 		dir: {
 			input: ".",
 			includes: "_includes",
-			layouts: "_layouts",
+			layouts: "_includes/layouts",
 			data: "_data",
 			output: "dist",
 		},

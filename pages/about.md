@@ -1,8 +1,7 @@
 ---
+layout: about.njk
 title: About
 description: "I'm a front-end web developer that builds websites that are fast, functional and beautiful."
-permalink: /about/
-layout: about.njk
 eleventyNavigation:
   key: About
   order: 10
@@ -12,14 +11,14 @@ eleventyNavigation:
 
 ## I've worked with:
 
-- <strong><abbr title="HTML">HTML</abbr></strong> templating languages like **Liquid**, **Twig**, and **Nunjucks**
-- <strong><abbr title="Cascading Stylesheets">CSS</abbr></strong> processing tools like **Sass**, **Less** and **PostCSS**
+- <strong><abbr title="HTML">HTML</abbr></strong>, including templating languages like **Liquid**, **Twig**, and **Nunjucks**
+- <strong><abbr title="Cascading Stylesheets">CSS</abbr></strong>, including processing tools like **Sass**, **Less** and **PostCSS**
 - **JavaScript**, including web components and libraries like **[Alpine](https://alpinejs.dev/)**, **[Vue](https://vuejs.org/)** and **jQuery**
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
 - **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)** and building editor blocks using **[Advanced Custom Fields](https://advancedcustomfields.com)**
 - **[Eleventy](https://11ty.dev)**, building full sites, landing pages and one-off page components
 
-<details>
+<details class="subsection">
 <summary>I've also worked with:</summary>
 
 ### Technologies and Frameworks:
@@ -57,7 +56,7 @@ eleventyNavigation:
 
 </details>
 
-<details>
+<details class="subsection">
 
 <summary>I'd love to learn more about:</summary>
 
@@ -73,7 +72,7 @@ eleventyNavigation:
 
 ## I've made:
 
-<details open>
+<details class="subsection" open>
 
 <summary>Recent Work</summary>
 
@@ -88,7 +87,7 @@ eleventyNavigation:
 
 </details>
 
-<details>
+<details class="subsection">
 
 <summary>Older Work</summary>
 
@@ -105,7 +104,7 @@ eleventyNavigation:
 
 </details>
 
-<details>
+<details class="subsection">
 
 <summary>Just for Fun</summary>
 

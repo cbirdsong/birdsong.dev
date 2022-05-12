@@ -1,0 +1,66 @@
+section:not(:first-child) {
+	margin-top: calc(var(--stack-gap) * 2);
+}
+
+hr {
+	border-style: solid;
+	margin-block: calc(var(--stack-gap) * 2);
+}
+
+aside {
+	font-size: 0.9em;
+}
+
+// Site Wrapper
+
+.site-wrapper {
+	padding-bottom: env(safe-area-inset-bottom);
+}
+.site-wrapper > * {
+	padding: calc(0.5vh + 0.5rem) calc(1vw + 1rem);
+
+	padding-left: calc(1vw + 1rem + env(safe-area-inset-left));
+	padding-right: calc(1vw + 1rem + env(safe-area-inset-right));
+}
+.site-wrapper > main {
+	padding: calc(1vh + 1rem) calc(1vw + 1rem);
+}
+
+// Layouts
+
+.l-container {
+	width: 34rem;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.l-stack {
+	> * + * {
+		--stack-gap: 1em;
+		margin-top: 1em;
+		margin-top: var(--stack-gap);
+	}
+
+	&.gap\:xs > * + * {
+		--stack-gap: 0.25em;
+		--stack-gap: min(0.25em, 0.85rem);
+	}
+
+	&.gap\:sm > * + * {
+		--stack-gap: 0.67em;
+		--stack-gap: min(0.67em, 1rem);
+	}
+
+	&.gap\:md > * + * {
+		--stack-gap: 1em;
+		--stack-gap: min(1em, 1rem);
+	}
+
+	&.gap\:lg > * + * {
+		--stack-gap: 2em;
+	}
+
+	&.gap\:xl > * + * {
+		--stack-gap: 3em;
+	}
+}

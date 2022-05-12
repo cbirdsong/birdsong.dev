@@ -1,0 +1,101 @@
+// Sane box sizing defaults
+* {
+	box-sizing: border-box;
+}
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+@import "normalize.css/normalize";
+
+// Set core root scroll behavior
+html {
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	@media (prefers-reduced-motion: no-preference) {
+		scroll-behavior: smooth;
+	}
+
+	scrollbar-gutter: stable;
+}
+
+// Set core root text behavior
+body {
+	text-rendering: optimizeSpeed;
+}
+
+// Set up HTML 5 Elements in old browsers
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+main,
+section,
+details {
+	display: block;
+}
+
+// Remove default margin
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+// Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+// Apply reasonable list padding
+ul,
+ol {
+	padding: 0 0 0 1.25em;
+}
+
+// Make images easier to work with
+img {
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+// Remove figure margin
+figure {
+	margin: 0;
+}
+
+// Inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+// Actually useful [hidden]
+[hidden] {
+	display: none !important;
+}

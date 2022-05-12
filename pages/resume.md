@@ -2,9 +2,7 @@
 title: Résumé
 description: "Cory Birdsong is a front-end web developer that can do a bunch of cool stuff listed on this page. (this is how meta descriptions work, right?)"
 permalink: /resume/
-# eleventyNavigation:
-#   key: Résumé
-#   order: 30
+robots: noindex, nofollow
 ---
 
 <section aria-label="Skills">
@@ -92,7 +90,7 @@ Customized and maintained a fork of Bootstrap to facilitate faster and higher-qu
 ## Contact
 
 <dl>
-	
+
 <dt>Phone</dt>
 <dd><strong>(985) 570-3709</strong></dd>
 	

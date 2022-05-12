@@ -8,7 +8,7 @@ body {
 }
 h1,
 h2,
-.is-style-heading,
+.heading,
 .site-logo,
 .nav-primary {
 	font-family: var(--font-family-heading);
@@ -147,7 +147,7 @@ ul {
 }
 
 .site-header__container > * {
-	--flow-spacing: 0;
+	--stack-gap: 0;
 }
 
 .site-header nav {
