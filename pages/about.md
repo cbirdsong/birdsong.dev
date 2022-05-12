@@ -29,6 +29,8 @@ eleventyNavigation:
 - **Schema.org**, **OpenGraph** and other bits of metadata
 - **[GSAP](https://greensock.com/)** framework for web animations
 - **<abbr title="Cascading Stylesheets">CSS</abbr> frameworks** like **Bootstrap**, compiled from source and customized to the project whenever possible
+- **Regular expressions** and **shell scripting**
+- Developer tooling like **npm**, **[Parcel](https://parceljs.org)** and **[gulp](https://gulpjs.com/)**
 
 ### <abbr title="Content Management Systems">CMSes</abbr> and Platforms:
 
@@ -40,16 +42,15 @@ eleventyNavigation:
 - **[Netlify](https://netlify.com)**
 - **Cloudflare**, as a DNS provider/CDN and doing edge <abbr title="search engine optimization">SEO</abbr> optimization via Cloudflare Workers
 - **Google Maps' JavaScript <abbr title="application programming interface">API</abbr>**, for searches, geocoding and design customization
-- **WP Engine**
+- **WP Engine** and **Flywheel**
 
 ### Software and Services:
 
-- Developer tooling like **npm**, **[Parcel](https://parceljs.org)** and **[gulp](https://gulpjs.com/)**
 - Image editors like **Photoshop**, **Illustrator**, **Pixelmator Pro** and **Affinity Designer**
 - Design tools like **Sketch**, **Figma** and **Adobe XD**
 - Accessibility auditing tools like **[axe](https://www.deque.com/axe/)** and **[WAVE](https://wave.webaim.org/)**
 - Performance auditing tools like **Google Lighthouse** and **WebPageTest**
-- **Google Analytics** and **Google Tag Manager**, implemented as performantly as possible
+- **Google Analytics** and **Google Tag Manager**, implemented as performantly as possible (including via **[Cloudflare Zaraz](https://www.cloudflare.com/products/zaraz/)**)
 - **[Screaming Frog](https://www.screamingfrog.co.uk/)**, to audit sites for accessibility, performance and <abbr title="search engine optimization">SEO</abbr> issues
 - **[BrowserStack](https://www.browserstack.com/)** and **[LambdaTest](https://www.lambdatest.com/)**, for browser compatibility testing
 - **[Litmus](https://litmus.com)** and **[EmailOnAcid](https://emailonacid.com)**, for email client compatibility testing
@@ -61,8 +62,9 @@ eleventyNavigation:
 <summary>I'd love to learn more about:</summary>
 
 - **[Svelte](https://svelte.dev/)**, and other similar tools that compile the framework away during the build process instead of delivering it to the client
-- **Privacy-minded analytics tools**
 - **[Storybook](https://storybook.js.org/)**
+- **[Kirby CMS](https://getkirby.com/)**
+- **Privacy-minded analytics tools**
 
 </details>
 
