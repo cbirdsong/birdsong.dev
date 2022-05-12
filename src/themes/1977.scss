@@ -31,7 +31,9 @@ h2 {
 @supports (background-clip: content-box) {
 	:focus,
 	:target {
+		position: relative;
 		outline-width: 0;
+		background-color: transparent;
 
 		&::before {
 			content: " ";

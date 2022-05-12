@@ -17,7 +17,7 @@
     </h2>
   </header>
   {% if post.data.description %}
-    <p>{{ post.data.description }}</p>
+    <p>{{ post.data.description | addNbsp | markdown | safe }}</p>
   {% endif %}
 </article>
 {% endfor %}
