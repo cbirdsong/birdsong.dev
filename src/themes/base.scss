@@ -29,24 +29,25 @@
 /* Set type */
 :root {
 	--font-family-base: #{$system-font-family};
+	--font-family-heading: var(--font-family-base);
+	--font-family-mono: "SF Mono", "Source Code Pro", monospace;
 
 	--font-weight-base: 400;
 
 	--font-weight-normal: var(--font-weight-base);
 	--font-weight-light: calc(var(--font-weight-normal) - 100);
-	--font-weight-heavy: calc(var(--font-weight-normal) + 150);
+	--font-weight-heavy: calc(var(--font-weight-normal) + 300);
 
 	--line-height-base: 1.5;
 	--line-height-sm: 1.25;
 	--line-height-xs: 1;
 
 	font-size: 120%;
-
 	line-height: var(--line-height-base);
 }
 @media screen {
 	:root {
-		font-size: calc(100% + 1vw);
+		font-size: calc(100% + 0.75vw);
 	}
 }
 @media screen and (min-width: 40em) {
@@ -121,7 +122,8 @@ details {
 
 a {
 	text-decoration-thickness: 2px;
-	text-underline-offset: 0.1em;
+	text-decoration-thickness: max(2px, 0.1em);
+	text-underline-offset: 0.05em;
 
 	text-decoration-color: var(--link-color-hover);
 
@@ -137,8 +139,7 @@ a:active {
 /* External links */
 
 a[target="_blank"]::after {
-	content: "\002197";
-	/* north east arrow (U+2197)  */
+	content: "\002197"; // north east arrow (U+2197)
 
 	display: inline-block;
 	color: var(--link-color-hover);
@@ -155,7 +156,7 @@ strong {
 	font-weight: var(--font-weight-heavy);
 
 	a {
-		font-weight: calc(var(--font-weight-heavy) + 100);
+		font-weight: calc(var(--font-weight-heavy) + 50);
 	}
 }
 
@@ -183,11 +184,11 @@ a abbr {
 
 pre,
 code {
-	font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", "Consolas", monospace;
+	font-family: var(--font-family-mono);
 	font-weight: inherit;
 
-	font-size: 1rem;
-	font-size: min(85%, 1rem);
+	font-size: 0.85em;
+	font-size: min(0.85em, 0.85rem);
 }
 pre code {
 	background-color: transparent;
@@ -246,11 +247,11 @@ code {
 	// padding-inline: 0.25em;
 	// margin-inline: 0.125em;
 
-	border-radius: 0.125em;
+	border-radius: 0.25rem;
 
 	background-color: var(--background-color--translucent);
 	// outline: 0.125em solid var(--background-color--translucent);
-	box-shadow: 0 0 0 0.125em var(--background-color--translucent);
+	box-shadow: 0.125em 0 0 var(--background-color--translucent), -0.125em 0 0 var(--background-color--translucent);
 }
 
 /* Headings */
@@ -377,22 +378,35 @@ img:not([alt]) {
 }
 
 details {
-	padding: 0 1rem;
-	font-size: 0.85rem;
-	font-size: min(75%, 0.85rem);
 	--flow-spacing: 0.75em;
 	border-radius: 0.5em;
+
+	outline-width: 0.125rem;
+	outline-style: solid;
+	outline-color: transparent;
+
+	font-size: 0.85rem;
+	font-size: min(75%, 0.85rem);
+
+	pre {
+		font-size: 0.85rem;
+	}
 }
 details[open] {
-	padding-bottom: 1rem;
-	background-color: var(--background-color--translucent);
+	outline-color: var(--background-color--translucent);
+
+	> *:not(summary) {
+		margin-left: var(--flow-spacing, 1rem);
+		margin-right: var(--flow-spacing, 1rem);
+	}
+	padding-bottom: var(--flow-spacing, 1rem);
 }
 
 summary {
-	margin: 0 -1rem;
+	// margin: 0 calc(var(--flow-spacing, 1rem) * -1);
 	padding: 0.25rem;
 
-	font-weight: calc(var(--font-weight-heavy) + 50);
+	font-weight: calc(var(--font-weight-normal) + 100);
 
 	border-radius: 0.5em;
 	line-height: var(--line-height-sm);
@@ -404,6 +418,12 @@ summary:active {
 
 	cursor: pointer;
 	cursor: help;
+}
+
+details[open] summary {
+	background-image: linear-gradient(var(--background-color--translucent), var(--background-color--translucent));
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 /* Structural elements */
@@ -480,7 +500,7 @@ hr {
 	--font-weight-normal: calc(var(--font-weight-base) + 50);
 	--font-weight-heavy: calc(var(--font-weight-base) + 200);
 
-	font-size: 1.25em;
+	font-size: 1.4em;
 	font-weight: var(--font-weight-normal);
 }
 
@@ -494,6 +514,15 @@ hr {
 	--list-spacing: 0.5em;
 }
 .footnote-item:target {
+}
+
+.footnote-ref a {
+	font-weight: calc(var(--font-weight-heavy));
+	font-size: 80%;
+
+	&:not(hover) {
+		text-decoration-color: transparent;
+	}
 }
 
 article time {

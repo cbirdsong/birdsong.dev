@@ -182,12 +182,11 @@ ul {
 }
 
 .site-header a {
-	font-weight: normal;
+	font-weight: 700;
 	text-decoration-color: transparent;
 	text-decoration-thickness: 0.12em;
 }
 .site-header a.active {
-	font-weight: bold;
 	text-decoration-color: var(--accent-color);
 }
 
