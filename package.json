@@ -31,6 +31,7 @@
 		"@11ty/eleventy-navigation": "^0.3.2",
 		"@11ty/eleventy-plugin-rss": "^1.1.2",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+		"@fontsource/azeret-mono": "^4.5.1",
 		"@fontsource/jost": "^4.5.1",
 		"autoprefixer": "^10.4.2",
 		"clean-css": "^5.2.2",
@@ -47,5 +48,8 @@
 		"prism-themes": "^1.9.0",
 		"prismjs": "^1.28.0",
 		"sass": "^1.48.0"
+	},
+	"devDependencies": {
+		"@11ty/eleventy-plugin-inclusive-language": "^1.0.3"
 	}
 }

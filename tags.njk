@@ -8,17 +8,19 @@ pagination:
     - nav
     - post
     - posts
-permalink: /tags/{{ tag }}/
+permalink: /tags/{{ tag | slugify }}/
 layout: _base.njk
 renderData:
   title: "Tagged “{{ tag }}”"
 ---
 
-<h1>Tagged “{{ tag }}”</h1>
+<h1><small>Tag:</small><br/> {{ tag }}</h1>
 
 {% set postslist = collections[ tag ] %}
 {% include "_includes/postslist.njk" %}
 
-<p>
+<hr>
+
+<p class="is-style-heading h6">
   <a href="{{ '/blog/' | url }}">← Blog index</a>
 </p>

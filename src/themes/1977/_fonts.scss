@@ -2,7 +2,14 @@
 	font-family: "Cartridge";
 	src: url("/fonts/Cartridge-Regular.woff2") format("woff2");
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Cartridge";
+	src: url("/fonts/Cartridge-Bold.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 900;
 	font-display: swap;
 }
 
@@ -50,7 +57,7 @@
 
 	--font-weight-normal: var(--font-weight-base);
 	--font-weight-light: calc(var(--font-weight-normal) - 100);
-	--font-weight-heavy: calc(var(--font-weight-normal) + 150);
+	--font-weight-heavy: calc(var(--font-weight-normal) + 200);
 
 	--line-height-base: 1.5;
 	--line-height-sm: 1.25;

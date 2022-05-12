@@ -4,9 +4,13 @@ section: blog
 permalink: /blog/index.html 
 ---
 
-<h1 class="minimal">{{ title }}</h1>
+<div class="l-stack gap:lg">
+  <header class="l-stack">
+    <h1 class="minimal">{{ title }}</h1>
 
-{{ layoutContent | safe }}
+    {{ layoutContent | safe }}
+  </header>
 
-{% set postslist = collections.posts %}
-{% include "_includes/postslist.njk" %}
+  {% set postslist = collections.posts %}
+  {% include "_includes/postslist.njk" %}
+</div>

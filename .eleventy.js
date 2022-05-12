@@ -1,59 +1,54 @@
 const { DateTime } = require("luxon");
+
 const CleanCSS = require("clean-css");
+
+const slugify = require("slugify");
 
 const eleventyNavigation = require("@11ty/eleventy-navigation");
 const eleventySyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const eleventyRss = require("@11ty/eleventy-plugin-rss");
+const eleventyInclusiveLanguage = require("@11ty/eleventy-plugin-inclusive-language");
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.setQuietMode(true);
 
-	eleventyConfig.addWatchTarget("./src/css/");
-	eleventyConfig.addWatchTarget("./src/sass/");
-	eleventyConfig.addWatchTarget("./src/js/");
+	eleventyConfig.addWatchTarget("./src/");
 
 	/* MarkdownIt Plugins */
 	const markdownIt = require("markdown-it");
-	const markdownItAnchor = require("markdown-it-anchor");
-	const markdownItFootnote = require("markdown-it-footnote");
 	const markdownItOptions = {
 		html: true,
 		breaks: true,
 		linkify: true,
 		typographer: true,
 	};
-	const markdownLib = markdownIt(markdownItOptions).use(markdownItFootnote);
-	const markdownRender = new markdownIt({
-		html: true,
-	});
 
+	const markdownItFootnote = require("markdown-it-footnote");
+
+	const markdownLib = markdownIt(markdownItOptions).use(markdownItFootnote).disable("code");
 	eleventyConfig.setLibrary("md", markdownLib);
 
 	eleventyConfig.addPlugin(eleventyNavigation);
 	eleventyConfig.addPlugin(eleventySyntaxHighlight);
+	// eleventyConfig.addPlugin(eleventyInclusiveLanguage);
 	eleventyConfig.addPlugin(eleventyRss);
 
 	// Date display filters
-	// Date formatting (human readable)
-	eleventyConfig.addFilter("readableDate", (dateObj) => {
-		return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
-	});
 
-	// Date formatting (machine readable)
-	eleventyConfig.addFilter("machineDate", (dateObj) => {
-		return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
+	eleventyConfig.addFilter("datetimeAttr", (dateObj) => {
+		return DateTime.fromJSDate(dateObj).toISO();
 	});
 
 	eleventyConfig.addFilter("dateShort", (dateObj) => {
 		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
 	});
 
-	eleventyConfig.addFilter("dateFull", (dateObj) => {
-		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATETIME_MED_WITH_WEEKDAY);
+	eleventyConfig.addFilter("dateLong", (dateObj) => {
+		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_HUGE);
 	});
 
-	eleventyConfig.addFilter("datetimeAttr", (dateObj) => {
-		return DateTime.fromJSDate(dateObj).toISO();
+	eleventyConfig.addFilter("datetimeFull", (dateObj) => {
+		return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATETIME_MED_WITH_WEEKDAY);
 	});
 
 	eleventyConfig.addFilter("time", (dateObj) => {
@@ -73,9 +68,63 @@ module.exports = function (eleventyConfig) {
 	});
 
 	// Add markdown filter
-	// https://11ty.rocks/eleventyjs/content/#markdown-filter
+	// based on https://11ty.rocks/eleventyjs/content/#markdown-filter
 	eleventyConfig.addFilter("markdown", (content) => {
+		const markdownRender = new markdownIt(markdownItOptions);
+
+		if (content.indexOf("\n") < 0) {
+			// console.log(content.indexOf("\n") + ": " + content);
+			return markdownRender.renderInline(content);
+		}
 		return markdownRender.render(content);
+	});
+
+	// Add anchorHeadings filter (WIP)
+	// based on https://11ty.rocks/eleventyjs/content/#markdown-filter
+	eleventyConfig.addFilter("anchorHeadings", (content) => {
+		const markdownItAnchor = require("markdown-it-anchor");
+		const markdownItAnchorLinkAfterHeader = markdownItAnchor.permalink.linkAfterHeader({
+			class: "anchor",
+			symbol: "<span hidden>#</span>",
+			style: "aria-labelledby",
+		});
+		const markdownItAnchorOptions = {
+			level: [2, 3, 4],
+			slugify: (str) =>
+				slugify(str, {
+					lower: true,
+					strict: true,
+					remove: /["]/g,
+				}),
+			tabIndex: false,
+			permalink(slug, opts, state, idx) {
+				state.tokens.splice(
+					idx,
+					0,
+					Object.assign(new state.Token("div_open", "div", 1), {
+						// Add class "header-wrapper [h1 or h2 or h3]"
+						attrs: [["class", "heading-wrapper"]],
+						block: true,
+					})
+				);
+
+				state.tokens.splice(
+					idx + 4,
+					0,
+					Object.assign(new state.Token("div_close", "div", -1), {
+						block: true,
+					})
+				);
+
+				markdownItAnchorLinkAfterHeader(slug, opts, state, idx + 1);
+			},
+		};
+
+		const markdownRenderAnchors = new markdownIt(markdownItOptions)
+			.use(markdownItAnchor, markdownItAnchorOptions)
+			.use(markdownItFootnote);
+
+		return markdownRenderAnchors.render(content);
 	});
 
 	// Add nbsp; between the last two words

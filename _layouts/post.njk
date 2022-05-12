@@ -19,15 +19,15 @@ section: post
     {{ layoutContent | safe }}
   </div>
 
-  <footer class="l-stack gap:sm">
+  <footer class="l-stack gap:xs">
     <p>
       Posted 
-      <time datetime="{{ page.date | datetimeAttr }}">{{ page.date | dateFull }}</time>
+      <time datetime="{{ page.date | datetimeAttr }}">{{ page.date | dateLong }}</time>
     </p>
     
     {% if tags %}
     <p>
-      Tagged with 
+      Tagged 
       {% for tag in tags %}
         {%- if tag != "post" -%}
           {% set tagUrl %}/tags/{{ tag }}/{% endset %}
@@ -40,7 +40,3 @@ section: post
   </footer>
 
 </article>
-
-<p>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
-</p>

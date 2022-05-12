@@ -19,6 +19,13 @@ h1,
 .nav-primary {
 	font-feature-settings: "aalt" on;
 }
+h1,
+h2 {
+	* {
+		font-feature-settings: "aalt" off;
+		font-family: inherit;
+	}
+}
 
 /* Fancy focus styles */
 @supports (background-clip: content-box) {
@@ -100,7 +107,8 @@ ul {
 		animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 		animation-timing-function: cubic-bezier(0.44, 0.02, 0.81, 0.88);
 		animation-timing-function: cubic-bezier(0.37, 0, 0.67, 0.98);
-		animation-duration: 1.5s;
+		animation-timing-function: ease;
+		animation-duration: 1s;
 		animation-iteration-count: 1;
 		animation-fill-mode: both;
 	}
@@ -151,8 +159,8 @@ ul {
 
 @media screen and (min-width: 40em) {
 	.site-header nav {
-		padding-right: 4vw;
-		padding-right: calc(4vw + env(safe-area-inset-right));
+		padding-right: 1vw;
+		padding-right: calc(1vw + env(safe-area-inset-right));
 	}
 }
 .site-header ul,
@@ -174,12 +182,12 @@ ul {
 }
 
 .site-header a {
-	font-weight: 700;
+	font-weight: normal;
 	text-decoration-color: transparent;
 	text-decoration-thickness: 0.12em;
 }
 .site-header a.active {
-	font-weight: 800;
+	font-weight: bold;
 	text-decoration-color: var(--accent-color);
 }
 
@@ -195,17 +203,7 @@ img {
 	border-radius: 2vw;
 }
 
-/* Footer */
-
-.site-footer {
-	margin-top: 3rem;
-	text-align: center;
-	font-size: 0.8em;
-	font-weight: 600;
-}
-.site-footer a {
-	font-weight: 667;
-}
+/* Nav */
 
 .nav-horizontal,
 .nav-horizontal ul {

@@ -1,26 +1,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<title>
-		{%- if title or renderData.title -%}
-				{{ title or renderData.title }}&nbsp;&bull;&nbsp;
-		{%- endif -%}
-		{{ metadata.title }}
-</title>
+{%- set titleTag -%}{% if title or renderData.title %}{{ title or renderData.title }} &bull; {% endif %}{{ metadata.title }}{%- endset -%}
+
+<title>{{ titleTag | markdown | striptags }}</title>
 
 {% if description %}
-		<meta name="description" content="{{description}}">
+<meta name="description" content="{{ description | markdown | striptags }}">
 {% endif %}
 
 {% if robots %}
-		<meta name="robots" content="{{robots}}">
+<meta name="robots" content="{{ robots }}">
 {% endif %}
 
 {% set css %}
 {% include "src/css/base.css" %}
 {% endset %}
 <style id="base-css">
-		{{css | cssmin | safe}}
+  {{css | cssmin | safe}}
 </style>
 
 <link id="theme-css" rel="stylesheet" href="/css/1977.css" media="screen" as="style"/>

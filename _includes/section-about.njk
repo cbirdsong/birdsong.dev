@@ -1,43 +1,46 @@
+{% filter safe %}
 <section class="intro" id="intro" aria-label="About Me">
 
-  <div class="lead">
+<div class="lead">
 
-    <div class="lead__content">
+<div class="lead__content">
 
-      <p class="is-style-heading h1">Hi.</p>
+<p class="is-style-heading h1">Hi.</p>
 
-      <p>I build websites that are <strong>fast</strong>, <strong>functional</strong> and <strong>beautiful</strong> using accessible and semantic <strong><abbr title="HyperText Markup Language">HTML</abbr></strong>, reusable and resilient <strong><abbr title="Cascading Stylesheets">CSS</abbr></strong>, and <em>just enough</em> <strong>JavaScript</strong>.</p>
+<p>I build websites that are <strong>fast</strong>, <strong>functional</strong> and <strong>beautiful</strong> using accessible and semantic <strong><abbr title="HyperText Markup Language">HTML</abbr></strong>, reusable and resilient <strong><abbr title="Cascading Stylesheets">CSS</abbr></strong>, and <em>just enough</em> <strong>JavaScript</strong>.</p>
 
-    </div>
+</div>
 
-    <figure class="lead__image">
+<figure class="lead__image">
 
-      <picture>
-        <source srcset="/images/portrait-308px.webp 308w, /images/portrait-615px.webp 615w, /images/portrait.webp 1230w" sizes="(min-width: 1200px) 20vw, (min-width: 767px) 33vw, 50vw" type="image/webp">
-        <img src="/images/portrait.jpg" alt="Cory Birdsong" width="615" height="615" srcset="/images/portrait-308px.jpg 308w, /images/portrait-615px.jpg 615w, /images/portrait.jpg 1230w" sizes="(min-width: 1200px) 20vw, (min-width: 767px) 33vw, 50vw" loading="eager">
-      </picture>
+<picture>
+  <source srcset="/images/portrait-308px.webp 308w, /images/portrait-615px.webp 615w, /images/portrait.webp 1230w" sizes="(min-width: 1200px) 20vw, (min-width: 767px) 33vw, 50vw" type="image/webp">
+  <img src="/images/portrait.jpg" alt="Cory Birdsong" width="615" height="615" srcset="/images/portrait-308px.jpg 308w, /images/portrait-615px.jpg 615w, /images/portrait.jpg 1230w" sizes="(min-width: 1200px) 20vw, (min-width: 767px) 33vw, 50vw" loading="eager">
+</picture>
 
-    </figure>
+</figure>
 
-  </div>
+</div>
 
 {% if page.fileSlug == 'about' %}
 
-  <div class="intro__content">
+<div class="intro__content">
 
-    <p>I have extensive experience collaborating with designers to strike the perfect balance between form and function. I love learning about new capabilities in browsers and figuring out how to employ them as progressive enhancement. I have a keen eye for detail and love laboring over sites to get them
-      <em>just right</em>.</p>
+<p>I have extensive experience collaborating with designers to strike the perfect balance between form and function. I love learning about new capabilities in browsers and figuring out how to employ them as progressive enhancement. I have a keen eye for detail and love laboring over sites to get them
+  <em>just right</em>.</p>
 
-  </div>
+</div>
 
 {% else %}
 
-  <div class="intro__content has-text-align-center">
+<div class="intro__content has-text-align-center">
 
-    <p><strong><a href="/about/">Find out more about me</a></strong>, or <strong><a href="/resume/">view my full résumé</a></strong>.</p>
+<p><strong><a href="/about/">Find out more about me</a></strong>, or <strong><a href="/resume/">view my full résumé</a></strong>.</p>
 
-  </div>
+</div>
 
 {% endif %}
 
 </section>
+
+{% endfilter %}

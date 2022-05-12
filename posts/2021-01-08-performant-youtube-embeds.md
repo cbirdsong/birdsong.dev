@@ -1,6 +1,6 @@
 ---
-title: Fast ways to embed YouTube videos
-description: The YouTube embed is a page speed killer. Here are some alternatives.
+title: Ways to embed YouTube videos
+description: The YouTube embed is a page speed killer, but there are alternatives.
 date: 2021-01-08
 tags:
   - youtube
@@ -8,7 +8,7 @@ tags:
   - performance
 ---
 
-The YouTube embed is a page speed killer. Here are some alternatives.
+The YouTube embed is a page speed killer, but there are alternatives.
 
 ## Default Embed
 
