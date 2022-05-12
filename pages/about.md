@@ -74,10 +74,6 @@ eleventyNavigation:
 
 ## I've made:
 
-<details class="subsection | l-stack" open>
-
-<summary>Recent Work</summary>
-
 <ul>
 {%- for item in work.featured -%}
 <li>
@@ -86,8 +82,6 @@ eleventyNavigation:
 </li>
 {%- endfor -%}
 </ul>
-
-</details>
 
 <details class="subsection | l-stack">
 
