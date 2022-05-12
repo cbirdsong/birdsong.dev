@@ -9,6 +9,8 @@
   document.documentElement.classList.add('js');
 </script>
 
+<link rel="canonical" href="{{ page.url | url | absoluteUrl(metadata.url) }}">
+
 {% set css %}
 {% include "src/css/base.css" %}
 {% endset %}
@@ -18,8 +20,6 @@
 
 <link id="theme-css" rel="stylesheet" href="/css/1977.css" media="screen" as="style"/>
 <link id="print-css" rel="stylesheet" href="/css/print.css" media="print" as="style"/>
-
-<link rel="canonical" href="https://www.mywebsite.com/page">
 
 {%- if description -%}<meta name="description" content="{{ description | markdown | striptags }}">{%- endif -%}
 
