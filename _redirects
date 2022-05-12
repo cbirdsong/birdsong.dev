@@ -1,15 +1,22 @@
 # These rules will change if you change your site’s custom domains or HTTPS settings
 
 # Redirect domain aliases to primary domain
+
 https://corybirdsong.com/* https://birdsong.dev/:splat 301!
 
 # Redirect default Netlify subdomains to primary domain
-https://corybirdsong.netlify.com/* https://birdsong.dev/:splat 301!
-https://birdsong-resume.netlify.com/* https://birdsong.dev/:splat 301!
+
+https://corybirdsong.netlify.com/_ https://birdsong.dev/:splat 301!
+https://birdsong-resume.netlify.com/_ https://birdsong.dev/:splat 301!
 
 # Changed pages
+
 //about/ /about/ 301
 
 # Changed posts
+
 /blog/sloppy-supports-check-for-gap-with-flexbox/ /blog/sloppy-supports-for-flexbox-gap/ 301
 
+# Changed tags
+
+/tags/progressive%20enhancement/ /tags/progressive-enhancement/ 301
