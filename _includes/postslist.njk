@@ -1,23 +1,29 @@
 {% for post in postslist | reverse %}
-<article class="l-stack gap:sm">
-  <header class="l-stack gap:xs">
-    <p>
-      <time datetime="{{ post.date | datetimeAttr }}">
-        {{ post.date | dateShort }}
-      </time>
-    </p>
-    <h2>
-      <a href="{{ post.url | url }}">
-        {% if post.data.title %}
-          {{ post.data.title | addNbsp | markdown | safe }}
-        {% else %}
-          Untitled
-        {% endif %}
-      </a>
-    </h2>
-  </header>
-  {% if post.data.description %}
-    <p>{{ post.data.description | addNbsp | markdown | safe }}</p>
+  {% set title = post.data.title | addNbsp | markdown | safe %}
+
+  {% set url = post.url %}
+  {% if post.data.link %}
+    {% set url = post.data.link %}
   {% endif %}
-</article>
+
+  <article class="l-stack gap:sm">
+    <header class="l-stack gap:xs">
+      <p>
+        <time datetime="{{ post.date | datetimeAttr }}">
+          {{ post.date | dateShort }}
+        </time>
+      </p>
+      <h2>
+        <a href="{{ url | url }}" {% if "http" in url %}class="external"{% endif %}>{{ title }}</a>
+      </h2>
+    </header>
+    {% if post.data.description %}
+      <p>{{ post.data.description | addNbsp | markdown | safe }}</p>
+    {% endif %}
+    {% if url != post.url %}
+      <small>
+      <a href="{{ post.url }}" class="permalink">permalink<span class="visually-hidden"> to {{ title }}</span></a>
+      </small>
+    {% endif %}
+  </article>
 {% endfor %}

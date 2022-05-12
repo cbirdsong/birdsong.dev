@@ -1,7 +1,3 @@
-section:not(:first-child) {
-	margin-top: calc(var(--stack-gap) * 2);
-}
-
 hr {
 	border-style: solid;
 }
@@ -9,8 +5,23 @@ hr:not(:first-child, :last-child) {
 	margin-block: calc(var(--stack-gap) * 2);
 }
 
+section:not(:first-child) {
+	margin-top: calc(var(--stack-gap) * 2);
+}
+
 aside {
-	font-size: 0.9em;
+	margin-block: calc(var(--stack-gap) * 2);
+	padding: 1em;
+	background-color: var(--background-color--translucent);
+	border-radius: 0.25em;
+
+	font-size: 0.85em;
+
+	> * + * {
+		--stack-gap: 1em;
+		margin-top: 1em;
+		margin-top: var(--stack-gap);
+	}
 }
 
 // Site Wrapper

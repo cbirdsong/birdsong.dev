@@ -1,7 +1,6 @@
----
-layout: _base.njk
-section: post
----
+{% extends "./_base.njk" %}
+
+{% block content %}
 
 <article class="l-stack gap:lg">
 
@@ -12,19 +11,22 @@ section: post
       </time>
     </p>
 
-    <h1>{{ title | addNbsp | markdown | safe }}</h1>
+    <h1>
+      {% if link %}<a href="{{ link }}" class="external"><span class="visually-hidden">External Link</span>{% endif %}
+      {{ title | addNbsp | markdown | safe }}
+      {% if link %}</a>{% endif %}
+    </h1>
   </header>
 
   <div class="l-stack">
-    {{ layoutContent | safe }}
+    {% if layoutContent %}
+      {{ layoutContent | safe }}
+    {% elseif description %}
+      {{ description | markdown | safe }}
+    {% endif %}
   </div>
 
   <footer class="l-stack gap:xs">
-    <p>
-      Posted 
-      <time datetime="{{ page.date | datetimeAttr }}">{{ page.date | dateLong }}</time>
-    </p>
-    
     {% if tags %}
     <p>
       Tagged 
@@ -37,6 +39,16 @@ section: post
     </p>
     {% endif %}
 
+    <p>
+      Posted 
+      <time datetime="{{ page.date | datetimeAttr }}">{{ page.date | dateLong }}</time>
+    </p>
+
+    <p>
+      <a href="{{ url }}" class="permalink">Permalink<span class="visually-hidden"> to {{ title }}</span></a>
+    </p>
   </footer>
 
 </article>
+
+{% endblock %}

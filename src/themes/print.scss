@@ -28,10 +28,6 @@
 	background-color: var(--focus-color);
 }
 
-:focus::before {
-	content: none;
-}
-
 body {
 	color: black;
 	background-color: transparent;
