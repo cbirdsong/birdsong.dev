@@ -3,6 +3,13 @@
 # Redirect domain aliases to primary domain
 https://corybirdsong.com/* https://birdsong.dev/:splat 301!
 
-# Optional: Redirect default Netlify subdomain to primary domain
+# Redirect default Netlify subdomains to primary domain
 https://corybirdsong.netlify.com/* https://birdsong.dev/:splat 301!
 https://birdsong-resume.netlify.com/* https://birdsong.dev/:splat 301!
+
+# Changed pages
+//about/ /about/ 301
+
+# Changed posts
+/blog/sloppy-supports-check-for-gap-with-flexbox/ /blog/sloppy-supports-for-flexbox-gap/ 301
+
