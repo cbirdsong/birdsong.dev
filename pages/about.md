@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 10
 ---
 
-<section aria-label="Skills">
+<section id="skills" aria-label="Skills">
 
 ## I've worked with:
 
@@ -118,11 +118,5 @@ eleventyNavigation:
 </ul>
 
 </details>
-
-</section>
-
-<section id="more-info" class="has-text-align-center" aria-label="More information">
-
-**[View my full resume](/resume/)**.
 
 </section>

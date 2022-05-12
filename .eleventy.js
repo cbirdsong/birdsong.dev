@@ -58,7 +58,10 @@ module.exports = function (eleventyConfig) {
 
 	// Minify CSS
 	eleventyConfig.addFilter("cssmin", function (code) {
-		return new CleanCSS({}).minify(code).styles;
+		if (process.env.ELEVENTY_ENV === "prod") {
+			return new CleanCSS({}).minify(code).styles;
+		}
+		return code;
 	});
 
 	// Fake an excerpt

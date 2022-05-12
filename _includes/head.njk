@@ -12,7 +12,7 @@
 {% include "src/css/base.css" %}
 {% endset %}
 <style id="base-css" media="all">
-  {{ css | safe }}
+  {{ css | cssmin | safe }}
 </style>
 
 <link id="theme-css" rel="stylesheet" href="/css/1977.css" media="screen" as="style"/>
