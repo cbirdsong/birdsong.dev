@@ -32,7 +32,7 @@
       Tagged 
       {% for tag in tags %}
         {%- if tag != "post" -%}
-          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+          {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
           <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
         {%- endif -%}
       {% endfor %}
