@@ -1,0 +1,28 @@
+---
+title: Posts
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }} &bull; {{ title }}</title>
+  {% if metadata.subtitle %}
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  {% endif %}
+  <link href="{{ page.url | url | absoluteUrl(metadata.url) }}" rel="self" />
+  <link href="{{ metadata.url | url | absoluteUrl(metadata.url) }}" />
+  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url | url | absoluteUrl(metadata.url) }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for post in collections.posts | reverse %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title type="html">{{ post.data.title | markdown }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

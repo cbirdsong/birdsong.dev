@@ -20,3 +20,7 @@ https://birdsong-resume.netlify.com/_ https://birdsong.dev/:splat 301!
 # Changed tags
 
 /tags/progressive%20enhancement/ /tags/progressive-enhancement/ 301
+
+# Changed feeds
+
+/posts.xml /feed/posts.xml 301

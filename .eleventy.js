@@ -150,7 +150,7 @@ module.exports = function (eleventyConfig) {
 		return title;
 	});
 
-	// Add posts collection
+	// Add collections
 	eleventyConfig.addCollection("posts", function (collection) {
 		return collection.getAllSorted().filter(function (item) {
 			return item.inputPath.match(/^\.\/posts\//) !== null;
