@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 10
 ---
 
-<section id="skills" aria-label="Skills">
+<section id="skills" class="l-stack" aria-label="Skills">
 
 ## I've worked with:
 
@@ -18,7 +18,7 @@ eleventyNavigation:
 - **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)** and building editor blocks using **[Advanced Custom Fields](https://advancedcustomfields.com)**
 - **[Eleventy](https://11ty.dev)**, building full sites, landing pages and one-off page components
 
-<details class="subsection">
+<details class="subsection | l-stack">
 <summary>I've also worked with:</summary>
 
 ### Technologies and Frameworks:
@@ -56,7 +56,7 @@ eleventyNavigation:
 
 </details>
 
-<details class="subsection">
+<details class="subsection | l-stack">
 
 <summary>I'd love to learn more about:</summary>
 
@@ -68,11 +68,11 @@ eleventyNavigation:
 
 </section>
 
-<section id="work" aria-label="Sample Work">
+<section id="work" class="l-stack" aria-label="Sample Work">
 
 ## I've made:
 
-<details class="subsection" open>
+<details class="subsection | l-stack" open>
 
 <summary>Recent Work</summary>
 
@@ -87,7 +87,7 @@ eleventyNavigation:
 
 </details>
 
-<details class="subsection">
+<details class="subsection | l-stack">
 
 <summary>Older Work</summary>
 
@@ -104,7 +104,7 @@ eleventyNavigation:
 
 </details>
 
-<details class="subsection">
+<details class="subsection | l-stack">
 
 <summary>Just for Fun</summary>
 

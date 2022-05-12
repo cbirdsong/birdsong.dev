@@ -4,6 +4,8 @@ section:not(:first-child) {
 
 hr {
 	border-style: solid;
+}
+hr:not(:first-child, :last-child) {
 	margin-block: calc(var(--stack-gap) * 2);
 }
 
