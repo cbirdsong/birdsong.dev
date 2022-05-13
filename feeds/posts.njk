@@ -3,7 +3,7 @@ title: Posts
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ metadata.title }} – {{ title }}</title>
+  <title>{{ metadata.title }}{{ metadata.title_separator_rss }}{{ title }}</title>
   {% if metadata.subtitle %}
   <subtitle>{{ metadata.subtitle }}</subtitle>
   {% endif %}

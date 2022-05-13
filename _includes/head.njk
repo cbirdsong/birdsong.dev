@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{%- set titleTag -%}{% if title or renderData.title %}{{ title or renderData.title }} &bull; {% endif %}{{ metadata.title }}{%- endset -%}
+{%- set titleTag -%}{% if title or renderData.title %}{{ title or renderData.title }}{{ metadata.title_separator }}{% endif %}{{ metadata.title }}{%- endset -%}
 <title>{{ titleTag | markdown | striptags }}</title>
 
 <script type="module">
@@ -25,7 +25,8 @@
 
 {%- if robots %}<meta name="robots" content="{{ robots }}">{%- endif -%}
 
-<link rel="alternate" type="application/rss+xml" title="{{ metadata.title }} &bull; Blog" href="/posts.xml"/>
+{# TODO: Add RSS feeds collection to loop over #}
+<link rel="alternate" type="application/rss+xml" title="{{ metadata.title }} – Posts" href="/feed/posts.xml"/>
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="alternate icon" type="image/png" sizes="512x512" href="/favicon.png">

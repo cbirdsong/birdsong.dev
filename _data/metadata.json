@@ -6,5 +6,7 @@
 		"name": "Cory Birdsong",
 		"email": "cory@birdsong.dev",
 		"github": "https://github.com/cbirdsong"
-	}
+	},
+	"title_separator": " • ",
+	"title_separator_rss": " – "
 }
