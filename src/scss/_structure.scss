@@ -78,3 +78,30 @@ aside {
 		--stack-gap: 3em;
 	}
 }
+
+// Navs
+
+/* Nav */
+
+.nav-horizontal,
+.nav-horizontal ul {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+}
+.nav-horizontal > * {
+	margin: 0.25em;
+	padding: 0;
+}
+
+.nav-horizontal > .nav__title {
+	font-size: 80%;
+}
+.nav-horizontal ul {
+	list-style-position: inside;
+	list-style-type: none;
+}
+.nav-horizontal li {
+	margin: 0.25em 0.5em;
+}

@@ -430,17 +430,15 @@ details.subsection {
 }
 .site-logo a {
 	display: inline-block;
+}
 
+.site-header a {
 	font-weight: 700;
 	text-decoration-color: transparent;
 	text-decoration-thickness: 0.12em;
 }
 .site-header a.active {
 	text-decoration-color: var(--accent-color);
-}
-
-.site-header-contact-info {
-	display: none;
 }
 
 /* Site Content Elements */
