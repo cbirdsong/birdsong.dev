@@ -11,15 +11,16 @@
 
 <link rel="canonical" href="{{ page.url | url | absoluteUrl(metadata.url) }}">
 
-{% set css %}
+{# {% set css %}
 {% include "src/css/base.css" %}
 {% endset %}
 <style id="base-css" media="all">
   {{ css | cssmin | safe }}
-</style>
+</style> #}
 
-<link id="theme-css" rel="stylesheet" href="/css/1977.css" media="screen" as="style"/>
-<link id="print-css" rel="stylesheet" href="/css/print.css" media="print" as="style"/>
+<link id="base-css" rel="stylesheet" href="/css/base.css" media="all" />
+<link id="theme-css" rel="stylesheet" href="/css/1977.css" media="screen" />
+<link id="print-css" rel="stylesheet" href="/css/print.css" media="print" />
 
 {%- if description -%}<meta name="description" content="{{ description | markdown | striptags }}">{%- endif -%}
 
