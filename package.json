@@ -7,10 +7,10 @@
 		"build": "npm-run-all build:sass build:css build:11ty",
 		"watch:11ty": "ELEVENTY_ENV=dev npx eleventy --serve",
 		"build:11ty": "ELEVENTY_ENV=prod npx eleventy",
-		"watch:sass": "sass --load-path=node_modules --watch src/themes:src/css",
-		"build:sass": "sass --load-path=node_modules src/themes:src/css",
-		"watch:css": "postcss src/css/*.css --dir dist/css --watch --map --use autoprefixer",
-		"build:css": "postcss src/css/*.css --dir dist/css --map --use autoprefixer cssnano",
+		"watch:sass": "sass --load-path=node_modules --watch src/scss:src/css && sass --load-path=node_modules --watch src/themes/1976/scss:src/themes/1976/css",
+		"build:sass": "sass --load-path=node_modules src/scss:src/css && sass --load-path=node_modules src/themes/1976/scss:src/themes/1976/css",
+		"watch:css": "postcss src/css/*.css --dir src/css --watch --map --use autoprefixer && postcss src/themes/1976/css/*.css --dir src/themes/1976/css --watch --map --use autoprefixer",
+		"build:css": "postcss src/css/*.css --dir src/css --map --use autoprefixer cssnano && postcss src/themes/1976/css/*.css --dir src/themes/1976/css --map --use autoprefixer cssnano",
 		"debug": "DEBUG=* npx eleventy"
 	},
 	"repository": {

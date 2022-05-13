@@ -91,7 +91,7 @@ $gap: 1rem;
 ```
 
 <details>
-<summary>Sass mixin</summary>
+<summary>As a Sass mixin</summary>
 
 ```scss
 @mixin flex-gap($gap: 1.25em) {
@@ -123,7 +123,7 @@ $gap: 1rem;
 	}
 }
 
-.flex-gap-test-cases {
+.gap-value-test-cases {
 	@include flex-gap(1em);
 	@include flex-gap(var(--gap));
 	@include flex-gap(1em 0.5em);

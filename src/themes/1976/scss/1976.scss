@@ -1,7 +1,7 @@
-@import "plumbing";
+@import "../../../scss/plumbing";
 
-@import "1977/fonts";
-@import "1977/colors";
+@import "fonts";
+@import "colors";
 
 body {
 	font-family: var(--font-family-base);
@@ -147,71 +147,6 @@ ul {
 	}
 }
 
-.site-header__container {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: baseline;
-	justify-content: space-between;
-	justify-content: space-evenly;
-
-	gap: 0.5rem;
-}
-
-@media (min-width: 40em) {
-	.site-header__container {
-		justify-content: space-between;
-	}
-}
-
-.site-header__container > * {
-	--stack-gap: 0;
-}
-
-.site-header nav {
-	animation-name: fadeIn;
-	animation-duration: 750ms;
-	animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
-	animation-fill-mode: both;
-}
-
-@media screen and (min-width: 40em) {
-	.site-header nav {
-		padding-right: 1vw;
-		padding-right: calc(1vw + env(safe-area-inset-right));
-	}
-}
-.site-header ul,
-.site-header li {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-
-.site-header nav ul {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	justify-content: space-evenly;
-}
-.site-header nav li {
-	margin: 0.2em 0.25em;
-	margin: calc(0.1em + 0.5vw) calc(0.2em + 1vw);
-}
-
-.site-header a {
-	font-weight: 700;
-	text-decoration-color: transparent;
-	text-decoration-thickness: 0.12em;
-}
-.site-header a.active {
-	text-decoration-color: var(--accent-color);
-}
-
-.site-logo {
-	font-size: 2em;
-	font-size: clamp(1.75em, 7.5vw, 2.75em);
-}
-
 /* Content */
 
 img {
@@ -254,5 +189,3 @@ img {
 		opacity: 1;
 	}
 }
-
-@import "1977/prism";

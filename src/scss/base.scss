@@ -24,6 +24,9 @@
 
 	font-size: 120%;
 	line-height: var(--line-height-base);
+
+	font-family: var(--font-family-base);
+	font-weight: var(--font-weight-normal);
 }
 @media screen {
 	:root {
@@ -60,25 +63,22 @@
 body {
 	color: var(--text-color);
 	background-color: var(--background-color);
-
-	font-family: var(--font-weight-base);
-	font-weight: var(--font-weight-normal);
 }
 
 a {
-	color: var(--link-color);
+	color: var(--link-color, initial);
 
 	text-decoration-thickness: 2px;
 	text-decoration-thickness: max(2px, 0.1em);
 	text-underline-offset: 0.05em;
 
-	text-decoration-color: var(--link-color-hover);
+	text-decoration-color: var(--link-color-hover, currentColor);
 }
 a:visited {
 }
 a:hover,
 a:active {
-	color: var(--link-color-hover);
+	color: var(--link-color-hover, initial);
 }
 
 /* External links */
@@ -371,11 +371,72 @@ details.subsection {
 
 /* Site Header Elements */
 
+.site-header__container {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	justify-content: space-evenly;
+
+	gap: 0.5rem;
+}
+
+@media (min-width: 40em) {
+	.site-header__container {
+		justify-content: space-between;
+	}
+}
+
+.site-header__container > * {
+	--stack-gap: 0;
+}
+
+.site-header nav {
+	animation-name: fadeIn;
+	animation-duration: 750ms;
+	animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+	animation-fill-mode: both;
+}
+
+@media screen and (min-width: 40em) {
+	.site-header nav {
+		padding-right: 1vw;
+		padding-right: calc(1vw + env(safe-area-inset-right));
+	}
+}
+.site-header ul,
+.site-header li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.site-header nav ul {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.site-header nav li {
+	margin: 0.2em 0.25em;
+	margin: calc(0.1em + 0.5vw) calc(0.2em + 1vw);
+}
+
 .site-logo {
-	--link-color: var(--text-color);
+	font-size: 2em;
+	font-size: clamp(1.75em, 7.5vw, 2.75em);
+
+	--link-color: var(--text-color, currentColor);
 }
 .site-logo a {
 	display: inline-block;
+
+	font-weight: 700;
+	text-decoration-color: transparent;
+	text-decoration-thickness: 0.12em;
+}
+.site-header a.active {
+	text-decoration-color: var(--accent-color);
 }
 
 .site-header-contact-info {
@@ -535,3 +596,8 @@ button {
 #skip-link:focus ~ * {
 	filter: sepia(100%) saturate(0.5) opacity(0.25);
 }
+
+// Syntax highlighting
+
+// TODO: Integrate with color system in /themes/
+@import "prism";
