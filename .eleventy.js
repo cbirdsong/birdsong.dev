@@ -173,11 +173,11 @@ module.exports = function (eleventyConfig) {
 	// Various other things in the root
 	eleventyConfig.addPassthroughCopy("_redirects");
 	eleventyConfig.addPassthroughCopy("robots.txt");
+	eleventyConfig.addPassthroughCopy("manifest.json");
 
-	eleventyConfig.addPassthroughCopy({ "src/themes/1977/favicon.ico": "/favicon.ico" });
-	eleventyConfig.addPassthroughCopy({ "src/themes/1977/favicon.png": "/favicon.png" });
-	eleventyConfig.addPassthroughCopy({ "src/themes/1977/favicon.svg": "/favicon.svg" });
-	eleventyConfig.addPassthroughCopy({ "src/themes/1977/apple-touch-icon.png": "/apple-touch-icon.png" });
+	eleventyConfig.addPassthroughCopy({ "src/themes/1977/*.ico": "/" });
+	eleventyConfig.addPassthroughCopy({ "src/themes/1977/*.png": "/" });
+	eleventyConfig.addPassthroughCopy({ "src/themes/1977/*.svg": "/" });
 
 	return {
 		templateFormats: ["md", "njk", "html"],
