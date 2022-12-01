@@ -26,6 +26,7 @@ eleventyNavigation:
 - **Git**, GitHub and BitBucket
 - **PHP**, primarily in the context of WordPress theming and templating
 - **Node**, primarily in the context of Eleventy
+- **[Svelte](https://svelte.dev/)**
 - **Schema.org**, **OpenGraph** and other bits of metadata
 - **[GSAP](https://greensock.com/)** framework for web animations
 - **<abbr title="Cascading Stylesheets">CSS</abbr> frameworks** like **Bootstrap**, compiled from source and customized to the project whenever possible
@@ -61,7 +62,6 @@ eleventyNavigation:
 
 <summary>I'd love to learn more about:</summary>
 
-- **[Svelte](https://svelte.dev/)**, and other similar tools that compile the framework away during the build process instead of delivering it to the client
 - **[Storybook](https://storybook.js.org/)**
 - **[Kirby CMS](https://getkirby.com/)**
 - **Privacy-minded analytics tools**
