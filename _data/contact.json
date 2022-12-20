@@ -2,31 +2,37 @@
 	{
 		"title": "Email",
 		"value": "cory@birdsong.dev",
-		"href": "mailto:cory@birdsong.dev"
+		"href": "mailto:cory@birdsong.dev",
+		"enabled": true
 	},
 	{
 		"title": "GitHub",
 		"value": "cbirdsong",
-		"href": "https://github.com/cbirdsong"
+		"href": "https://github.com/cbirdsong",
+		"enabled": true
 	},
 	{
 		"title": "Micro.blog",
 		"value": "@cbirdsong",
-		"href": "https://micro.blog/cbirdsong"
+		"href": "https://micro.blog/cbirdsong",
+		"enabled": true
 	},
 	{
 		"title": "Mastodon",
 		"value": "@cbirdsong@mastodon.social",
-		"href": "https://mastodon.social/@cbirdsong"
+		"href": "https://mastodon.social/@cbirdsong",
+		"enabled": true
 	},
 	{
 		"title": "Twitter",
 		"value": "@cbirdsong",
-		"href": "https://twitter.com/cbirdsong"
+		"href": "https://twitter.com/cbirdsong",
+		"enabled": false
 	},
 	{
 		"title": "LinkedIn",
 		"value": "cbirdsong",
-		"href": "https://linkedin.com/in/cbirdsong"
+		"href": "https://linkedin.com/in/cbirdsong",
+		"enabled": true
 	}
 ]

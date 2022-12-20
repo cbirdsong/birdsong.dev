@@ -7,6 +7,7 @@ eleventyNavigation:
 
 <dl>
   {%- for item in contact %}
+    {%- if item.enabled -%}
     <dt>
       {{ item.title }}
     </dt>
@@ -15,5 +16,6 @@ eleventyNavigation:
         <strong>{{ item.value }}</strong>
       </a>
     </dd>
+  	{%- endif %}
   {%- endfor %}
 </dl>

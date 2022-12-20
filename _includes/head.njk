@@ -37,7 +37,7 @@
 <meta name="generator" content="{{ eleventy.generator }}">
 
 {%- for item in contact %}
-  {% if  "http" in item.href %}
+  {% if item.enabled and "http" in item.href %}
   <link rel="me" href="{{ item.href | url }}">
   {% endif %}
 {%- endfor %}
