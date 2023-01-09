@@ -36,7 +36,7 @@
 		"autoprefixer": "^10.4.2",
 		"clean-css": "^5.2.2",
 		"cssnano": "^5.0.15",
-		"luxon": "^2.3.0",
+		"luxon": "^2.5.2",
 		"markdown-it": "^13.0.1",
 		"markdown-it-anchor": "^8.4.1",
 		"markdown-it-footnote": "^3.0.3",
