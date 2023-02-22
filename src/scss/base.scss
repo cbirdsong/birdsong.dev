@@ -369,6 +369,16 @@ details.subsection {
 	}
 }
 
+// Sections
+
+section[aria-label] {
+	> * + * {
+		--stack-gap: 1em;
+		margin-top: 1em;
+		margin-top: var(--stack-gap);
+	}
+}
+
 /* Site Header Elements */
 
 .site-header__container {

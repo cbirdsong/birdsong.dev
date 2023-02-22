@@ -5,19 +5,19 @@ permalink: /resume/
 robots: noindex, nofollow
 ---
 
-<section aria-label="Skills">
+<section aria-label="Skills" id="skills">
 
 ## Skills
 
 **Expert**: <abbr title="HyperText Markup Language">HTML</abbr> + templating languages, <abbr title="Cascading Stylesheets">CSS</abbr> + Sass/Less, JavaScript + jQuery, WordPress + [<abbr title="Advanced Custom Fields">ACF</abbr>](https://advancedcustomfields.com) & [Timber](https://www.upstatement.com/timber/)
 
-**Adept**: Web accessibility, <abbr title="Scalable Vector Graphics">SVG</abbr>, Git, [Pattern Lab](https://patternlab.io), custom <abbr title="HyperText Markup Language">HTML</abbr> email development, [Schema.org](https://schema.org), [Eleventy](https://www.11ty.dev), [Netlify](https://netlify.com)
+**Adept**: Web accessibility, <abbr title="Scalable Vector Graphics">SVG</abbr>, Git, [Schema.org](https://schema.org), [Eleventy](https://www.11ty.dev), [Netlify](https://netlify.com)
 
-**Proficient**: PHP, [Craft CMS](https://www.craftcms.com/), [Alpine](https://alpinejs.dev/), [Vue](https://vuejs.org/), Shopify, MailChimp, HubSpot, npm, [Parcel](https://parceljs.org), Google Analytics, Google Tag Manager, [GSAP](https://greensock.com/)
+**Proficient**: PHP, [Craft CMS](https://www.craftcms.com/), [Alpine](https://alpinejs.dev/), [Vue](https://vuejs.org/), Shopify, MailChimp, HubSpot, npm, [Parcel](https://parceljs.org), Google Analytics, Google Tag Manager, [GSAP](https://greensock.com/), [Pattern Lab](https://patternlab.io), custom <abbr title="HyperText Markup Language">HTML</abbr> email development, Google Maps JavaScript API
 
 </section>
 
-<section aria-label="Work">
+<section aria-label="Work" id="work">
 
 ## Work
 
@@ -49,11 +49,13 @@ robots: noindex, nofollow
 
 </section>
 
-<section aria-label="Experience">
+<section aria-label="Experience" id="experience">
 
 ## Experience
 
-### Freelance <small>(<time>2020</time>-)</small>
+### [MESH](https://whenwemesh.com) <small>(<time>2021</time>-)</small>
+
+### Freelance <small>(<time>2020</time>-<time>2022</time>)</small>
 
 Worked with a number of agencies on projects using Eleventy, WordPress and Craft CMS. Collaborated with designers using Sketch, Figma and Adobe XD.
 
@@ -61,13 +63,13 @@ Built a personal toolkit for development of custom WordPress themes. Helped cont
 
 ### [The Current](https://thecurrentla.com) <small>(<time>2018</time>-)</small>
 
-Helped (re)launch and run a WordPress-powered non-profit news organization. Customized and eventually replaced a prebuilt theme. Managed WordPress integrations and transitions between Mailchimp/Active Campaign and Memberful/Pico.
+Helped launch and run a WordPress-powered non-profit news organization. Customized and eventually replaced a prebuilt theme. Managed WordPress integrations and transitions between Mailchimp/Active Campaign and Memberful/Pico.
 
 ### [BBR Creative](https://bbrcreative.com) <small>(<time>2018</time>-<time>2020</time>)</small>
 
 Use modern web technologies to accessibly implement and extend designs. Collaborated with designers to make sites beautiful, accessible and user-friendly. Built a landing page template system leveraging <abbr title="Cascading Stylesheets">CSS</abbr> custom properties from scratch.
 
-Worked with clients to maintains and improve their existing WordPress sites. Audited and optimized existing sites for performance. Built custom <abbr title="HyperText Markup Language">HTML</abbr> email templates in HubSpot.
+Worked with clients to maintain and improve their existing WordPress sites. Audited and optimized existing sites for performance. Built custom <abbr title="HyperText Markup Language">HTML</abbr> email templates in HubSpot.
 
 ### [Wide Web Marketing](http://web.archive.org/web/20171021221327/https://www.widewebmarketing.com/) <small>(<time>2010</time>-<time>2018</time>)</small>
 
@@ -77,7 +79,7 @@ Customized and maintained a fork of Bootstrap to facilitate faster and higher-qu
 
 </section>
 
-<section aria-label="Education">
+<section aria-label="Education" id="education">
 
 ## Education
 
@@ -85,7 +87,7 @@ Customized and maintained a fork of Bootstrap to facilitate faster and higher-qu
 
 </section>
 
-<section aria-label="Contact">
+<section aria-label="Contact" id="contact">
 
 ## Contact
 
