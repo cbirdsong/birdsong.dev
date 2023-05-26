@@ -1,6 +1,11 @@
 {
 	"featured": [
 		{
+			"name": "MESH",
+			"url": "https://whenwemesh.com",
+			"original_url": "https://whenwemesh.com"
+		},
+		{
 			"name": "Easy Tiger",
 			"url": "https://easytigerusa.com",
 			"original_url": "https://easytigerusa.com",
