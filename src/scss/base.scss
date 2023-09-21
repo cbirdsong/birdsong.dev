@@ -358,6 +358,11 @@ details:not([class])[open] {
 		+ * {
 			margin-top: 0;
 		}
+
+		+ div:last-child {
+			font-size: 0.85em;
+			padding-left: 1.85em;
+		}
 	}
 }
 

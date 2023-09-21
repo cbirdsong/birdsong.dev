@@ -11,21 +11,25 @@ eleventyNavigation:
 
 ## I've worked with:
 
-- <strong><abbr title="HTML">HTML</abbr></strong>, including templating languages like **Liquid**, **Twig**, and **Nunjucks**
-- <strong><abbr title="Cascading Stylesheets">CSS</abbr></strong>, including processing tools like **Sass**, **Less** and **PostCSS**
-- **JavaScript**, including web components and libraries like **[Alpine](https://alpinejs.dev/)**, **[Vue](https://vuejs.org/)** and **jQuery**
+- **<abbr title="HTML">HTML</abbr>**, including templating languages like **Liquid**, **Twig**, and **Nunjucks**
+- **<abbr title="Cascading Stylesheets">CSS</abbr>**, including processing tools like **Sass**, **Less** and **PostCSS**
+- **JavaScript**, including web components and libraries.
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
 - **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)** and building editor blocks using **[Advanced Custom Fields](https://advancedcustomfields.com)**
 - **[Eleventy](https://11ty.dev)**, building full sites, landing pages and one-off page components
 
-<details class="subsection | l-stack">
+<details class="subsection">
 <summary>I've also worked with:</summary>
+<div class="l-stack">
 
 ### Technologies and Frameworks:
 
 - **Git**, GitHub and BitBucket
 - **PHP**, primarily in the context of WordPress theming and templating
 - **Node**, primarily in the context of Eleventy
+- **jQuery**
+- **[Alpine](https://alpinejs.dev/)**
+- **[Vue](https://vuejs.org/)**
 - **[Svelte](https://svelte.dev/)**
 - **Schema.org**, **OpenGraph** and other bits of metadata
 - **[GSAP](https://greensock.com/)** framework for web animations
@@ -56,16 +60,18 @@ eleventyNavigation:
 - **[BrowserStack](https://www.browserstack.com/)** and **[LambdaTest](https://www.lambdatest.com/)**, for browser compatibility testing
 - **[Litmus](https://litmus.com)** and **[EmailOnAcid](https://emailonacid.com)**, for email client compatibility testing
 
+</div>
 </details>
 
-<details class="subsection | l-stack">
-
+<details class="subsection">
 <summary>I'd love to learn more about:</summary>
+<div class="l-stack">
 
 - **[Storybook](https://storybook.js.org/)**
 - **[Kirby CMS](https://getkirby.com/)**
 - **Privacy-minded analytics tools**
 
+</div>
 </details>
 
 </section>

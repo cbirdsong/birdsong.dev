@@ -55,11 +55,13 @@ robots: noindex, nofollow
 
 ### [MESH](https://whenwemesh.com) <small>(<time>2021</time>-)</small>
 
+Continued developing a deep understanding of how to build and improve custom WordPress themes, including taking over maintenance of an enterprise-level site with complex external integrations. Mentored junior developers on problem solving.
+
 ### Freelance <small>(<time>2020</time>-<time>2022</time>)</small>
 
-Worked with a number of agencies on projects using Eleventy, WordPress and Craft CMS. Collaborated with designers using Sketch, Figma and Adobe XD.
+Worked with a number of agencies on projects using Eleventy, WordPress and Craft CMS. Collaborated with designers using Webflow, Sketch and Figma.
 
-Built a personal toolkit for development of custom WordPress themes. Helped contribute to proposals around the development of the WordPress block editor.
+Built a custom starter toolkit for development of WordPress themes. Helped contribute to proposals around the development of the WordPress block editor.
 
 ### [The Current](https://thecurrentla.com) <small>(<time>2018</time>-)</small>
 
@@ -67,7 +69,7 @@ Helped launch and run a WordPress-powered non-profit news organization. Customiz
 
 ### [BBR Creative](https://bbrcreative.com) <small>(<time>2018</time>-<time>2020</time>)</small>
 
-Use modern web technologies to accessibly implement and extend designs. Collaborated with designers to make sites beautiful, accessible and user-friendly. Built a landing page template system leveraging <abbr title="Cascading Stylesheets">CSS</abbr> custom properties from scratch.
+Use modern web technologies to accessibly implement and extend designs. Collaborated with designers to make sites beautiful, accessible and user-friendly. Built a landing page template system leveraging <abbr title="Cascading Stylesheets">CSS</abbr> custom properties.
 
 Worked with clients to maintain and improve their existing WordPress sites. Audited and optimized existing sites for performance. Built custom <abbr title="HyperText Markup Language">HTML</abbr> email templates in HubSpot.
 
@@ -92,18 +94,18 @@ Customized and maintained a fork of Bootstrap to facilitate faster and higher-qu
 ## Contact
 
 <dl>
+	
+<dt class="print-only">Web</dt>
+<dd class="print-only"><strong>birdsong.dev</strong></dd>
+	
+<dt>Email</dt>
+<dd><strong>cory@birdsong.dev</strong></dd>
 
 <dt>Phone</dt>
 <dd><strong>(985) 570-3709</strong></dd>
 	
 <dt>Time Zone</dt>
 <dd><strong>GMT-6</strong> (Central Standard Time)</dd>
-	
-<dt>Email</dt>
-<dd><strong>cory@birdsong.dev</strong></dd>
-	
-<dt class="print-only">Web</dt>
-<dd class="print-only"><strong>birdsong.dev</strong></dd>
 	
 <dt>Github</dt>
 <dd><strong><a href="https://github.com/cbirdsong">github.com/cbirdsong</a></strong></dd>
