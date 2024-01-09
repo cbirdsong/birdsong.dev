@@ -378,9 +378,14 @@ details.subsection {
 
 section[aria-label] {
 	> * + * {
-		--stack-gap: 1em;
-		margin-top: 1em;
+		margin-top: 1.125em;
 		margin-top: var(--stack-gap);
+
+		--stack-gap: 1.125em;
+
+		&:where(h2, h3, h4, h5, h6) {
+			--stack-gap: 1.5em;
+		}
 	}
 }
 
