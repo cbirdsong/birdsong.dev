@@ -95,8 +95,8 @@ Customized and maintained a fork of Bootstrap to facilitate faster and higher-qu
 
 <dl>
 	
-<dt class="print-only">Web</dt>
-<dd class="print-only"><strong>birdsong.dev</strong></dd>
+<dt class="print-visible">Web</dt>
+<dd class="print-visible"><strong>birdsong.dev</strong></dd>
 	
 <dt>Email</dt>
 <dd><strong>cory@birdsong.dev</strong></dd>

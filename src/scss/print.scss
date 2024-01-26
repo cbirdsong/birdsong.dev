@@ -18,6 +18,8 @@
 	--focus-color: var(--gray-light);
 
 	--font-weight-base: 400;
+
+	font-size: 100%;
 }
 
 * {
@@ -84,7 +86,6 @@ a[data-print-label]::after {
 }
 
 a + small {
-	display: block;
 	margin: 0.25em 0 0.5em;
 }
 
@@ -115,19 +116,20 @@ h4,
 h5,
 h6 {
 	font-family: inherit;
+	font-size: revert;
 }
 
 h1 {
-	margin-bottom: 0.75cm;
+	margin-bottom: 0.5cm;
 }
 h2 {
-	margin-bottom: 0.45cm;
+	margin-bottom: 0.33cm;
 }
 h3,
 h4,
 h5,
 h6 {
-	margin-bottom: 0.33cm;
+	margin-bottom: 0.25cm;
 }
 
 p {
@@ -151,7 +153,7 @@ li + li {
 
 main {
 	margin: 0.75cm 0;
-	padding: 0;
+	padding: 0 !important;
 }
 
 nav {
@@ -165,8 +167,8 @@ article,
 }
 
 section {
-	page-break-inside: avoid;
-	break-inside: avoid-page;
+	// page-break-inside: avoid;
+	// break-inside: avoid-page;
 	padding: 0;
 }
 
@@ -191,6 +193,7 @@ details:not([open]) {
 .site-header {
 	font-weight: 600;
 	font-size: 1.1em;
+	padding: 0;
 }
 .site-header__container {
 	flex-direction: column;
@@ -205,7 +208,7 @@ details:not([open]) {
 }
 
 .site-logo {
-	font-size: 36pt;
+	font-size: 28pt;
 	font-weight: bold;
 }
 .site-logo svg {
@@ -244,6 +247,10 @@ details:not([open]) {
 	content: attr(data-content);
 }
 
+.page-resume h1 {
+	display: none;
+}
+
 .site-footer {
 	margin: 0;
 	font-weight: inherit;
@@ -255,6 +262,9 @@ details:not([open]) {
 	display: none;
 }
 
-.print-only {
+.print-visible {
 	display: block;
+}
+.print-hidden {
+	display: none;
 }
