@@ -102,7 +102,7 @@ eleventyNavigation:
 {%- endfor %}
 </ul>
 
-<p><small>Some of these probably aren't up to my modern standard. They also often use Typekit fonts, which do not work on archive.org.</small></p>
+<p class="small"><em>Some of these probably aren't up to my modern standard. They also often use Typekit fonts, which do not work on archive.org.</em></p>
 
 </details>
 
@@ -114,7 +114,7 @@ eleventyNavigation:
 {%- for item in work.fun -%}
 <li>
 <a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a>
-{%- if item.desc -%} <small>, {{ item.desc }}</small>{%- endif -%}
+{%- if item.desc -%} <small>{{ item.desc }}</small>{%- endif -%}
 </li>
 {%- endfor -%}
 </ul>

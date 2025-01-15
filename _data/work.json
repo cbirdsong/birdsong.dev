@@ -1,13 +1,18 @@
 {
 	"featured": [
 		{
+			"name": "FlyGuys",
+			"url": "https://flyguys.com",
+			"original_url": "https://flyguys.com"
+		},
+		{
 			"name": "MESH",
 			"url": "https://whenwemesh.com",
 			"original_url": "https://whenwemesh.com"
 		},
 		{
 			"name": "Easy Tiger",
-			"url": "https://easytigerusa.com",
+			"url": "https://web.archive.org/web/20220429191643/https://www.easytigerusa.com/",
 			"original_url": "https://easytigerusa.com",
 			"award": {
 				"name": "Gold Addy",

@@ -105,3 +105,11 @@ aside {
 .nav-horizontal li {
 	margin: 0.25em 0.5em;
 }
+
+:is(ul, ol).columns {
+	column-width: 25ch;
+}
+
+p.small {
+	font-size: 80%;
+}

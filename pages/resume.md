@@ -21,11 +21,11 @@ robots: noindex, nofollow
 
 ## Work
 
-<ul>
+<ul class="columns">
 {%- for item in work.featured %}
 <li>
 <a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a>
-{%- if item.award -%} <small>(won {{ item.award.name }}, <time>{{ item.award.year }}</time>)</small>{%- endif -%}
+{%- if item.award -%} <small><em>Winner: {{ item.award.name }}, <time>{{ item.award.year }}</time></em></small>{%- endif -%}
 </li>
 {%- endfor %}
 </ul>
@@ -36,11 +36,11 @@ robots: noindex, nofollow
 
 <p>Some of these probably aren't up to my modern standard. They also often use Typekit fonts, which do not work on archive.org.</p>
 
-<ul>
+<ul class="columns">
 {%- for item in work.old %}
 <li>
 <a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a>
-{%- if item.award -%} <small>(won {{ item.award.name }}, <time>{{ item.award.year }}</time>)</small>{%- endif -%}
+{%- if item.award -%} <small><em>Winner: {{ item.award.name }}, <time>{{ item.award.year }}</time></em></small>{%- endif -%}
 </li>
 {%- endfor %}
 </ul>

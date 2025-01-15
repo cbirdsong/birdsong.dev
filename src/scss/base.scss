@@ -92,7 +92,7 @@ a[target="_blank"]::after {
 	line-height: 1;
 }
 a[target="_blank"] + small {
-	margin-left: 0.5em;
+	display: block;
 }
 
 /* Text states */
