@@ -9,7 +9,7 @@ robots: noindex, nofollow
 
 ## Skills
 
-**Expert**: <abbr title="HyperText Markup Language">HTML</abbr> + templating languages, <abbr title="Cascading Stylesheets">CSS</abbr> + Sass/Less, JavaScript + jQuery, WordPress + [<abbr title="Advanced Custom Fields">ACF</abbr>](https://advancedcustomfields.com) & [Timber](https://www.upstatement.com/timber/)
+**Expert**: <abbr title="HyperText Markup Language">HTML</abbr> + templating languages, <abbr title="Cascading Stylesheets">CSS</abbr> + Sass/Less, JavaScript, WordPress + [<abbr title="Advanced Custom Fields">ACF</abbr>](https://advancedcustomfields.com) & [Timber](https://www.upstatement.com/timber/)
 
 **Adept**: Web accessibility, <abbr title="Scalable Vector Graphics">SVG</abbr>, Git, [Schema.org](https://schema.org), [Eleventy](https://www.11ty.dev), [Netlify](https://netlify.com)
 
