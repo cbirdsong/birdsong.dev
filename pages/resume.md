@@ -11,9 +11,9 @@ robots: noindex, nofollow
 
 **Expert**: <abbr title="HyperText Markup Language">HTML</abbr> + templating languages, <abbr title="Cascading Stylesheets">CSS</abbr> + Sass/Less, JavaScript, WordPress + [<abbr title="Advanced Custom Fields">ACF</abbr>](https://advancedcustomfields.com) & [Timber](https://www.upstatement.com/timber/)
 
-**Adept**: Web accessibility, <abbr title="Scalable Vector Graphics">SVG</abbr>, Git, [Schema.org](https://schema.org), [Eleventy](https://www.11ty.dev), [Netlify](https://netlify.com)
+**Adept**: PHP, Web accessibility, <abbr title="Scalable Vector Graphics">SVG</abbr>, Git, [Schema.org](https://schema.org), [Eleventy](https://www.11ty.dev)
 
-**Proficient**: PHP, [Craft CMS](https://www.craftcms.com/), [Alpine](https://alpinejs.dev/), [Vue](https://vuejs.org/), Shopify, MailChimp, HubSpot, npm, [Parcel](https://parceljs.org), Google Analytics, Google Tag Manager, [GSAP](https://greensock.com/), [Pattern Lab](https://patternlab.io), custom <abbr title="HyperText Markup Language">HTML</abbr> email development, Google Maps JavaScript API
+**Proficient**: [Craft CMS](https://www.craftcms.com), [Alpine](https://alpinejs.dev), [Vue](https://vuejs.org), Shopify, MailChimp, HubSpot, npm, [Parcel](https://parceljs.org), Google Analytics, Google Tag Manager, [GSAP](https://greensock.com), [Pattern Lab](https://patternlab.io), custom <abbr title="HyperText Markup Language">HTML</abbr> email development, Google Maps JavaScript API, [Netlify](https://netlify.com)
 
 </section>
 
@@ -23,8 +23,15 @@ robots: noindex, nofollow
 
 <ul class="columns">
 {%- for item in work.featured %}
+{%- set print_label -%}
+{%- if item.original_url -%}
+data-print-label={{ item.original_url|replace("https://", "") }}
+{%- else %}
+data-print-label={{ item.url|replace("https://", "") }}
+{%- endif %}
+{%- endset %}
 <li>
-<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a>
+<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)" {{ print_label }}>{{ item.name }}</a>
 {%- if item.award -%} <small><em>Winner: {{ item.award.name }}, <time>{{ item.award.year }}</time></em></small>{%- endif -%}
 </li>
 {%- endfor %}
@@ -38,8 +45,15 @@ robots: noindex, nofollow
 
 <ul class="columns">
 {%- for item in work.old %}
+{%- set print_label -%}
+{%- if item.original_url -%}
+data-print-label={{ item.original_url|replace("https://", "") }}
+{%- else %}
+data-print-label={{ item.url|replace("https://", "") }}
+{%- endif %}
+{%- endset %}
 <li>
-<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)">{{ item.name }}</a>
+<a href="{{ item.url | url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ item.name }} (opens in new window)" {{ print_label }}>{{ item.name }}</a>
 {%- if item.award -%} <small><em>Winner: {{ item.award.name }}, <time>{{ item.award.year }}</time></em></small>{%- endif -%}
 </li>
 {%- endfor %}
@@ -73,7 +87,7 @@ Use modern web technologies to accessibly implement and extend designs. Collabor
 
 Worked with clients to maintain and improve their existing WordPress sites. Audited and optimized existing sites for performance. Built custom <abbr title="HyperText Markup Language">HTML</abbr> email templates in HubSpot.
 
-### [Wide Web Marketing](http://web.archive.org/web/20171021221327/https://www.widewebmarketing.com/) <small>(<time>2010</time>-<time>2018</time>)</small>
+### [Wide Web Marketing](http://web.archive.org/web/20171021221327/https://www.widewebmarketing.com) <small>(<time>2010</time>-<time>2018</time>)</small>
 
 Implemented and extended designs originating in Photoshop or Illustrator. Worked with designers to make designs more responsive and user-friendly.
 

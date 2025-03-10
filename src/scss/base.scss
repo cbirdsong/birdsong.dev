@@ -545,8 +545,10 @@ article footer {
 	text-align: center;
 }
 
-.print-visible {
-	display: none;
+@media screen {
+	.print-visible {
+		display: none;
+	}
 }
 
 /* Basic transitions */

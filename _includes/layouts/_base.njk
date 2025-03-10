@@ -12,34 +12,34 @@
     <div class="site-wrapper">
 
       {% block header_wrapper %}
-      <header class="site-header">
-        <div class="l-container site-header__container">
-          {% block header %}
-            {% include "_includes/site-header.njk" %}
-          {% endblock %}
-        </div>
-      </header>
+        <header class="site-header">
+          <div class="l-container site-header__container">
+            {% block header %}
+              {% include "_includes/site-header.njk" %}
+            {% endblock %}
+          </div>
+        </header>
       {% endblock %}
 
       {% block content_wrapper %}
-      <main id="main">
-        <div class="l-container l-stack">
-        {% block content %}
-          {{ layoutContent | safe }}
-        {% endblock %}
-        </div>
-      </main>
+        <main id="main">
+          <div class="l-container l-stack">
+            {% block content %}
+              {{ layoutContent | safe }}
+            {% endblock %}
+          </div>
+        </main>
       {% endblock %}
-      
-      {# {% block footer_wrapper %}
-      <footer class="site-footer">
-        <div class="l-container site-footer__container">
-          {% block footer %}
-            {% include "_includes/site-footer.njk" %}
-          {% endblock %}
-        </div>
-      </footer>
-      {% endblock %} #}
+
+      {% block footer_wrapper %}
+        <footer class="site-footer">
+          <div class="l-container site-footer__container">
+            {% block footer %}
+              {% include "_includes/site-footer.njk" %}
+            {% endblock %}
+          </div>
+        </footer>
+      {% endblock %}
     </div>
 
     {% block body_js %}{% endblock %}

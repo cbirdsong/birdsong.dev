@@ -71,19 +71,18 @@ a[href]::after {
 
 	opacity: 0.75;
 }
-a[href^="#"]::after,
-a[href*="archive.org"]::after,
-a[href*="mailto:"]::after,
-a[href*="tel:"]::after,
-a[href*="cbirdsong"]::after {
-	content: none;
+a:not([data-print-label]) {
+	&[href^="#"]::after,
+	&[href*="archive.org"]::after,
+	&[href*="mailto:"]::after,
+	&[href*="tel:"]::after,
+	&[href*="cbirdsong"]::after {
+		content: none;
+	}
 }
 
 a[data-print-label]::after {
-	content: ": " attr(data-print-label);
-
-	font-size: 100%;
-	font-weight: inherit;
+	content: attr(data-print-label);
 }
 
 a + small {
@@ -91,10 +90,10 @@ a + small {
 }
 
 abbr {
-	text-decoration: dotted;
+	text-decoration: none !important;
 }
 abbr[title]::after {
-	content: "(" attr(title) ")";
+	// content: "(" attr(title) ")";
 	margin-left: 0.15em;
 	font-size: 80%;
 	font-weight: 400;
@@ -266,12 +265,5 @@ details:not([open]) {
 }
 
 .site-footer > .nav {
-	display: none;
-}
-
-.print-visible {
-	display: block;
-}
-.print-hidden {
 	display: none;
 }
