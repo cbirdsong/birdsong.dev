@@ -75,7 +75,7 @@ Continued developing a deep understanding of how to build and improve custom Wor
 
 Worked with a number of agencies on projects using Eleventy, WordPress and Craft CMS. Collaborated with designers using Webflow, Sketch and Figma.
 
-Built a custom starter toolkit for development of WordPress themes. Helped contribute to proposals around the development of the WordPress block editor.
+Built a custom starter toolkit for development of WordPress themes. Contributed to proposals around the development of the WordPress block editor.
 
 ### [The Current](https://thecurrentla.com) <small>(<time>2018</time>-)</small>
 

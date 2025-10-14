@@ -15,12 +15,18 @@
 		"title": "Micro.blog",
 		"value": "@cbirdsong",
 		"href": "https://micro.blog/cbirdsong",
-		"enabled": true
+		"enabled": false
 	},
 	{
 		"title": "Mastodon",
 		"value": "@cbirdsong@mastodon.social",
 		"href": "https://mastodon.social/@cbirdsong",
+		"enabled": true
+	},
+	{
+		"title": "Bluesky",
+		"value": "@cbi.rds.ong",
+		"href": "https://bsky.app/profile/cbi.rds.ong",
 		"enabled": true
 	},
 	{
