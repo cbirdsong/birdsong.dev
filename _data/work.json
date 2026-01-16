@@ -1,13 +1,27 @@
 {
 	"featured": [
 		{
+			"name": "Louisiana Board of Regents",
+			"url": "https://web.archive.org/web/20260101154903/https://www.laregents.edu/",
+			"original_url": "https://www.laregents.edu"
+		},
+		{
+			"name": "GMFS Mortgage",
+			"url": "https://web.archive.org/web/20251113000841/https://gmfsmortgage.com/",
+			"original_url": "https://gmfsmortgage.com"
+		},
+		{
 			"name": "FlyGuys",
-			"url": "https://web.archive.org/web/20241126005814/http://flyguys.com/",
+			"url": "https://web.archive.org/web/20241126005814/https://flyguys.com/",
 			"original_url": "https://flyguys.com"
 		},
 		{
+			"name": "Community Bank of Louisiana",
+			"url": "https://www.communitybankofla.bank"
+		},
+		{
 			"name": "MESH",
-			"url": "https://whenwemesh.com",
+			"url": "https://web.archive.org/web/20230525091031/https://whenwemesh.com/",
 			"original_url": "https://whenwemesh.com"
 		},
 		{
@@ -18,6 +32,11 @@
 				"name": "Gold Addy",
 				"year": "2022"
 			}
+		},
+		{
+			"name": "Belgard Rooms",
+			"url": "https://web.archive.org/web/20211220043705/https://rooms.belgard.com/",
+			"original_url": "https://rooms.belgard.com"
 		},
 		{
 			"name": "Civix",
@@ -75,13 +94,14 @@
 	"old": [
 		{
 			"name": "Cajun Country Rice",
-			"url": "https://cajuncountryrice.com",
+			"url": "https://web.archive.org/web/20200811223051/https://cajuncountryrice.com/",
 			"original_url": "https://cajuncountryrice.com",
 			"archive_url": "https://web.archive.org/web/20200811223051/https://cajuncountryrice.com/"
 		},
 		{
 			"name": "Lafayette General Ortho",
-			"url": "https://lafayettegeneralortho.com",
+			"url": "https://web.archive.org/web/20200926000942/https://lafayettegeneralortho.com/",
+			"original_url": "https://lafayettegeneralortho.com",
 			"archive_url": "https://web.archive.org/web/20200926000942/https://lafayettegeneralortho.com/",
 			"award": {
 				"name": "Silver Addy",
