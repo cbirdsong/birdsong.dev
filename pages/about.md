@@ -36,7 +36,7 @@ eleventyNavigation:
 
 ### <abbr title="Content Management Systems">CMSes</abbr> and Platforms:
 
-- _Many_ common WordPress plugins like **[Gravity Forms](https://www.gravityforms.com)**, **[The Events Calendar](https://theeventscalendar.com)**, and **[Advanced Custom Fields](https://advancedcustomfields.com)**
+- _Many_ common WordPress plugins like **[Advanced Custom Fields](https://advancedcustomfields.com)**, **[Gravity Forms](https://www.gravityforms.com)**, **[The Events Calendar](https://theeventscalendar.com)**, and **[WP All Import/Export](https://www.wpallimport.com)**
 - Managed hosts like **[Pantheon](https://pantheon.io)**, **[WP Engine](https://wpengine.com)** and **[Digital Ocean](https://www.digitalocean.com)**
 - Static hosts like **[Netlify](https://netlify.com)**, **[Cloudflare Pages](https://pages.cloudflare.com)** and **[AWS Amplify](https://docs.amplify.aws)**
 - **[Cloudflare](https://www.cloudflare.com)**, as a DNS provider/CDN and doing edge <abbr title="search engine optimization">SEO</abbr> optimization using [Cloudflare Workers](https://www.cloudflare.com/developer-platform/products/workers/)
