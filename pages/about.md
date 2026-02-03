@@ -11,11 +11,11 @@ eleventyNavigation:
 
 ## I've worked with:
 
-- **<abbr title="HTML">HTML</abbr>**, including templating languages like **Liquid**, **Twig**, and **Nunjucks**
-- **<abbr title="Cascading Stylesheets">CSS</abbr>**, including processing tools like **Sass**, **Less** and **PostCSS**
-- **JavaScript**, including web components and libraries.
+- **<abbr title="HTML">HTML</abbr>**, including templating languages like **[Liquid](https://shopify.github.io/liquid/)**, **[Twig](https://twig.symfony.com)**, and **[Nunjucks](https://mozilla.github.io/nunjucks/)**
+- **<abbr title="Cascading Stylesheets">CSS</abbr>**, including processing tools like **[Sass](https://sass-lang.com)**, **Less** and **PostCSS**
+- **JavaScript**, including [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) and libraries.
 - **<abbr title="Scalable Vector Graphics">SVG</abbr>**, hand-coding animations, transitions and optimizations
-- **WordPress**, building themes from scratch in both standard PHP and using Twig via **[Timber](https://www.upstatement.com/timber/)** and building editor blocks using **[Advanced Custom Fields](https://advancedcustomfields.com)**
+- **[WordPress](https://wordpress.org)**, building block editor-first themes from scratch in both standard PHP and using **[Timber](https://www.upstatement.com/timber/)**, including custom editor blocks using **[Advanced Custom Fields](https://advancedcustomfields.com)**
 - **[Eleventy](https://11ty.dev)**, building full sites, landing pages and one-off page components
 
 <details class="subsection">
@@ -25,37 +25,34 @@ eleventyNavigation:
 ### Technologies and Frameworks:
 
 - **Git**, GitHub and BitBucket
-- **PHP**, primarily in the context of WordPress theming and templating
-- **Node**, primarily in the context of Eleventy
-- **jQuery**
-- **[Alpine](https://alpinejs.dev/)**
-- **[Vue](https://vuejs.org/)**
-- **[Svelte](https://svelte.dev/)**
-- **Schema.org**, **OpenGraph** and other bits of metadata
-- **[GSAP](https://greensock.com/)** framework for web animations
-- **<abbr title="Cascading Stylesheets">CSS</abbr> frameworks** like **Bootstrap**, compiled from source and customized to the project whenever possible
+- **[PHP](https://www.php.net)**, primarily in the context of WordPress theming and templating
+- **[Node.js](https://nodejs.org/en)**, primarily in the context of Eleventy
 - **Regular expressions** and **shell scripting**
-- Developer tooling like **npm**, **[Parcel](https://parceljs.org)** and **[gulp](https://gulpjs.com/)**
+- **[Schema.org](https://schema.org)**, **OpenGraph** and other bits of metadata
+- **[GSAP](https://greensock.com/)** animation library
+- **JavaScript frameworks** like **[jQuery](https://jquery.com)**, **[Alpine](https://alpinejs.dev/)**, **[Vue](https://vuejs.org/)** and **[Svelte](https://svelte.dev/)**
+- **<abbr title="Cascading Stylesheets">CSS</abbr> frameworks** like **[Bootstrap](https://getbootstrap.com)**, compiled from source and customized to the project whenever possible
+- Developer tooling like **[npm](https://www.npmjs.com)**, **[Parcel](https://parceljs.org)** and **[Docker](https://www.docker.com)**
 
 ### <abbr title="Content Management Systems">CMSes</abbr> and Platforms:
 
+- _Many_ common WordPress plugins like **[Gravity Forms](https://www.gravityforms.com)**, **[The Events Calendar](https://theeventscalendar.com)**, and **[Advanced Custom Fields](https://advancedcustomfields.com)**
+- Managed hosts like **[Pantheon](https://pantheon.io)**, **[WP Engine](https://wpengine.com)** and **[Digital Ocean](https://www.digitalocean.com)**
+- Static hosts like **[Netlify](https://netlify.com)**, **[Cloudflare Pages](https://pages.cloudflare.com)** and **[AWS Amplify](https://docs.amplify.aws)**
+- **[Cloudflare](https://www.cloudflare.com)**, as a DNS provider/CDN and doing edge <abbr title="search engine optimization">SEO</abbr> optimization using [Cloudflare Workers](https://www.cloudflare.com/developer-platform/products/workers/)
+- **[Google Maps Plaform](https://mapsplatform.google.com/)** <abbr title="application programming interfaces">APIs</abbr>, for searches, geocoding and customized map embeds
+- **[Webflow](https://webflow.com/)**
 - **[Craft CMS](https://www.craftcms.com/)**
-- **Shopify**
-- **MailChimp**
-- **HubSpot**
+- Email providers like **[MailChimp](https://mailchimp.com)** and **[HubSpot](https://www.hubspot.com)**
 - **[Pattern Lab](https://patternlab.io/)**, building pattern libraries for design systems
-- **[Netlify](https://netlify.com)**
-- **Cloudflare**, as a DNS provider/CDN and doing edge <abbr title="search engine optimization">SEO</abbr> optimization via Cloudflare Workers
-- **Google Maps' JavaScript <abbr title="application programming interface">API</abbr>**, for searches, geocoding and design customization
-- **WP Engine** and **Flywheel**
 
 ### Software and Services:
 
-- Image editors like **Photoshop**, **Illustrator**, **Pixelmator Pro** and **Affinity Designer**
+- Image editors like **Adobe Photoshop**, **Adobe Illustrator**, **Pixelmator Pro** and **Affinity Designer**
 - Design tools like **Sketch**, **Figma** and **Adobe XD**
 - Accessibility auditing tools like **[axe](https://www.deque.com/axe/)** and **[WAVE](https://wave.webaim.org/)**
 - Performance auditing tools like **Google Lighthouse** and **WebPageTest**
-- **Google Analytics** and **Google Tag Manager**, implemented as performantly as possible (including via **[Cloudflare Zaraz](https://www.cloudflare.com/products/zaraz/)**)
+- **Google Analytics** and **Google Tag Manager**, implemented as performantly as possible
 - **[Screaming Frog](https://www.screamingfrog.co.uk/)**, to audit sites for accessibility, performance and <abbr title="search engine optimization">SEO</abbr> issues
 - **[BrowserStack](https://www.browserstack.com/)** and **[LambdaTest](https://www.lambdatest.com/)**, for browser compatibility testing
 - **[Litmus](https://litmus.com)** and **[EmailOnAcid](https://emailonacid.com)**, for email client compatibility testing
@@ -67,6 +64,7 @@ eleventyNavigation:
 <summary>I'd love to learn more about:</summary>
 <div class="l-stack">
 
+- **WordPress' [site editor](https://wordpress.org/documentation/article/site-editor/)**
 - **[Storybook](https://storybook.js.org/)**
 - **[Kirby CMS](https://getkirby.com/)**
 - **Privacy-minded analytics tools**
