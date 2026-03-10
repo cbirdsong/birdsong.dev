@@ -1,7 +1,9 @@
-let data = {
-	layout: "page",
-	permalink: "{{ title | slugify }}/",
-	tags: "page",
-};
+export default function () {
+	let data = {
+		layout: "page",
+		permalink: "{{ title | slugify }}/",
+		tags: "page",
+	};
 
-module.exports = data;
+	return data;
+}

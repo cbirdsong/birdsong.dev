@@ -1,18 +1,32 @@
-const eleventyNavigation = require("@11ty/eleventy-navigation");
-const eleventySyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const eleventyRss = require("@11ty/eleventy-plugin-rss");
-const eleventyInclusiveLanguage = require("@11ty/eleventy-plugin-inclusive-language");
+import eleventyNavigation from "@11ty/eleventy-navigation";
+import eleventySyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import eleventyRss from "@11ty/eleventy-plugin-rss";
+import eleventyInclusiveLanguage from "@11ty/eleventy-plugin-inclusive-language";
 
-const markdownIt = require("markdown-it");
+import markdownIt from "markdown-it";
+import markdownItFootnote from "markdown-it-footnote";
 const markdownItOptions = {
 	html: true,
 	breaks: true,
 	linkify: true,
 	typographer: true,
 };
-const markdownItFootnote = require("markdown-it-footnote");
 
-module.exports = function (eleventyConfig) {
+// Filters
+
+import addNbsp from  "./_11ty/filters/addNbsp.js";
+import cssmin from  "./_11ty/filters/cssmin.js";
+import excerpt from  "./_11ty/filters/excerpt.js";
+import markdown from  "./_11ty/filters/markdown.js";
+import dateShort from  "./_11ty/filters/dateShort.js";
+import dateLong from  "./_11ty/filters/dateLong.js";
+import timeShort from  "./_11ty/filters/timeShort.js";
+import timeLong from  "./_11ty/filters/timeLong.js";
+import datetimeShort from  "./_11ty/filters/datetimeShort.js";
+import datetimeLong from  "./_11ty/filters/datetimeLong.js";
+import datetimeAttr from  "./_11ty/filters/datetimeAttr.js";
+
+export default async function (eleventyConfig) {
 	// Plugins
 	eleventyConfig.addPlugin(eleventyNavigation);
 	eleventyConfig.addPlugin(eleventySyntaxHighlight);
@@ -25,22 +39,22 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.setLibrary("md", markdownLib);
 
 	// Filters
-	eleventyConfig.addFilter("addNbsp", require("./_11ty/filters/addNbsp.js"));
+	eleventyConfig.addFilter("addNbsp", addNbsp);
 
-	eleventyConfig.addFilter("cssmin", require("./_11ty/filters/cssmin.js"));
+	eleventyConfig.addFilter("cssmin", cssmin);
 
-	eleventyConfig.addFilter("excerpt", require("./_11ty/filters/excerpt.js"));
+	eleventyConfig.addFilter("excerpt", excerpt);
 
-	eleventyConfig.addFilter("markdown", require("./_11ty/filters/markdown.js"));
+	eleventyConfig.addFilter("markdown", markdown);
 	// eleventyConfig.addFilter("markdownAnchorHeadings", require("./_11ty/filters/markdownAnchorHeadings.js"));
 
-	eleventyConfig.addFilter("dateShort", require("./_11ty/filters/dateShort.js"));
-	eleventyConfig.addFilter("dateLong", require("./_11ty/filters/dateLong.js"));
-	eleventyConfig.addFilter("timeShort", require("./_11ty/filters/timeShort.js"));
-	eleventyConfig.addFilter("timeLong", require("./_11ty/filters/timeLong.js"));
-	eleventyConfig.addFilter("datetimeShort", require("./_11ty/filters/datetimeShort.js"));
-	eleventyConfig.addFilter("datetimeLong", require("./_11ty/filters/datetimeLong.js"));
-	eleventyConfig.addFilter("datetimeAttr", require("./_11ty/filters/datetimeAttr.js"));
+	eleventyConfig.addFilter("dateShort", dateShort);
+	eleventyConfig.addFilter("dateLong", dateLong);
+	eleventyConfig.addFilter("timeShort", timeShort);
+	eleventyConfig.addFilter("timeLong", timeLong);
+	eleventyConfig.addFilter("datetimeShort", datetimeShort);
+	eleventyConfig.addFilter("datetimeLong", datetimeLong);
+	eleventyConfig.addFilter("datetimeAttr", datetimeAttr);
 
 	// Collections
 	eleventyConfig.addCollection("posts", function (collectionApi) {
@@ -50,7 +64,7 @@ module.exports = function (eleventyConfig) {
 	});
 
 	// Shortcodes
-	eleventyConfig.addShortcode("year", require("./_11ty/shortcodes/year.js"));
+	eleventyConfig.addShortcode("year", function() { return `${new Date().getFullYear()}`; });
 
 	// Passthrough
 	eleventyConfig.addPassthroughCopy({

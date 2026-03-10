@@ -1,6 +1,6 @@
-const { DateTime } = require("luxon");
+import { DateTime } from "luxon";
 
-module.exports = function (dateObj) {
+export default async function (dateObj) {
 	return DateTime.fromJSDate(dateObj).toLocaleString({
 		year: "numeric",
 		month: "numeric",

@@ -1,7 +1,7 @@
 // Add nbsp; between the last two words
 // https://11ty.rocks/eleventyjs/content/#addnbsp-filter
 
-module.exports = function (content) {
+export default async function (content) {
 	if (!content || typeof content !== "string") {
 		return;
 	}

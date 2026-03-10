@@ -1,7 +1,8 @@
 // Add markdown filter
 // based on https://11ty.rocks/eleventyjs/content/#markdown-filter
 
-const markdownIt = require("markdown-it");
+import markdownIt from "markdown-it";
+
 const markdownItOptions = {
 	html: true,
 	breaks: true,
@@ -11,7 +12,7 @@ const markdownItOptions = {
 
 const markdownRenderFilter = new markdownIt(markdownItOptions);
 
-module.exports = function (content) {
+export default async function (content) {
 	if (!content || typeof content !== "string") {
 		return;
 	}

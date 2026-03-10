@@ -2,12 +2,12 @@
 // based on https://11ty.rocks/eleventyjs/content/#markdown-filter
 // might've been replaced by native markdown-it-anchor functionality
 
-const slugify = require("slugify");
+import slugify from "slugify";
+import markdownIt from "markdown-it";
+import markdownItFootnote from "markdown-it-footnote";
+import markdownItAnchor from "markdown-it-anchor";
 
-module.exports = function (content) {
-	const markdownIt = require("markdown-it");
-	const markdownItFootnote = require("markdown-it-footnote");
-	const markdownItAnchor = require("markdown-it-anchor");
+export default async function (content) {
 	const markdownItAnchorLinkAfterHeader = markdownItAnchor.permalink.linkAfterHeader({
 		class: "anchor",
 		symbol: "<span hidden>#</span>",

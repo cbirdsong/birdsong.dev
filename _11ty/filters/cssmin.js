@@ -1,8 +1,8 @@
 // Minify CSS
 
-const CleanCSS = require("clean-css");
+import CleanCSS from "clean-css";
 
-module.exports = function (code) {
+export default async function (code) {
 	if (process.env.ELEVENTY_ENV === "prod") {
 		return new CleanCSS({}).minify(code).styles;
 	}

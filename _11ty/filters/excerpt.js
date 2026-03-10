@@ -1,7 +1,7 @@
 // Fake an excerpt
 // https:11ty.rocks/eleventyjs/content/#excerpt-filter
 
-module.exports = function (content) {
+export default async function (content) {
 	if (!content || typeof content !== "string") {
 		return;
 	}
