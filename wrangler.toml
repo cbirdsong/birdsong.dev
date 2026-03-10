@@ -3,7 +3,6 @@ compatibility_date = "2026-03-10"
 compatibility_flags = ["nodejs_compat"]
 main = "eleventy.config.js"
 name = "personal-site"
-workers_dev = false
 
 [build]
 command = "npm run build"
