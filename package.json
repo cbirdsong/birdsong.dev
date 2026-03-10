@@ -50,6 +50,7 @@
 		"sass": "^1.48.0"
 	},
 	"devDependencies": {
-		"@11ty/eleventy-plugin-inclusive-language": "^1.0.3"
+		"@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
+		"wrangler": "^4.71.0"
 	}
 }
