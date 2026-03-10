@@ -4,17 +4,7 @@
   {%- include "_includes/section-about.njk" -%}
 
   {% if layoutContent %}
-    <hr />
+    <hr/>
     {{ layoutContent | safe }}
   {% endif %}
-{% endblock %}
-
-{% block head_css %}
-  {{ super() }}
-  {% set css %}
-  {% include "dist/css/about.css" %}
-  {% endset %}
-  <style id="about-css">
-    {{css | cssmin | safe}}
-  </style>
 {% endblock %}
