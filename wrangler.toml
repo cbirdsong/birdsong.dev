@@ -1,5 +1,6 @@
 "$schema" = "./node_modules/wrangler/config-schema.json"
 compatibility_date = "2026-03-10"
+compatibility_flags = ["nodejs_compat"]
 main = ".eleventy.js"
 name = "personal-site"
 workers_dev = false
