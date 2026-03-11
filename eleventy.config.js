@@ -18,6 +18,7 @@ import addNbsp from  "./_11ty/filters/addNbsp.js";
 import cssmin from  "./_11ty/filters/cssmin.js";
 import excerpt from  "./_11ty/filters/excerpt.js";
 import markdown from  "./_11ty/filters/markdown.js";
+// import markdownAnchorHeadings from  "./_11ty/filters/markdownAnchorHeadings.js";
 import dateShort from  "./_11ty/filters/dateShort.js";
 import dateLong from  "./_11ty/filters/dateLong.js";
 import timeShort from  "./_11ty/filters/timeShort.js";
@@ -40,13 +41,11 @@ export default async function (eleventyConfig) {
 
 	// Filters
 	eleventyConfig.addFilter("addNbsp", addNbsp);
-
 	eleventyConfig.addFilter("cssmin", cssmin);
-
 	eleventyConfig.addFilter("excerpt", excerpt);
 
 	eleventyConfig.addFilter("markdown", markdown);
-	// eleventyConfig.addFilter("markdownAnchorHeadings", require("./_11ty/filters/markdownAnchorHeadings.js"));
+	// eleventyConfig.addFilter("markdownAnchorHeadings", markdownAnchorHeadings);
 
 	eleventyConfig.addFilter("dateShort", dateShort);
 	eleventyConfig.addFilter("dateLong", dateLong);
