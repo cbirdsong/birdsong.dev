@@ -14,18 +14,18 @@ const markdownItOptions = {
 
 // Filters
 
-import addNbsp from  "./_11ty/filters/addNbsp.js";
-import cssmin from  "./_11ty/filters/cssmin.js";
-import excerpt from  "./_11ty/filters/excerpt.js";
-import markdown from  "./_11ty/filters/markdown.js";
+import addNbsp from "./_11ty/filters/addNbsp.js";
+import cssmin from "./_11ty/filters/cssmin.js";
+import excerpt from "./_11ty/filters/excerpt.js";
+import markdown from "./_11ty/filters/markdown.js";
 // import markdownAnchorHeadings from  "./_11ty/filters/markdownAnchorHeadings.js";
-import dateShort from  "./_11ty/filters/dateShort.js";
-import dateLong from  "./_11ty/filters/dateLong.js";
-import timeShort from  "./_11ty/filters/timeShort.js";
-import timeLong from  "./_11ty/filters/timeLong.js";
-import datetimeShort from  "./_11ty/filters/datetimeShort.js";
-import datetimeLong from  "./_11ty/filters/datetimeLong.js";
-import datetimeAttr from  "./_11ty/filters/datetimeAttr.js";
+import dateShort from "./_11ty/filters/dateShort.js";
+import dateLong from "./_11ty/filters/dateLong.js";
+import timeShort from "./_11ty/filters/timeShort.js";
+import timeLong from "./_11ty/filters/timeLong.js";
+import datetimeShort from "./_11ty/filters/datetimeShort.js";
+import datetimeLong from "./_11ty/filters/datetimeLong.js";
+import datetimeAttr from "./_11ty/filters/datetimeAttr.js";
 
 export default async function (eleventyConfig) {
 	// Plugins
@@ -63,12 +63,13 @@ export default async function (eleventyConfig) {
 	});
 
 	// Shortcodes
-	eleventyConfig.addShortcode("year", function() { return `${new Date().getFullYear()}`; });
+	eleventyConfig.addShortcode("year", function () {
+		return `${new Date().getFullYear()}`;
+	});
 
 	// Passthrough
 	eleventyConfig.addPassthroughCopy({
-		"./node_modules/@fontsource/*/files/*.woff2": "fonts",
-		"./node_modules/@fontsource/*/files/*.woff": "fonts",
+		"src/fonts": "fonts",
 	});
 	eleventyConfig.addPassthroughCopy({ "src/images": "images" });
 	eleventyConfig.addPassthroughCopy({ "src/js": "js" });
@@ -78,7 +79,6 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("robots.txt");
 	eleventyConfig.addPassthroughCopy("manifest.json");
 
-	eleventyConfig.addPassthroughCopy({ "src/themes/1976/css/*": "css" });
 	eleventyConfig.addPassthroughCopy({ "src/themes/1976/fonts/*": "fonts" });
 	eleventyConfig.addPassthroughCopy({ "src/themes/1976/root/*": "/" });
 
@@ -97,4 +97,4 @@ export default async function (eleventyConfig) {
 			output: "dist",
 		},
 	};
-};
+}
