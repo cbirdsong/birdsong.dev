@@ -14,6 +14,7 @@
 
 	--font-weight-normal: var(--font-weight-base);
 	--font-weight-light: calc(var(--font-weight-normal) - 100);
+	--font-weight-semi: calc(var(--font-weight-normal) + 100);
 	--font-weight-heavy: calc(var(--font-weight-normal) + 300);
 
 	--line-height-base: 1.5;
@@ -67,6 +68,7 @@ body {
 
 a {
 	color: var(--link-color, initial);
+	font-weight: var(--font-weight-semi);
 
 	text-decoration-thickness: 2px;
 	text-decoration-thickness: max(2px, 0.1em);
@@ -531,12 +533,20 @@ article a.permalink::before {
 }
 
 article time {
-	font-weight: var(--font-weight-heavy);
+	font-weight: var(--font-weight-semi);
 }
 
 article footer {
-	font-size: 0.85rem;
-	font-size: min(75%, 0.85rem);
+	font-size: 0.825rem;
+	font-size: min(60%, 0.825rem);
+
+	border-block-start: 2px solid currentColor;
+	border-color: unquote("rgb(from currentColor r g b / 50%)");
+	padding-block-start: 2rem;
+
+	&:not(:hover, :focus-within) {
+		opacity: 0.85;
+	}
 }
 
 /* Utilities */

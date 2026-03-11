@@ -82,10 +82,6 @@ nav {
 
 /* Basic styles */
 
-a {
-	font-weight: calc(var(--font-weight-normal) + 50);
-}
-
 @counter-style circles {
 	system: cyclic;
 	symbols: "\002609";

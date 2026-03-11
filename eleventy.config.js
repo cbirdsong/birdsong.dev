@@ -1,7 +1,6 @@
 const eleventyNavigation = require("@11ty/eleventy-navigation");
 const eleventySyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const eleventyRss = require("@11ty/eleventy-plugin-rss");
-const eleventyInclusiveLanguage = require("@11ty/eleventy-plugin-inclusive-language");
 
 const markdownIt = require("markdown-it");
 const markdownItOptions = {
@@ -54,8 +53,7 @@ module.exports = function (eleventyConfig) {
 
 	// Passthrough
 	eleventyConfig.addPassthroughCopy({
-		"./node_modules/@fontsource/*/files/*.woff2": "fonts",
-		"./node_modules/@fontsource/*/files/*.woff": "fonts",
+		"./src/fonts": "fonts",
 	});
 	eleventyConfig.addPassthroughCopy({ "src/images": "images" });
 	eleventyConfig.addPassthroughCopy({ "src/js": "js" });
@@ -65,9 +63,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("robots.txt");
 	eleventyConfig.addPassthroughCopy("manifest.json");
 
-	eleventyConfig.addPassthroughCopy({ "src/themes/1976/css/*": "css" });
-	eleventyConfig.addPassthroughCopy({ "src/themes/1976/fonts/*": "fonts" });
-	eleventyConfig.addPassthroughCopy({ "src/themes/1976/root/*": "/" });
+	eleventyConfig.addPassthroughCopy({ "src/themes/*/css/*": "css" });
+	eleventyConfig.addPassthroughCopy({ "src/themes/*/fonts/*": "fonts" });
+	eleventyConfig.addPassthroughCopy({ "src/themes/*/root/*": "/" });
 
 	return {
 		templateFormats: ["md", "njk", "html"],
