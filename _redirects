@@ -1,14 +1,3 @@
-# These rules will change if you change your site’s custom domains or HTTPS settings
-
-# Redirect domain aliases to primary domain
-
-https://corybirdsong.com/* https://birdsong.dev/:splat 301!
-
-# Redirect default Netlify subdomains to primary domain
-
-https://corybirdsong.netlify.com/_ https://birdsong.dev/:splat 301!
-https://birdsong-resume.netlify.com/_ https://birdsong.dev/:splat 301!
-
 # Changed pages
 
 //about/ /about/ 301

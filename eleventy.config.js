@@ -53,19 +53,18 @@ module.exports = function (eleventyConfig) {
 
 	// Passthrough
 	eleventyConfig.addPassthroughCopy({
-		"./src/fonts": "fonts",
+		"src/fonts": "fonts",
+		"src/themes/*/fonts/*": "fonts",
 	});
 	eleventyConfig.addPassthroughCopy({ "src/images": "images" });
 	eleventyConfig.addPassthroughCopy({ "src/js": "js" });
 	eleventyConfig.addPassthroughCopy({ "src/css": "css" });
 
+	eleventyConfig.addPassthroughCopy({ "src/themes/*/root/*": "/" });
+
 	eleventyConfig.addPassthroughCopy("_redirects");
 	eleventyConfig.addPassthroughCopy("robots.txt");
 	eleventyConfig.addPassthroughCopy("manifest.json");
-
-	eleventyConfig.addPassthroughCopy({ "src/themes/*/css/*": "css" });
-	eleventyConfig.addPassthroughCopy({ "src/themes/*/fonts/*": "fonts" });
-	eleventyConfig.addPassthroughCopy({ "src/themes/*/root/*": "/" });
 
 	return {
 		templateFormats: ["md", "njk", "html"],
