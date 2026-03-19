@@ -3,6 +3,22 @@
 @import "fonts";
 @import "colors";
 
+:root {
+	--font-family-base: "Jost", #{$system-font-family};
+	--font-family-heading: "Cartridge", var(--font-family-base);
+
+	--font-weight-base: 400;
+
+	--font-weight-normal: var(--font-weight-base);
+	--font-weight-light: calc(var(--font-weight-normal) - 100);
+	--font-weight-semi: calc(var(--font-weight-normal) + 100);
+	--font-weight-heavy: calc(var(--font-weight-normal) + 200);
+
+	--line-height-base: 1.5;
+	--line-height-sm: 1.25;
+	--line-height-xs: 1;
+}
+
 body {
 	font-family: var(--font-family-base);
 }
