@@ -36,6 +36,12 @@
 		"enabled": false
 	},
 	{
+		"title": "Letterboxd",
+		"value": "cbirdsong",
+		"href": "https://letterboxd.com/cbirdsong",
+		"enabled": false
+	},
+	{
 		"title": "LinkedIn",
 		"value": "cbirdsong",
 		"href": "https://linkedin.com/in/cbirdsong",
