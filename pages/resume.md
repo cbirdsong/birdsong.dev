@@ -67,7 +67,11 @@ data-print-label={{ item.url|replace("https://", "") }}
 
 ## Experience
 
-### [MESH](https://whenwemesh.com) <small>(<time>2021</time>-)</small>
+### [Deep South Today](https://deepsouthtoday.org) <small>(<time>2026</time>-)</small>
+
+Helping to run a network of WordPress-powered non-profit news sites.
+
+### [MESH](https://whenwemesh.com) <small>(<time>2021</time>-<time>2026</time>)</small>
 
 Continued developing a deep understanding of how to build and improve custom WordPress themes, including taking over maintenance of an enterprise-level site with complex external integrations. Mentored junior developers on problem solving.
 
