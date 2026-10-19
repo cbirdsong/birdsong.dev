@@ -33,7 +33,7 @@
 		"@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
 		"autoprefixer": "^10.4.2",
 		"clean-css": "^5.2.2",
-		"cssnano": "^5.0.15",
+		"cssnano": "^9.9.0",
 		"luxon": "^2.5.2",
 		"markdown-it": "^13.0.1",
 		"markdown-it-anchor": "^8.4.1",
